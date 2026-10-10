@@ -728,7 +728,7 @@ De logo's en beeldmerken staan als echte, transparante PNG's in de openbare GitH
 | `DBF_chevron.svg` + `DBF_chevron_*.png` (10×) | Chevron, vector en in elke paletkleur | §1.3, §3.7 |
 | `DBF_patroon_*.svg` (6×), `DBF_patroon_slotdia_koningsblauw.png`, `patroon.py` | Decoratief patroon, dia-afbeelding en generator | Bijlage B |
 | `DBF_fotostrook_zw.png`, `DBF_titelfoto_strand.jpg` | Sjabloonfoto's PowerPoint | §3.5 |
-| `Powerpoint_sjabloon.potx` | PowerPoint-sjabloon | §3, §6 |
+| `Powerpoint_sjabloon.potx` | PowerPoint-sjabloon. **Niet in de hoofdmap** (te groot, 28 MiB), maar als bijlage bij de GitHub-release: {R}Powerpoint_sjabloon.potx | §3, §6 |
 | `DBF_offerte_sjabloon.dotx`, `dbf_offerte_sjabloon.pdf` | Offertesjabloon en voorbeeld | §4.1 |
 | `DB_brief_sjabloon.pdf`, `DBF_rapport_sjabloon.pdf` | Voorbeelden brief en rapport | §1.3, §4.2 |
 | `kleurenpalet.png` | Bron van het palet | §1.1 |
@@ -736,7 +736,7 @@ De logo's en beeldmerken staan als echte, transparante PNG's in de openbare GitH
 | `DBF_ontwikkellogboek.md` | Ontwikkelgeschiedenis | — |
 | Beeldbank | Historische foto's, portretten, teambeelden | Bijlage C |
 
-**Noodroute:** lukt downloaden niet, vraag dan om `DBF_huisstijl_assets.zip`.
+**Noodroute:** lukt downloaden niet, vraag dan om `DBF_huisstijl_assets.zip`. Die staat ook als bijlage bij de GitHub-release: {R}DBF_huisstijl_assets.zip
 
 
 ### Logo — wit, zonder tagline, voor donkerblauwe achtergrond (klein / herhalend)
