@@ -63,3 +63,14 @@
 - Beelden stonden eerst als links naar de eigen website. Die bleek niet bereikbaar vanuit Claude, en het moest werken voor collega's vanuit hun eigen Claude-omgeving. Daarom een openbare GitHub-repository (`dbfbeeldbank/dbf`). Websitelinks zijn nu alleen nog opslaglocatie.
 - Bestandsnamen op de website (met "-scaled") weken af van de originelen; op GitHub staan de originele archiefnamen.
 - Het sjoelbeeld kreeg nummer C.46 in plaats van 18, omdat C.18–C.28 al in gebruik waren.
+
+## 10 oktober 2026 — assetpakket en gids bijgewerkt
+
+- **Assetpakket compleet.** Alle bestanden waar de gids naar verwijst staan op GitHub, met `DBF_assets_manifest.csv` als volledige lijst en `DBF_huisstijl_assets.zip` als noodroute voor AI-omgevingen zonder internet (ChatGPT kon GitHub niet bereiken).
+- **Fotostrook zwart-wit, zonder koningsblauw filter** (besluit Paul; vervangt de tint van 62%). Uitsnede overgenomen uit `Powerpoint_sjabloon.potx`. Hogere resolutie bestaat niet: het sjabloon zelf heeft 88 × 791 px.
+- **Titelfoto** uit het sjabloon gehaald in de oorspronkelijke resolutie (2765 × 1844) in plaats van de schermafbeelding.
+- **Slotdia zonder tekst** (besluit Paul): alleen patroon en logo.
+- **Sluitdia-logo in het `.potx` bleek niet beschadigd** (wit, echte transparantie, gecontroleerd op koningsblauw). Waarschuwing uit §1.2 geschrapt.
+- **Offertesjabloon aangepast:** footer `#15284B` → `#27275B`; Heading 1/2 stonden in Word-standaardblauw `#2E74B5` en zonder outline-niveau. Nu zwart, Calibri Light, vet, 10,5 pt, navigeerbaar.
+- **C.04 hernoemd:** het "…"-teken in de bestandsnaam brak andere AI-omgevingen. Regel voor alle bestandsnamen: alleen `A–Z a–z 0–9 _ - .`.
+- **Chevron-PNG's** opnieuw uit de vectorpunten gemaakt; de oude PNG's in de projectmap waren niet transparant en goud week 1 punt af (`#DDB85F`).

@@ -6,6 +6,8 @@
 > - **Deze huisstijlgids:** de geldende regels en ontwerpprincipes. De normatieve bron.
 > - **`DBF_ontwikkellogboek.md`:** hoe keuzes tot stand kwamen, afgewezen varianten, open ontwikkelpunten. Wordt bijgewerkt als de huisstijl zelf verandert. Niet nodig om een uiting te maken.
 > - **Kwaliteitsrapportage (§5):** per oplevering, over die ene uiting. Geen ontwikkelgeschiedenis.
+>
+> **Alle bestanden** (logo's, chevrons, patronen, sjablonen, sjabloonfoto's, beeldbank) staan in de openbare GitHub-repository `dbfbeeldbank/dbf`, met een volledige lijst in `DBF_assets_manifest.csv` (Bijlage A). **Lukt downloaden niet**, bijvoorbeeld in een AI-omgeving zonder internet, vraag de gebruiker dan om `DBF_huisstijl_assets.zip`: daarin zit alles, inclusief deze gids en het manifest.
 
 ## Wegwijzer — wat lees je voor welk formaat?
 
@@ -115,13 +117,13 @@ Het eerdere HTML/Word-blauw `#15284B` vervalt. Waar in deze gids "donkerblauw" o
 ### 1.2 Logo en beeldmerk
 
 - Altijd het officiële logobestand. Nooit een zelfgetekende benadering.
-- Gebruik alleen de logo's en beeldmerken uit **Bijlage A**. De witte bestanden in de oude assetbibliotheek (`Logo_..._wit_....png`, `Beeldmerk_wit_....png`) en het sluitdia-logo in `Powerpoint_sjabloon.potx` zijn beschadigd: niet gebruiken.
+- Gebruik alleen de logo's en beeldmerken uit **Bijlage A**. De witte bestanden in de oude assetbibliotheek (`Logo_..._wit_....png`, `Beeldmerk_wit_....png`) zijn beschadigd (wit op wit, zonder transparantie): niet gebruiken.
 - **Het hexagon is uitsluitend de vorm van het beeldmerk zelf.** Het is geen decoratief motief, geen kopmarkering en geen bullet; daarvoor is de chevron (§1.3).
 - Gebruik nooit het losse beeldmerk náást het logo: het logo bevat het beeldmerk al.
 
 **Tagline "IDENTITY MARKETING":**
 - **Standaardregel (HTML, PowerPoint):** alleen bij grote, eenmalige plaatsingen (cover, titelslide). Bij kleine of herhalende plaatsingen (documentkopje, footer) de wordmark **zonder** tagline. Op kleine hoogte wordt de tagline onleesbaar; de fix is de tagline weglaten, niet het logo opblazen.
-- **Uitzondering Word-offerte (besluit Paul, op basis van `Offertesjabloon.dotx`):** horizontaal logo **mét** tagline, zwart, herhalend op elke pagina. Het bronbestand overrulet hier de standaardregel. Of dit ook voor brief/rapport/memo geldt, is nog niet vastgesteld.
+- **Uitzondering Word-offerte (besluit Paul, op basis van het offertesjabloon):** horizontaal logo **mét** tagline, zwart, herhalend op elke pagina. Het bronbestand overrulet hier de standaardregel. Of dit ook voor brief/rapport/memo geldt, is nog niet vastgesteld.
 
 ### 1.3 Chevron (`›`) als kopmarkering
 
@@ -483,7 +485,7 @@ Dit is de werkende maatvoering; nieuwe presentaties bouwen hierop (zie ook §6 o
 
 | Element | Positie (inch) | Toelichting |
 |---|---|---|
-| Linker fotostrook | x=0, y=0, w=0,80, h=7,18 | Foto uit `Powerpoint_sjabloon.potx`, navy-tint (`#27275B`, 62%) |
+| Linker fotostrook | x=0, y=0, w=0,80, h=7,18 | `DBF_fotostrook_zw.png`: zwart-wit, zonder kleurfilter |
 | Navy footerbalk | x=0, y=7,18, w=9,35, h=0,32 | **Bewust korter dan de dia** — laat ruimte vrij voor een opdrachtgeverslogo naast het DBF-logo |
 | DBF-logo | w=1,3, rechts uitgelijnd op x=12,67 (= contentmarge-rand), y=6,64 | Zwart logo, **los boven** de balk in het wit — niet op/in de balk zelf, die is te dun (0,32") voor de logohoogte (0,42") |
 | Contentmarge | x=1,62, breedte 11,05 | Geldt voor titel, body en footerbijschriften |
@@ -497,16 +499,16 @@ Dit is de werkende maatvoering; nieuwe presentaties bouwen hierop (zie ook §6 o
 
 **Scheidingsdia:** effen koningsblauw, nummer in goud, titel wit. Eventueel een foto ernaast (§1.7). Geen patroon.
 
-**Slotdia:** patroon (`DBF_patroon_koningsblauw.svg`, Bijlage B) over de volle dia. In het midden "Dank voor uw aandacht" (Merriweather bold, wit) en daaronder het logo wit mét tagline, 0,7 inch hoog.
+**Slotdia:** patroon over de volle dia (`DBF_patroon_slotdia_koningsblauw.png`, Bijlage B), met in het midden het logo wit mét tagline, 0,7 inch hoog. Geen tekst.
 
-**Foto-assets uit het sjabloon (door Paul aangeleverd, projectmap):**
+**Foto-assets uit het sjabloon** (overgenomen uit `Powerpoint_sjabloon.potx`):
 
 | Bestand | Gebruik | Behandeling |
 |---|---|---|
-| `Schermafbeelding_20260909_om_19_09_17.png` (kathedraal-detail) | Linker fotostrook op contentdia's | Koningsblauwe tint `#27275B` op 62% |
-| `Schermafbeelding_20260909_om_19_10_04.png` (silhouetten op het strand) | Openingsdia, rechterhelft — alleen als laatste keuze (§1.7) | Ongefilterd, crop op hoofd-tot-voeten, niet centreren op de lucht |
+| `DBF_fotostrook_zw.png` (kathedraal-detail, 88 × 790 px) | Linker fotostrook op contentdia's, alleen in PowerPoint | Zwart-wit, **zonder kleurfilter**. Al op maat (verhouding 0,1114); plaatsen op 0,80 × 7,18 inch, niet opnieuw bijsnijden |
+| `DBF_titelfoto_strand.jpg` (silhouetten op het strand, 2765 × 1844 px) | Openingsdia, rechterhelft — alleen als laatste keuze (§1.7) | Ongefilterd; per presentatie bijsnijden op hoofd-tot-voeten, niet centreren op de lucht |
 
-De bestandsnamen zijn generieke schermafbeeldingen; het zijn wel de juiste sjabloonfoto's. Strandsilhouetten nooit in HTML gebruiken (§1.6).
+URL's: `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/DBF_fotostrook_zw.png` en `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/DBF_titelfoto_strand.jpg`. De strook is klein (de foto in het sjabloon heeft niet meer pixels); op een groot scherm is hij iets zacht. Strandsilhouetten nooit in HTML gebruiken (§1.6).
 
 **Crop zonder vervorming:** zie §1.5.
 
@@ -531,7 +533,7 @@ Procedure:
 
 ### 3.7 Chevron-bibliotheek — alle paletkleuren (ook bruikbaar in Word)
 
-De chevron is **in elke kleur uit het palet** (§1.1) beschikbaar als transparante PNG, allemaal met dezelfde vorm (§1.3). Een nieuwe kleur nodig? Genereer die uit de vectorpunten, niet door een bestaande PNG te verkleuren.
+De chevron is **in elke kleur uit het palet** (§1.1) beschikbaar als transparante PNG (924 × 1316 px), allemaal met dezelfde vorm (§1.3). Ophalen via `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/<bestandsnaam>`. Een nieuwe kleur nodig? Genereer die uit de vectorpunten, niet door een bestaande PNG te verkleuren.
 
 | Bestand | Hex | Paletnaam | Opmerking |
 |---|---|---|---|
@@ -555,7 +557,7 @@ standaard navy of goud. Grijs, crème en de lichte navy-tint zijn alleen bruikba
 
 ## 4. Word
 
-Bron: `Offertesjabloon.dotx`, gevalideerd in Word. Logo-tagline: zie de uitzondering in §1.2.
+Bron: `DBF_offerte_sjabloon.dotx` (afgeleid van het oorspronkelijke `Offertesjabloon.dotx`), gevalideerd in Word. Logo-tagline: zie de uitzondering in §1.2.
 
 ### 4.1 Offerte
 
@@ -588,7 +590,7 @@ Deze marges gelden voor de offerte; voor brief en rapport zijn ze nog niet vastg
 
 #### Koppen
 - Geïmplementeerd als **echte Word-stijl** (Heading 1, outline-niveau ingesteld — navigeerbaar/TOC-geschikt), niet als losse vet-opmaak.
-- Uiterlijk: Calibri Light, vet, 10,5pt (zelfde grootte als body — geen niveau-hiërarchie in grootte).
+- Uiterlijk: Calibri Light, vet, 10,5pt, zwart (zelfde grootte als body — geen niveau-hiërarchie in grootte). Vastgelegd in de stijl zelf, zodat een nieuwe kop niet in Word-standaardblauw verschijnt.
 
 #### Tabel (bijv. planning & investering) — geldt voor élke tabel met data
 - Randen: **bovenrand + horizontale lijnen tussen rijen** (zwart, dun, ~0,1mm).
@@ -614,8 +616,7 @@ Deze marges gelden voor de offerte; voor brief en rapport zijn ze nog niet vastg
 - Geen goud, geen `#30475E`, geen `#ECECEC` als hex — die kwamen in dit document niet voor.
 
 #### Bestand
-- `DBF_offerte_sjabloon.dotx` — Word-template met bovenstaande waarden, generieke placeholders (`[Naam klant]`, `[Fase 1: omschrijving]`, etc.), algemene voorwaarden verbatim overgenomen (die zijn al generiek/herbruikbaar).
-- Let op: het sjabloon heeft nog de oude footerkleur `#15284B`; bij de volgende versie omzetten naar `#27275B`.
+- `DBF_offerte_sjabloon.dotx` — Word-template met bovenstaande waarden, generieke placeholders (`[Naam klant]`, `[Fase 1: omschrijving]`, etc.), algemene voorwaarden verbatim overgenomen (die zijn al generiek/herbruikbaar). URL: `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/DBF_offerte_sjabloon.dotx`.
 
 ### 4.2 Regels voor álle Word-documenten (ook rapport/boekje en memo)
 
@@ -695,14 +696,14 @@ Groen is geen garantie dat een document foutloos, juridisch juist of AVG-proof i
 - **Slidemaat:** `Powerpoint_sjabloon.potx` is custom 22 × 12,375 inch (16:9); de referentie-implementatie gebruikt standaard 13,333 × 7,5 inch. Behouden of standaardiseren?
 - **Assetbibliotheek:** schone transparante witte logo's als SVG aanvragen bij de bron (de PNG's in Bijlage A volstaan intussen).
 - **Openingsdia PowerPoint:** exacte breedte van het blauwe tekstvlak en de plek van een klantlogo (co-branding) vastleggen aan de hand van een goedgekeurd voorbeeld.
-- **Patroonbestanden (Bijlage B):** staan nog niet op GitHub; uploaden naast de logo's en de URL's in B.1 opnemen.
 - **Zandvariant van het patroon:** twee voorstellen in proef (B.2). Visuele keuze nog te maken; daarna pas vastleggen.
+- **C.22 (`005.jpg`):** staat nog niet op GitHub.
 - **Ken je de foto?:** de pagina is vanuit de AI-omgeving niet te controleren (website blokkeert automatische toegang). Werking periodiek zelf nagaan.
 - **Praktijktoets:** de gids toetsen met een HTML-lesbrief, een PowerPoint en een Word-offerte, elk met kwaliteitsrapportage. Terugkerende problemen leiden tot een aanpassing van de gids; incidentele niet.
 
 ---
 
-## Bijlage A — Logo-assets (via GitHub)
+## Bijlage A — Assets (via GitHub)
 
 De logo's en beeldmerken staan als echte, transparante PNG's in de openbare GitHub-repository **dbfbeeldbank/dbf**, naast de beeldbank (Bijlage C). De witte versies zijn de gerepareerde varianten (§1.2), gecontroleerd op donkere en lichte achtergrond. Alle zes links getest en bereikbaar op 10 oktober 2026.
 
@@ -719,6 +720,24 @@ De logo's en beeldmerken staan als echte, transparante PNG's in de openbare GitH
 | `DBF-logo-zwart-tagline.png` | 1244 × 370 | Omslag en, als uitzondering, de koptekst van de Word-offerte (§1.2). |
 | `DBF-beeldmerk-wit.png` | 944 × 1083 | Alleen los, nooit naast het logo (§1.2). Bijvoorbeeld klein rechtsonder op een donkere accentdia (§3.5). |
 | `DBF-beeldmerk-zwart.png` | 944 × 1083 | Alleen los, nooit naast het logo (§1.2). |
+
+**Overige assets.** Alles staat in de hoofdmap van de repository; URL = `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/<bestandsnaam>`. De volledige lijst, met afmeting, sha256-controlegetal en status per bestand, staat in **`DBF_assets_manifest.csv`** (https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/DBF_assets_manifest.csv).
+
+| Bestand | Wat | Zie |
+|---|---|---|
+| `DBF_chevron.svg` + `DBF_chevron_*.png` (10×) | Chevron, vector en in elke paletkleur | §1.3, §3.7 |
+| `DBF_patroon_*.svg` (6×), `DBF_patroon_slotdia_koningsblauw.png`, `patroon.py` | Decoratief patroon, dia-afbeelding en generator | Bijlage B |
+| `DBF_fotostrook_zw.png`, `DBF_titelfoto_strand.jpg` | Sjabloonfoto's PowerPoint | §3.5 |
+| `Powerpoint_sjabloon.potx` | PowerPoint-sjabloon | §3, §6 |
+| `DBF_offerte_sjabloon.dotx`, `dbf_offerte_sjabloon.pdf` | Offertesjabloon en voorbeeld | §4.1 |
+| `DB_brief_sjabloon.pdf`, `DBF_rapport_sjabloon.pdf` | Voorbeelden brief en rapport | §1.3, §4.2 |
+| `kleurenpalet.png` | Bron van het palet | §1.1 |
+| `DBF_algemene_voorwaarden.md` | Algemene voorwaarden | §4.1 |
+| `DBF_ontwikkellogboek.md` | Ontwikkelgeschiedenis | — |
+| Beeldbank | Historische foto's, portretten, teambeelden | Bijlage C |
+
+**Noodroute:** lukt downloaden niet, vraag dan om `DBF_huisstijl_assets.zip`.
+
 
 ### Logo — wit, zonder tagline, voor donkerblauwe achtergrond (klein / herhalend)
 
@@ -795,8 +814,10 @@ HTML (na inbedden): `<img src="data:image/png;base64,…" alt="de Betekenisfabri
 | `DBF_patroon_navy.svg` | Uitzondering | Alleen als donker marine bewust gemotiveerd is |
 | `DBF_patroon_zand_A_voorstel.svg` | Voorstel, in proef | Warme, rustige variant op zand |
 | `DBF_patroon_zand_B_voorstel.svg` | Voorstel, in proef | Idem, zachter contrast |
+| `DBF_patroon_slotdia_koningsblauw.png` | Vastgesteld | Koningsblauwe variant als volle dia (4000 × 2250 px, 300 dpi, rijafstand 0,43 inch). Voor de slotdia in PowerPoint |
+| `patroon.py` | — | Generator van alle bovenstaande bestanden (B.5) |
 
-Alle bestanden zijn vector en naadloos herhaalbaar, met dezelfde geometrie (B.5). Ze horen naast de logo's op GitHub (`dbfbeeldbank/dbf`). Niet per as schalen; bijsnijden in plaats van vervormen (§1.5). Op een dia plaats je het patroon als afbeelding van de volle dia (bij voorkeur PNG op 300 dpi, rijafstand ±0,43 inch).
+De SVG-bestanden zijn vector, met dezelfde geometrie (B.5). Het zijn vaste vellen, geen tegels: naast elkaar leggen geeft een naad. Een ander formaat nodig? Genereer het met `patroon.py`. Alle bestanden staan op GitHub: `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/<bestandsnaam>`. Niet per as schalen; bijsnijden in plaats van vervormen (§1.5). Op een dia plaats je het patroon als afbeelding van de volle dia (bij voorkeur PNG op 300 dpi, rijafstand ±0,43 inch).
 
 ### B.2 Kleur
 
@@ -808,7 +829,7 @@ Alle bestanden zijn vector en naadloos herhaalbaar, met dezelfde geometrie (B.5)
 | Zand A | `#ECE4D7` | `#D9CEBB` | Warm, rustig, verfijnd | Voorstel |
 | Zand B | `#ECE4D7` | `#E2D8C6` | Idem, zachter | Voorstel |
 
-Geen goud in het patroon: geen gouden lijnen, geen metallic, verlopen of glans. Goud blijft voor de korte accentlijn en het logo op donker. De zandkleuren in de lijnen zijn proefwaarden, geen vastgestelde huisstijlkleuren; vergelijking in `DBF_patroon_proef_zand.png`.
+Geen goud in het patroon: geen gouden lijnen, geen metallic, verlopen of glans. Goud blijft voor de korte accentlijn en het logo op donker. De zandkleuren in de lijnen zijn proefwaarden, geen vastgestelde huisstijlkleuren.
 
 ### B.3 Toepassing per formaat
 
@@ -821,7 +842,7 @@ Geen goud in het patroon: geen gouden lijnen, geen metallic, verlopen of glans. 
 **PowerPoint**
 - Openingsdia: koningsblauw tekstvlak links, foto rechts; logo met tagline 0,5 inch hoog, linksonder.
 - Scheidingsdia: effen koningsblauw, nummer in goud, titel wit; eventueel een foto. Geen patroon.
-- Slotdia: patroon over de volle dia, "Dank voor uw aandacht" en logo met tagline gecentreerd (0,7 inch hoog).
+- Slotdia: patroon over de volle dia (`DBF_patroon_slotdia_koningsblauw.png`), logo met tagline gecentreerd (0,7 inch hoog). Geen tekst.
 - Logomaten gelden voor de standaard dia van 13,333 × 7,5 inch.
 - Het patroon verschijnt hooguit één keer per presentatie. Plaatsen als afbeelding, niet als getegelde vulling.
 
@@ -857,7 +878,7 @@ Vastgesteld 10 oktober 2026 (besluit Paul). Generator: `patroon.py`.
 
 > Deze beeldbank bevat 18 historische foto's (C.01–C.17 en C.46), elf eigen beelden met toelichting (C.18–C.28) en 17 aanvullende eigen bestanden (C.29–C.45).
 >
-> **Ophalen:** altijd via de GitHub-URL (`https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/…`). Stand 10 oktober 2026: 45 bestanden, alle URL's getest en bereikbaar. Uitzondering: C.22 (`005.jpg`) staat alleen op de website.
+> **Ophalen:** altijd via de GitHub-URL (`https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/…`). Stand 10 oktober 2026: alle URL's staan in `DBF_assets_manifest.csv`. Uitzondering: C.22 (`005.jpg`) staat alleen op de website.
 >
 > **Vindplaats ≠ opslag.** De eigen website en GitHub zijn publicatie- of opslaglocaties, niet de oorspronkelijke archiefvindplaats. Per historische foto staat de oorspronkelijke vindplaats apart vermeld. Een zoekingang (bijv. de fotocollectie van het Nationaal Archief) is géén gecontroleerde, permanente fotoregistratie.
 >
@@ -937,10 +958,10 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 **Oorspronkelijke bestandsnaam:** `Oostenrijkse_Rode_Kruis_Kalonex,_hier_te_Dordrecht_,_zal_worden_ingezet_bij_de_%E2%80%A6,_Bestanddeelnr_905-5501.jpg`
 **Oorspronkelijke vindplaats (Wikimedia Commons):** https://commons.wikimedia.org/wiki/File:Oostenrijkse_Rode_Kruis_Kalonex,_hier_te_Dordrecht_,_zal_worden_ingezet_bij_de_%E2%80%A6,_Bestanddeelnr_905-5501.jpg
 *Let op:* Commons is de ontsluitingspagina; zie de bestandsbeschrijving voor de archiefinstelling en originele catalogusgegevens.
-**Bestand (GitHub):** `Oostenrijkse_Rode_Kruis_Kalonex_hier_te_Dordrecht__zal_worden_ingezet_bij_de_…_Bestanddeelnr_905-5501.jpg`
-**Afbeeldings-URL:** https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/Oostenrijkse_Rode_Kruis_Kalonex_hier_te_Dordrecht__zal_worden_ingezet_bij_de_%E2%80%A6_Bestanddeelnr_905-5501.jpg
+**Bestand (GitHub):** `Oostenrijkse_Rode_Kruis_Kalonex_Dordrecht_Bestanddeelnr_905-5501.jpg`
+**Afbeeldings-URL:** https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/Oostenrijkse_Rode_Kruis_Kalonex_Dordrecht_Bestanddeelnr_905-5501.jpg
 
-[![Oostenrijkse Rode Kruis-ambulance (1953)](https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/Oostenrijkse_Rode_Kruis_Kalonex_hier_te_Dordrecht__zal_worden_ingezet_bij_de_%E2%80%A6_Bestanddeelnr_905-5501.jpg)](https://debetekenisfabriek.nl/wp-content/uploads/2026/10/Ken_je_de_foto.html "Over deze foto")
+[![Oostenrijkse Rode Kruis-ambulance (1953)](https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/Oostenrijkse_Rode_Kruis_Kalonex_Dordrecht_Bestanddeelnr_905-5501.jpg)](https://debetekenisfabriek.nl/wp-content/uploads/2026/10/Ken_je_de_foto.html "Over deze foto")
 
 ### C.05 Vrijwilligers in Nieuwerkerk (1955)
 
