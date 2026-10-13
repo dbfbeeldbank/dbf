@@ -1,6 +1,6 @@
 # DBF Huisstijlgids — één bron voor HTML, PDF, PowerPoint en Word
 
-> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 10 oktober 2026 — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
+> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 13 oktober 2026 (nieuwe chevron, nieuw patroon, fotostrook in kleur, uitgebreide fotobeschrijvingen) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
 >
 > Drie documenten, elk met een eigen functie; ze herhalen elkaars inhoud niet:
 > - **Deze huisstijlgids:** de geldende regels en ontwerpprincipes. De normatieve bron.
@@ -118,7 +118,8 @@ Het eerdere HTML/Word-blauw `#15284B` vervalt. Waar in deze gids "donkerblauw" o
 
 - Altijd het officiële logobestand. Nooit een zelfgetekende benadering.
 - Gebruik alleen de logo's en beeldmerken uit **Bijlage A**. De witte bestanden in de oude assetbibliotheek (`Logo_..._wit_....png`, `Beeldmerk_wit_....png`) zijn beschadigd (wit op wit, zonder transparantie): niet gebruiken.
-- **Het hexagon is uitsluitend de vorm van het beeldmerk zelf.** Het is geen decoratief motief, geen kopmarkering en geen bullet; daarvoor is de chevron (§1.3).
+- **Het hexagon als losse vorm is uitsluitend het beeldmerk zelf.** Een getekende zeshoek is geen decoratief motief, geen kopmarkering en geen bullet; daarvoor is de chevron (§1.3).
+- **Uitzondering: het patroon (Bijlage B).** Daarin ontstaat de zeshoek uit chevrons die elkaar aankijken. Dat is geen toegevoegd ornament maar een gevolg van de constructie, en daarom toegestaan. Er wordt nergens een zeshoeklijn getekend.
 - Gebruik nooit het losse beeldmerk náást het logo: het logo bevat het beeldmerk al.
 
 **Tagline "IDENTITY MARKETING":**
@@ -129,13 +130,16 @@ Het eerdere HTML/Word-blauw `#15284B` vervalt. Waar in deze gids "donkerblauw" o
 
 Bron: `Schermafbeelding_20260910_om_16_01_39.png`. Een gestileerde, dikke "›" — geen tekstkarakter maar een los vlak met scherpe punten. Komt ook terug in de Word-sjablonen als opsommingsteken bij ingesprongen tekst (`DB_brief_sjabloon.pdf`, `DBF_rapport_sjabloon.pdf`).
 
-Vectorpunten (viewBox `0 0 924 1316`): `191,118 452,653 191,1188 273,1188 763,653 273,118`.
+Vectorpunten (viewBox `0 0 924 1316`): `296.7,118 461.2,653 296.7,1188 348.4,1188 657.3,653 348.4,118`.
+
+**Vorm vastgesteld 13 oktober 2026 (besluit Paul).** Dit is de chevron van 10 oktober, in de pijlrichting samengedrukt tot 63% (exact 535 / (490·√3)). De armen staan daardoor precies onder 30°: buitenhoek 120°, binnenhoek 146° (was 95° en 128°). Zo past dezelfde vorm als los teken, in het patroon (Bijlage B) en naast het beeldmerk. Er is maar één chevron; de oude vectorpunten (`191,118 452,653 191,1188 273,1188 763,653 273,118`) vervallen. Karakter: minder pijl, meer teken. Waar richting nodig is, zoals een stappenreeks met een label per stap, mogen meerdere chevrons naast elkaar staan in plaats van één spitse pijl; dat is inhoud, geen lijnaccent.
 
 - **Gebruik:** markering bij korte, betekenisvolle koppen (bijv. **"› Vandaag"**). Niet bij lange, doorlopende bullet-lijsten: daar blijft een gewone bullet passender.
 - **Kleur kiezen op basis van de achtergrond** (voldoende contrast): navy/koningsblauw op licht, goud of wit op donker.
 - **Verboden:** een herhalende rij chevrons als lijnaccent of breker, ook niet "subtiel" of "één keer per titelblok".
 - **Uitlijning:** de y-positie nooit via een geschatte offset. Centreer op de rij: `chevron-y = rij-y + rijhoogte/2 − chevron-hoogte/2`. Geldt voor elke chevron.
-- Bestanden: `DBF_chevron.svg` (schaalbaar, `fill="currentColor"`) en de PNG-bibliotheek in §3.7. In HTML: inline `<svg><polygon>` met een CSS-variabele als `fill`.
+- Bestanden: `DBF_chevron.svg` (schaalbaar, `fill="currentColor"`) en de PNG-bibliotheek in §3.7. In HTML: inline `<svg><polygon>` met een CSS-variabele als `fill`. Bestaande uitingen of scripts met de oude vectorpunten: bij de eerstvolgende bewerking omzetten.
+- **Grote chevron ('chevrondiepte'), alleen titel- en scheidingsdia:** twee grote chevrons toon op toon over elkaar, afgesneden door de rechterrand, links de titel vrij. Vaste regels: maximaal twee lagen, altijd toon op toon (`#30306A` en `#34346F` op koningsblauw), altijd afgesneden door de rechterrand, nooit in goud, nooit achter tekst. Bestand: `DBF_titeldia_chevrondiepte_koningsblauw.png` (Bijlage A).
 
 ### 1.4 Typografie per formaat
 
@@ -172,10 +176,10 @@ Gebruik alleen fontgewichten die beschikbaar of ingesloten zijn; anders bootst d
 
 - Ondergeschikt aan logo, typografie, kleur en inhoud. Nooit verplicht op een pagina of dia.
 - Alleen op afsluitende momenten: achterkant van een rapport, slotdia van een presentatie, smalle strook boven de voet van een webpagina.
-- Altijd toon op toon (lijnen op circa 10% verschil met de achtergrond). Nooit in hetzelfde vlak als een foto, nooit achter tekst of knoppen.
+- Altijd toon op toon (vormen op circa 5% verschil met de achtergrond). Nooit in hetzelfde vlak als een foto, nooit achter tekst of knoppen.
 - In beginsel maximaal één keer per uiting.
 - Donkere variant: koningsblauw is de standaard. Donker marine alleen als gemotiveerde uitzondering.
-- Bij bijzondere uitgaven mag het patroon nadrukkelijker aanwezig zijn; dat is een bewuste uitzondering, niet de standaard.
+- Bij bijzondere uitgaven mag het patroon nadrukkelijker aanwezig zijn; dat is een bewuste uitzondering, niet de standaard. Drie niveaus: **standaard** volledig toon op toon; **bijzonder** een beperkt aantal chevrons in een eigen huisstijlkleur, in één cluster; **uitzonderlijk** verbindingsstaven, alleen met een inhoudelijke reden (Bijlage B.7).
 
 Fotografie volgt het formaat: beelden die in een sjabloon een vaste plek hebben (zoals de titeldia in PowerPoint) worden niet naar andere formaten overgezet. Het logo blijft in elk formaat op zijn vaste plek staan; een foto vervangt nooit het logo.
 
@@ -274,12 +278,11 @@ Nooit losse hex-codes in de rest van het document — ook niet in SVG's (dus `fi
 
 **Dit `:root`-blok staat precies één keer in het bestand, bovenaan en compleet.** Verandert het kleurenschema, herschrijf dan dit ene blok; zet er geen tweede blok achter.
 
-
 ### 2.4 Component-kit
 
 Bouwstenen. Gebruik wat past bij het documenttype, laat weg wat niet nodig is:
 
-- **Titelblok** — donkerblauw, met logo, eyebrow-regel, titel, subtitel, eventueel een dunne effen goudlijn als breker (geen chevron-lijnaccent, zie §1.3)
+- **Titelblok** — donkerblauw, met logo, eyebrow-regel, titel, subtitel, eventueel een dunne effen goudlijn als breker (geen chevron-lijnaccent, zie §1.3). **Onder het logo een haarlijn** (1px, wit op 18%, over de breedte van de tekstkolom), ±26px onder het logo en ±40px boven de eyebrow: zo bestaat het blauwe vlak uit twee lagen en oogt het minder massief (besluit Paul, 13 oktober 2026).
 - **Hoofdstukkop** — donkerblauw blok met chevron-icoon + nummer + titel — dit is de vaste, herkenbare plek voor het chevron-icoon (zie §1.3). Het nummer krijgt **dezelfde kleur en hetzelfde lettertype/gewicht/formaat als de titel ernaast** (beide wit, `Open Sans` bold, `font-size` tussen **1.1rem en 1.3rem**, vergelijkbaar met een h3) — géén apart goud of een ander lettertype voor het cijfer. Nummer en titel horen visueel bij elkaar; laat het cijfer gewoon de kleur van de omringende tekst erven (`color` niet apart overschrijven op `.nummer`), niet weggemoffeld als klein label. Het chevron-icoon ernaast schaalt mee, ongeveer even hoog als het cijfer.
 - **"In het kort"-kader** — korte samenvatting bovenaan een sectie
 - **Doelenlijst** — gewone bullets. Geen chevron-bullets: dat oogt al snel druk over een hele pagina tekst
@@ -289,10 +292,9 @@ Bouwstenen. Gebruik wat past bij het documenttype, laat weg wat niet nodig is:
 - **Tabellen** — donkerblauw kopregel, witte tekst
 - **Figuren/diagrammen** — SVG met bijschrift
 - **Klikbare navigatie** — bij een langere tekst (vanaf een stuk of vijf secties/hoofdstukken): een vaste "Inhoud"-knop rechtsonder die een uitschuifpaneel opent, zie §2.5
-- **Footer** — donkerblauw, **wit logo zonder tagline** (Bijlage A) + documentregel. Gebruik nooit het losse beeldmerk náást het logo: het logo bevat het beeldmerk al, dus dan staat het hexagon-icoon dubbel. Geef de footer onderaan ca. 88px padding, zodat de vaste "Inhoud"-knop de documentregel niet afdekt (in print terug naar normaal).
+- **Footer** — donkerblauw, **wit logo zonder tagline** (Bijlage A) + documentregel + eventueel het webadres (`debetekenisfabriek.nl`, Open Sans semibold, goud). Staat de patroonstrook erboven (Bijlage B.3), dan scheidt een **gouden lijn van 2px over de volle breedte** strook en voet. Gebruik nooit het losse beeldmerk náást het logo: het logo bevat het beeldmerk al, dus dan staat het hexagon-icoon dubbel. Geef de footer onderaan ca. 88px padding, zodat de vaste "Inhoud"-knop de documentregel niet afdekt (in print terug naar normaal). Referentie: `DBF_voorbeeld_html.html`.
 - **Bronfragment** — letterlijk citaat uit een klantstuk (bijv. als oefenmateriaal): papiertint-vlak, dunne `--inkt-zacht` zijrand, cursief, iets kleiner dan de lopende tekst. Duidelijk anders dan de pull quote (goud), zodat lezers zien: dit is brontekst, geen eigen kernboodschap.
 - **Hergebruikte slides als figuur** — slides uit een ander klanttraject mogen als figuur worden ingebed, maar **altijd zonder het logo van die andere klant** (pixelvlak wegpoetsen naar de achtergrondkleur vóór het inbedden, daarna programmatisch controleren dat er geen restpixels over zijn). Het DBF-logo mag blijven staan. Noem de andere klant ook niet in bijschrift of bronvermelding.
-
 
 ### 2.5 Klikbare navigatie bij langere teksten
 
@@ -382,7 +384,6 @@ Elke sectie krijgt `id="<slug>"` en `data-nav-section`; elke link in het paneel 
 
 Drie dingen zitten al in deze code en moeten erin blijven: de knop verdwijnt zolang het paneel open is (`.is-hidden`), een klik op een link sluit het paneel, en de pagina scrollt niet door achter het open paneel.
 
-
 ### 2.6 Titelblok en body horizontaal laten uitlijnen
 
 De tekst in het titelblok moet precies boven de tekst in de body staan.
@@ -394,7 +395,6 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 .top-inner{max-width:800px;margin:0 auto;padding:0 24px}  /* zelfde 24px, geen padding op header.top zelf */
 ```
 
-
 ### 2.7 Toegankelijkheid — niet-onderhandelbaar
 
 - Minimale contrastratio: 4,5:1 voor lopende tekst, 3:1 voor grote koppen.
@@ -402,13 +402,11 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 - Vlakken met witte tekst erop (labels, chips, badges) staan op donkerblauw — nooit op goud, dat geeft wit-op-licht en is onleesbaar.
 - Controleer dit door het bestand daadwerkelijk te renderen, niet door alleen de code te lezen. Fouten hierin zijn met het blote oog in code makkelijk te missen.
 
-
 ### 2.8 Techniek en oplevering
 
 - Eén zelfstandig HTML-bestand: CSS inline in een `<style>`-blok, logo's, beelden **en fonts** als base64 data-URI ingebed (zie §2.2). Geen losse bestanden en geen CDN-`<link>`'s. Dit is een harde eis: een verwijzing naar een los bestand of naar Google Fonts is een gebroken oplevering, ook als het er bij jou goed uitziet.
 - Test responsief: smal (mobiel) én breed scherm. Voeg een print-mediaquery toe als het document ook afgedrukt moet kunnen worden.
 - Test met de daadwerkelijk geladen fonts vóór oplevering, niet alleen met fallback-fonts. Merriweather en Open Sans zijn beide breder dan een generieke systeemfont — bij vaste-breedte elementen (SVG-labels, badges) kan dat tot overlopende tekst leiden als je dat niet checkt.
-
 
 ### 2.9 Checklist vóór oplevering
 
@@ -465,7 +463,6 @@ In code de familienamen `Merriweather` en `Open Sans`, precies zoals ze in de in
 - Openings-, scheidings- en slotdia: zie §3.5 en Bijlage B.3.
 - Footerbalk op inhoudsdia's blijft ruim binnen de dia-breedte staan, zodat er naast het DBF-logo ook plek is voor een opdrachtgeverslogo (co-branding, zie cover-slide).
 
-
 ### 3.4 Accentgebruik: waar de huisstijl bewust "donker" inzet
 
 Opening, scheidingsdia's en slot hebben hun vaste donkere vormgeving (§3.5). Daarnaast mag **één scharniermoment** in een langere
@@ -473,7 +470,6 @@ presentatie — de conclusie of het inzicht waar de rest van het verhaal naartoe
 volle, donkere behandeling krijgen in plaats van de lichte inhouds-chrome. Dit is een bewuste
 uitzondering, geen vast om-de-zoveel-dia's-ritme: per document beoordelen welke dia het verdient.
 Voorbeeld: in een analyse van negen dia's krijgt de dia met het antwoord op de hoofdvraag deze behandeling.
-
 
 ### 3.5 Contentdia-indeling (referentie-implementatie, 16:9 standaard 13,333 × 7,5 inch)
 
@@ -485,7 +481,7 @@ Dit is de werkende maatvoering; nieuwe presentaties bouwen hierop (zie ook §6 o
 
 | Element | Positie (inch) | Toelichting |
 |---|---|---|
-| Linker fotostrook | x=0, y=0, w=0,80, h=7,18 | `DBF_fotostrook_zw.png`: zwart-wit, zonder kleurfilter |
+| Linker fotostrook | x=0, y=0, w=0,80, h=7,18 | `DBF_fotostrook.png`: in kleur, met de blauwe lucht; geen kleurfilter |
 | Navy footerbalk | x=0, y=7,18, w=9,35, h=0,32 | **Bewust korter dan de dia** — laat ruimte vrij voor een opdrachtgeverslogo naast het DBF-logo |
 | DBF-logo | w=1,3, rechts uitgelijnd op x=12,67 (= contentmarge-rand), y=6,64 | Zwart logo, **los boven** de balk in het wit — niet op/in de balk zelf, die is te dun (0,32") voor de logohoogte (0,42") |
 | Contentmarge | x=1,62, breedte 11,05 | Geldt voor titel, body en footerbijschriften |
@@ -494,21 +490,26 @@ Dit is de werkende maatvoering; nieuwe presentaties bouwen hierop (zie ook §6 o
 **Openingsdia** (volgens Bijlage B.3):
 - Links een effen tekstvlak in koningsblauw, rechts een foto. Het vlak beslaat ongeveer de linkerhelft (richtwaarde; vastleggen zodra er een goedgekeurd voorbeeld is).
 - Foto altijd aanwezig; keuze volgens §1.7: historisch beeld → sessiebeeld → strandsilhouetten. Foto en tekstvlak raken elkaar, overlappen niet. Geen patroon.
+- **Variant zonder foto ('chevrondiepte'):** volle koningsblauwe dia met twee grote chevrons toon op toon (§1.3). Gebruiken als er geen passend beeld is, of als de presentatie bewust typografisch opent. Ook voor scheidingsdia's.
+  - Teken de twee chevrons als vrije vorm (`custGeom`, in `pptxgenjs`: `CUSTOM_GEOMETRY`) met de vectorvorm uit §1.3, punt naar rechts. Achterste: middelpunt op 88,75% van de diabreedte en 50% van de hoogte, hoogte 166,7% van de diahoogte, kleur `#30306A`. Voorste: middelpunt op 95% van de breedte, hoogte 122,2% van de diahoogte, kleur `#34346F`. Het middelpunt is het midden van de vorm in de pijlrichting; wat buiten de dia valt, valt weg. De twee vormen blijven altijd samen één paar: nooit los van elkaar schalen of verschuiven.
+  - Tekst: titel wit, Merriweather bold, 40pt, links op 0,92 inch; korte gouden lijn; ondertitel of datum in goud (Open Sans) direct eronder; logo wit met tagline 0,5 inch hoog linksonder.
+  - Lukt een vrije vorm niet: `DBF_titeldia_chevrondiepte_koningsblauw.png` als afbeelding over de volle dia.
+  - Referentie: dia 2 van `DBF_voorbeeldpresentatie.pptx`.
 - In het tekstvlak: titel wit, Merriweather bold, ±36–44pt; direct eronder de korte gouden lijn (0,15" afstand); ondertitel wit direct onder de lijn (0,13" afstand). Daaronder twee metaregels: een inhoudelijke regel en de documentdatum.
 - Logo: wit, mét tagline (Bijlage A), 0,5 inch hoog, linksonder in het tekstvlak. Niet op de foto.
 
-**Scheidingsdia:** effen koningsblauw, nummer in goud, titel wit. Eventueel een foto ernaast (§1.7). Geen patroon.
+**Scheidingsdia:** effen koningsblauw, nummer in goud, titel wit. Eventueel een foto ernaast (§1.7) of de chevrondiepte (§1.3). Geen patroon.
 
-**Slotdia:** patroon over de volle dia (`DBF_patroon_slotdia_koningsblauw.png`, Bijlage B), met in het midden het logo wit mét tagline, 0,7 inch hoog. Geen tekst.
+**Slotdia:** `DBF_slotdia_beeldmerk_koningsblauw.png` over de volle dia: het patroon met het witte beeldmerk precies in het midden, in de plek van één chevronpaar (Bijlage B.6). **Geen logo en geen tekst**; het logo staat al op de openingsdia (besluit Paul, 13 oktober 2026). Referentie: dia 5 van `DBF_voorbeeldpresentatie.pptx`.
 
 **Foto-assets uit het sjabloon** (overgenomen uit `Powerpoint_sjabloon.potx`):
 
 | Bestand | Gebruik | Behandeling |
 |---|---|---|
-| `DBF_fotostrook_zw.png` (kathedraal-detail, 88 × 790 px) | Linker fotostrook op contentdia's, alleen in PowerPoint | Zwart-wit, **zonder kleurfilter**. Al op maat (verhouding 0,1114); plaatsen op 0,80 × 7,18 inch, niet opnieuw bijsnijden |
+| `DBF_fotostrook.png` (kathedraal-detail met blauwe lucht, 88 × 790 px) | Linker fotostrook op contentdia's, alleen in PowerPoint | **In kleur** (besluit Paul, 13 oktober 2026: zwart-wit maakte de dia te streng). Geen kleurfilter. Al op maat (verhouding 0,1114); plaatsen op 0,80 × 7,18 inch, niet opnieuw bijsnijden. `DBF_fotostrook_zw.png` vervalt |
 | `DBF_titelfoto_strand.jpg` (silhouetten op het strand, 2765 × 1844 px) | Openingsdia, rechterhelft — alleen als laatste keuze (§1.7) | Ongefilterd; per presentatie bijsnijden op hoofd-tot-voeten, niet centreren op de lucht |
 
-URL's: `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/DBF_fotostrook_zw.png` en `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/DBF_titelfoto_strand.jpg`. De strook is klein (de foto in het sjabloon heeft niet meer pixels); op een groot scherm is hij iets zacht. Strandsilhouetten nooit in HTML gebruiken (§1.6).
+URL's: `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/DBF_fotostrook.png` en `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/DBF_titelfoto_strand.jpg`. De strook is klein (de foto in het sjabloon heeft niet meer pixels); op een groot scherm is hij iets zacht. Strandsilhouetten nooit in HTML gebruiken (§1.6).
 
 **Crop zonder vervorming:** zie §1.5.
 
@@ -518,7 +519,6 @@ wit beeldmerk rechtsonder (± 0,4").
 **Chevron als kopmarkering:** hoogte ± 0,30–0,32", goud — op licht én op donker. Koningsblauw alleen als variant op lichte kaarten. Geen apart nummer nodig — de chevron zelf is de markering.
 
 **Uitlijning chevron:** zie §1.3.
-
 
 ### 3.6 Fonts embedden — verplichte stap, geen optie
 
@@ -533,7 +533,7 @@ Procedure:
 
 ### 3.7 Chevron-bibliotheek — alle paletkleuren (ook bruikbaar in Word)
 
-De chevron is **in elke kleur uit het palet** (§1.1) beschikbaar als transparante PNG (924 × 1316 px), allemaal met dezelfde vorm (§1.3). Ophalen via `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/<bestandsnaam>`. Een nieuwe kleur nodig? Genereer die uit de vectorpunten, niet door een bestaande PNG te verkleuren.
+De chevron is **in elke kleur uit het palet** (§1.1) beschikbaar als transparante PNG (924 × 1316 px), allemaal met dezelfde vorm (§1.3, vorm van 13 oktober 2026; de bestandsnamen zijn ongewijzigd). Ophalen via `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/<bestandsnaam>`. Een nieuwe kleur nodig? Genereer die uit de vectorpunten, niet door een bestaande PNG te verkleuren.
 
 | Bestand | Hex | Paletnaam | Opmerking |
 |---|---|---|---|
@@ -551,7 +551,6 @@ De chevron is **in elke kleur uit het palet** (§1.1) beschikbaar als transparan
 **Gebruik:** kies de kleur op basis van de achtergrond waarop de chevron staat (voldoende contrast), niet
 standaard navy of goud. Grijs, crème en de lichte navy-tint zijn alleen bruikbaar op koningsblauwe vlakken
 (openingsvlak, scheidings- en slotdia, donkere accentdia) — op wit vallen ze niet op.
-
 
 ---
 
@@ -692,11 +691,15 @@ Groen is geen garantie dat een document foutloos, juridisch juist of AVG-proof i
 
 - **PDF:** geen eigen gids. Openstaande keuze: PDF als export van Word-opmaak, als HTML-export, of een aparte drukopmaak.
 - **Tagline in Word buiten de offerte:** geldt de offerte-uitzondering (herhalend mét tagline) ook voor brief, rapport en memo?
-- **PowerPoint-sjabloonstructuur:** échte slidemaster/layouts met placeholders vs. huidige opzet (losse vormen per dia) — nog te beslissen.
+- **PowerPoint-sjabloon:** `Powerpoint_sjabloon.potx` (in de release) is het oude bronbestand van september en **geen** DBF-sjabloon; niet gebruiken als basis. De geldende vormgeving is de referentie-implementatie in §3.5 (voorbeeld: `DBF_voorbeeldpresentatie.pptx`). Volgende stap: een eigen DBF-sjabloon met echte slidemaster op 13,333 × 7,5 inch, gebouwd vanuit die referentie.
 - **Slidemaat:** `Powerpoint_sjabloon.potx` is custom 22 × 12,375 inch (16:9); de referentie-implementatie gebruikt standaard 13,333 × 7,5 inch. Behouden of standaardiseren?
 - **Assetbibliotheek:** schone transparante witte logo's als SVG aanvragen bij de bron (de PNG's in Bijlage A volstaan intussen).
 - **Openingsdia PowerPoint:** exacte breedte van het blauwe tekstvlak en de plek van een klantlogo (co-branding) vastleggen aan de hand van een goedgekeurd voorbeeld.
 - **Zandvariant van het patroon:** twee voorstellen in proef (B.2). Visuele keuze nog te maken; daarna pas vastleggen.
+
+- **Klantinhoud in het oude sjabloon:** `Powerpoint_sjabloon.potx` bevat nog het logo en de tekst van een klanttraject. Vervalt zodra het eigen DBF-sjabloon er is.
+- **Oude chevron in voorbeeldbestanden:** `DB_brief_sjabloon.pdf` en `DBF_rapport_sjabloon.pdf` tonen nog de chevron en het patroon van vóór 13 oktober. Deze gids en de bestanden in Bijlage A/B gaan voor. Bijwerken vraagt de Word-bronbestanden.
+- **Rustvergelijking:** het nieuwe patroon bestaat uit vlakken, het oude uit lijnen. De dekking van 5% is gekozen zodat beide even aanwezig ogen; in de praktijk toetsen op beamer en drukwerk.
 - **C.22 (`005.jpg`):** staat nog niet op GitHub.
 - **Ken je de foto?:** de pagina is vanuit de AI-omgeving niet te controleren (website blokkeert automatische toegang). Werking periodiek zelf nagaan.
 - **Praktijktoets:** de gids toetsen met een HTML-lesbrief, een PowerPoint en een Word-offerte, elk met kwaliteitsrapportage. Terugkerende problemen leiden tot een aanpassing van de gids; incidentele niet.
@@ -726,9 +729,12 @@ De logo's en beeldmerken staan als echte, transparante PNG's in de openbare GitH
 | Bestand | Wat | Zie |
 |---|---|---|
 | `DBF_chevron.svg` + `DBF_chevron_*.png` (10×) | Chevron, vector en in elke paletkleur | §1.3, §3.7 |
-| `DBF_patroon_*.svg` (6×), `DBF_patroon_slotdia_koningsblauw.png`, `patroon.py` | Decoratief patroon, dia-afbeelding en generator | Bijlage B |
-| `DBF_fotostrook_zw.png`, `DBF_titelfoto_strand.jpg` | Sjabloonfoto's PowerPoint | §3.5 |
-| `Powerpoint_sjabloon.potx` | PowerPoint-sjabloon. **Niet in de hoofdmap** (te groot, 28 MiB), maar als bijlage bij de GitHub-release: {R}Powerpoint_sjabloon.potx | §3, §6 |
+| `DBF_patroon_*.svg` (6×), `DBF_patroon_slotdia_koningsblauw.png`, `patroon.py` | Decoratief patroon, dia-afbeelding en generator (ook van de chevron) | Bijlage B |
+| `DBF_titeldia_chevrondiepte_koningsblauw.png` | Achtergrond titel- en scheidingsdia zonder foto (4000 × 2250 px) | §1.3, §3.5 |
+| `DBF_slotdia_beeldmerk_koningsblauw.png` | Slotdia: patroon met het beeldmerk in de middelste cel (4000 × 2250 px) | §3.5, B.6 |
+| `DBF_voorbeeldpresentatie.pptx`, `DBF_voorbeeld_html.html`, `DBF_voorbeeld_achterkant_A4.pdf` | Referentievoorbeelden: zo hoort het eruit te zien (de presentatie heeft geen ingesloten lettertypen; voor een echte uiting §3.6 volgen) | §2.4, §3.5, B.3 |
+| `DBF_fotostrook.png`, `DBF_titelfoto_strand.jpg` | Sjabloonfoto's PowerPoint | §3.5 |
+| `Powerpoint_sjabloon.potx` | PowerPoint-sjabloon. **Niet in de hoofdmap** (te groot, 28 MiB), maar als bijlage bij de GitHub-release: https://github.com/dbfbeeldbank/dbf/releases/latest/download/Powerpoint_sjabloon.potx | §3, §6 |
 | `DBF_offerte_sjabloon.dotx`, `dbf_offerte_sjabloon.pdf` | Offertesjabloon en voorbeeld | §4.1 |
 | `DB_brief_sjabloon.pdf`, `DBF_rapport_sjabloon.pdf` | Voorbeelden brief en rapport | §1.3, §4.2 |
 | `kleurenpalet.png` | Bron van het palet | §1.1 |
@@ -736,8 +742,7 @@ De logo's en beeldmerken staan als echte, transparante PNG's in de openbare GitH
 | `DBF_ontwikkellogboek.md` | Ontwikkelgeschiedenis | — |
 | Beeldbank | Historische foto's, portretten, teambeelden | Bijlage C |
 
-**Noodroute:** lukt downloaden niet, vraag dan om `DBF_huisstijl_assets.zip`. Die staat ook als bijlage bij de GitHub-release: {R}DBF_huisstijl_assets.zip
-
+**Noodroute:** lukt downloaden niet, vraag dan om `DBF_huisstijl_assets.zip`. Die staat ook als bijlage bij de GitHub-release: https://github.com/dbfbeeldbank/dbf/releases/latest/download/DBF_huisstijl_assets.zip
 
 ### Logo — wit, zonder tagline, voor donkerblauwe achtergrond (klein / herhalend)
 
@@ -799,7 +804,6 @@ Alleen los, nooit naast het logo (§1.2).
 
 HTML (na inbedden): `<img src="data:image/png;base64,…" alt="de Betekenisfabriek" width="28" height="32">`
 
-
 ---
 
 ## Bijlage B — Decoratief patroon
@@ -814,75 +818,103 @@ HTML (na inbedden): `<img src="data:image/png;base64,…" alt="de Betekenisfabri
 | `DBF_patroon_navy.svg` | Uitzondering | Alleen als donker marine bewust gemotiveerd is |
 | `DBF_patroon_zand_A_voorstel.svg` | Voorstel, in proef | Warme, rustige variant op zand |
 | `DBF_patroon_zand_B_voorstel.svg` | Voorstel, in proef | Idem, zachter contrast |
-| `DBF_patroon_slotdia_koningsblauw.png` | Vastgesteld | Koningsblauwe variant als volle dia (4000 × 2250 px, 300 dpi, rijafstand 0,43 inch). Voor de slotdia in PowerPoint |
-| `patroon.py` | — | Generator van alle bovenstaande bestanden (B.5) |
+| `DBF_patroon_koningsblauw_A4.svg` | Vastgesteld | Staand A4: achterkant rapport (Word/PDF), met het beeldmerk in de middelste cel (B.6) |
+| `DBF_patroon_wit_A4.svg` | Vastgesteld | Staand A4, op wit: alleen bijzondere uitgaven |
+| `DBF_patroon_slotdia_koningsblauw.png` | Vastgesteld | Alleen het patroon als volle dia (4000 × 2250 px, randlengte 1,25 inch), zonder beeldmerk. Voor eigen samenstellingen |
+| `DBF_slotdia_beeldmerk_koningsblauw.png` | Vastgesteld | Slotdia PowerPoint: patroon met het beeldmerk in de middelste cel (B.6) |
+| `patroon.py` | — | Generator van alle bovenstaande bestanden, de chevron-SVG, de tien chevron-PNG's (§3.7) en de titeldia (§1.3) |
 
-De SVG-bestanden zijn vector, met dezelfde geometrie (B.5). Het zijn vaste vellen, geen tegels: naast elkaar leggen geeft een naad. Een ander formaat nodig? Genereer het met `patroon.py`. Alle bestanden staan op GitHub: `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/<bestandsnaam>`. Niet per as schalen; bijsnijden in plaats van vervormen (§1.5). Op een dia plaats je het patroon als afbeelding van de volle dia (bij voorkeur PNG op 300 dpi, rijafstand ±0,43 inch).
+De SVG-bestanden zijn vector, met dezelfde geometrie (B.5). Het zijn vaste vellen, geen tegels: naast elkaar leggen geeft een naad. Een ander formaat nodig? Genereer het met `patroon.py`. Alle bestanden staan op GitHub: `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/<bestandsnaam>`. Niet per as schalen; bijsnijden in plaats van vervormen (§1.5). Op een dia plaats je het patroon als afbeelding van de volle dia (PNG, randlengte ±1,25 inch).
 
 ### B.2 Kleur
 
-| Variant | Achtergrond | Lijnen | Karakter | Status |
-|---|---|---|---|---|
-| Koningsblauw | `#27275B` | 10% wit | Krachtig, herkenbaar, uitgesproken | Vastgesteld (standaard) |
-| Wit | `#FFFFFF` | 8–10% koningsblauw | Licht, voor bijzondere uitgaven | Vastgesteld |
-| Donker marine | `#222831` | 10% wit | — | Alleen gemotiveerde uitzondering |
-| Zand A | `#ECE4D7` | `#D9CEBB` | Warm, rustig, verfijnd | Voorstel |
-| Zand B | `#ECE4D7` | `#E2D8C6` | Idem, zachter | Voorstel |
+| Variant | Achtergrond | Chevrons | Status |
+|---|---|---|---|
+| Koningsblauw | `#27275B` | wit, 5% dekking | Vastgesteld (standaard) |
+| Wit | `#FFFFFF` | koningsblauw, 5% dekking | Vastgesteld |
+| Donker marine | `#222831` | wit, 5% dekking | Alleen gemotiveerde uitzondering |
+| Zand A | `#ECE4D7` | `#C1A57B`, 18% dekking | Voorstel |
+| Zand B | `#ECE4D7` | `#C1A57B`, 12% dekking | Voorstel |
 
-Geen goud in het patroon: geen gouden lijnen, geen metallic, verlopen of glans. Goud blijft voor de korte accentlijn en het logo op donker. De zandkleuren in de lijnen zijn proefwaarden, geen vastgestelde huisstijlkleuren.
+In de standaard geen goud: geen gouden vormen, geen metallic, verlopen of glans. Goud blijft voor de korte accentlijn, het logo op donker en de bijzondere toepassingen in B.7.
 
 ### B.3 Toepassing per formaat
 
 **Word en PDF (rapport)**
 - Omslag: als er een passend beeld is (§1.7) een foto in het bovenste ±56%; anders typografisch. Gouden lijn, titel op wit, logo met tagline rechtsonder. Geen patroon.
 - Binnenwerk en hoofdstukopeningen: geen patroon.
-- Achterkant: patroon (koningsblauw) over de volle pagina, logo en website gecentreerd. Een achterkant zonder patroon is ook in huisstijl.
-- PDF volgt de bronopmaak (§0). Het patroon blijft vector; fijnste lijn minimaal 0,25 pt.
+- Achterkant: `DBF_patroon_koningsblauw_A4.svg` over de volle pagina, met het witte beeldmerk in de middelste cel (B.6) en onderaan gecentreerd het webadres (Open Sans semibold, 10,5 pt, `#BEBECE`, ±22 mm boven de onderrand). Geen logo. Een achterkant zonder patroon is ook in huisstijl. Referentie: `DBF_voorbeeld_achterkant_A4.pdf`.
+- PDF volgt de bronopmaak (§0). Het patroon blijft vector.
 
 **PowerPoint**
-- Openingsdia: koningsblauw tekstvlak links, foto rechts; logo met tagline 0,5 inch hoog, linksonder.
-- Scheidingsdia: effen koningsblauw, nummer in goud, titel wit; eventueel een foto. Geen patroon.
-- Slotdia: patroon over de volle dia (`DBF_patroon_slotdia_koningsblauw.png`), logo met tagline gecentreerd (0,7 inch hoog). Geen tekst.
+- Openingsdia: koningsblauw tekstvlak links, foto rechts; logo met tagline 0,5 inch hoog, linksonder. Variant zonder foto: chevrondiepte (§1.3, §3.5).
+- Scheidingsdia: effen koningsblauw, nummer in goud, titel wit; eventueel een foto of de chevrondiepte. Geen patroon.
+- Slotdia: `DBF_slotdia_beeldmerk_koningsblauw.png` over de volle dia, zonder logo en zonder tekst (B.6).
 - Logomaten gelden voor de standaard dia van 13,333 × 7,5 inch.
 - Het patroon verschijnt hooguit één keer per presentatie. Plaatsen als afbeelding, niet als getegelde vulling.
 
 **HTML**
-- Het titelblok blijft zoals in §2.4: donkerblauw, **met logo** (wit, uit Bijlage A), eyebrow, titel, subtitel en goudlijn. Deze aanvulling verandert daar niets aan.
+- Het titelblok blijft zoals in §2.4: donkerblauw, **met logo** (wit, uit Bijlage A), eyebrow, titel, subtitel en goudlijn.
 - Geen foto boven het titelblok. Een foto is optioneel en staat in de inhoud (als figuur met bijschrift), alleen als die bij het onderwerp van dít document hoort.
 - Beeld uit de PowerPoint-bibliotheek (o.a. de strandsilhouetten van de titeldia, §3) wordt niet in HTML gebruikt.
-- Geen patroon in het titelblok. Eventueel één smalle patroonstrook (circa 90 px) direct boven de footer, toon op toon. Inline SVG, ingebed. Niet verplicht.
+- Geen patroon in het titelblok. Eventueel één smalle patroonstrook (90 px) direct boven de footer, toon op toon. Inline SVG, ingebed. Niet verplicht. Tussen strook en voet een gouden lijn van 2px over de volle breedte (§2.4).
 
 ### B.4 Niet doen
 
 - Het patroon als standaardachtergrond of op elke pagina.
 - Het patroon combineren met een foto in hetzelfde vlak.
-- Het logo in een uitsparing van het patroon plaatsen.
-- Eigen kleuren, eigen schaal per as, of het patroon hertekenen.
+- Het logo of beeldmerk in een willekeurige uitsparing van het patroon. Alleen het beeldmerk precies in één cel, volgens B.6.
+- Het beeldmerk als tegel herhalen: het patroon is geen verzameling logo's.
+- Eigen kleuren, eigen schaal per as, of het patroon hertekenen. Geen zeshoeklijnen toevoegen.
 - Losse chevrons uit het patroon als lijnaccent (§1.3).
 - Het patroon als tweede logo: zo groot of zo vaak dat het meer aandacht trekt dan inhoud, logo of typografie.
 - Een foto boven of in plaats van het titelblok met logo (HTML).
+- Het raster fijner maken dan een randlengte van ±0,5 inch op een dia: dan smelten de sterren samen en verdwijnt de chevron.
 
 ### B.5 Opbouw (ter verantwoording; gebruik de bestanden uit B.1)
 
-Vastgesteld 10 oktober 2026 (besluit Paul). Generator: `patroon.py`.
+Vastgesteld 13 oktober 2026 (besluit Paul; vervangt het liggende halfsteensverband van 10 oktober). Generator: `patroon.py`.
 
-- Eén vorm: de chevron uit §1.3, liggend (punt omhoog), als omlijning met één binnenlijn langs het midden.
-- Liggend halfsteensverband: rijafstand 86, vormlengte 201,5, tussenruimte 44 (eenheden); hoogte × 0,8.
-- Alleen de vormen, **geen diagonale of horizontale verbindingslijnen.**
-- Lijnen 10% wit op donker (8–10% koningsblauw op wit).
-- Op een dia van 13,333 inch: rijafstand ±0,43 inch.
+- Grondvorm: een honingraat met puntige zeshoeken (verticale randen), randlengte *d*. De honingraat zelf wordt nooit getekend.
+- Op elke rand liggen twee chevrons (§1.3) met de punten naar de hoekpunten en de armen naar elkaar toe. Samen vormen ze een kleine zeshoek, in drie richtingen: verticaal en twee keer schuin.
+- Op elk hoekpunt komen zo drie chevrons samen tot een Y-ster. De witte Y-voegen wijzen naar het midden van de grote zeshoeken.
+- Maten: halve breedte van de chevron 0,408·*d*; afstand van de punt tot het hoekpunt 0,047·*d*.
+- Standaard alleen de chevrons, vlak, toon op toon (B.2).
+- Op een dia van 13,333 inch: randlengte ±1,25 inch; op staand A4: ±1,0 inch.
+- **Gecentreerd:** het raster ligt altijd zo dat het midden van één verticaal chevronpaar precies op het midden van het vlak valt. Daar komt, waar nodig, het beeldmerk (B.6).
+
+### B.6 Beeldmerk in het patroon (slotdia en achterkant)
+
+Vastgesteld 13 oktober 2026 (besluit Paul). Het beeldmerk is een regelmatige zeshoek met de punt omhoog, net als de verticale cellen van het patroon. Daarom komt het niet bovenop het patroon, maar ín het patroon: op de plek van één chevronpaar.
+
+1. **Plaats:** het raster is gecentreerd (B.5). Het verticale chevronpaar in het midden van het vlak vervalt; daar staat het beeldmerk, precies gecentreerd.
+2. **Maat:** de zeshoek van het beeldmerk is 0,906 × de randlengte *d* hoog (96% van de celbreedte). Niet groter of kleiner maken: dan past het niet meer in de cel.
+3. **Wat erbij mag:** niets op de slotdia. Op de achterkant van een rapport alleen het webadres onderaan. Geen logo, geen tagline, geen tekst bij het beeldmerk (§1.2: nooit beeldmerk én logo).
+4. **Bestand:** alleen het officiële witte beeldmerk (Bijlage A), onbewerkt, één keer per uiting.
+5. **Bestanden:** `DBF_slotdia_beeldmerk_koningsblauw.png` (dia). Voor A4 en andere maten: `patroon.py` (functies `middelste_cel` en `beeldmerk_in_cel`).
+
+### B.7 Bijzondere toepassingen (kleur en verbindingslijnen)
+
+Alleen buiten de standaarduitingen: bijzondere uitgaven, een omslag van een jubileum- of jaaruitgave, bureaubladachtergronden, seizoensbeelden.
+
+- **Kleur:** een beperkt aantal chevrons krijgt een eigen, vlakke huisstijlkleur (§1.1), in één of twee duidelijke clusters; de rest blijft toon op toon. Elke chevron één kleur: geen tweekleurige vlakken, geen glans of metallic.
+- **Verbindingsstaaf:** een dunne staaf dwars door het midden van een grote zeshoek, van ster naar ster. Breedte gelijk aan het smalle uiteinde van de chevron. Alleen tussen twee sterren die allebei kleur hebben, en alleen als de verbinding iets betekent.
+- **Seizoenen:** het raster blijft altijd intact; het seizoen zit uitsluitend in welke chevrons kleur krijgen (bijv. herfst: een cluster, een dunne valbaan en een hoop). Geen vormen die uit het raster vallen of draaien.
+- Achtergrond uit het palet (§1.1): koningsblauw, navy, blauw `#30475E`, crème of wit.
 
 ---
 
 ## Bijlage C — Beeldbank (historische foto's, portretten, teambeelden)
 
-> Deze beeldbank bevat 18 historische foto's (C.01–C.17 en C.46), elf eigen beelden met toelichting (C.18–C.28) en 17 aanvullende eigen bestanden (C.29–C.45).
+> Deze beeldbank bevat 17 historische foto's (C.01–C.15, C.17 en C.46; C.16 is op 13 oktober 2026 verwijderd), elf eigen beelden met toelichting (C.18–C.28) en 17 aanvullende eigen bestanden (C.29–C.45).
 >
 > **Ophalen:** altijd via de GitHub-URL (`https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/…`). Stand 10 oktober 2026: alle URL's staan in `DBF_assets_manifest.csv`. Uitzondering: C.22 (`005.jpg`) staat alleen op de website.
 >
 > **Vindplaats ≠ opslag.** De eigen website en GitHub zijn publicatie- of opslaglocaties, niet de oorspronkelijke archiefvindplaats. Per historische foto staat de oorspronkelijke vindplaats apart vermeld. Een zoekingang (bijv. de fotocollectie van het Nationaal Archief) is géén gecontroleerde, permanente fotoregistratie.
 >
 > De foto-omschrijvingen bij de Spaarnestad Onderwerpen-beelden zijn grotendeels werkbeschrijvingen op basis van het beeld, geen geverifieerde archiefbijschriften. Datering en rechtenstatus zijn daar nog niet vastgesteld.
+>
+> **Wat je ziet** (toegevoegd 13 oktober 2026) beantwoordt de vraag van de kijker: waar kijk ik naar? Concreet wat er te zien is, de context en wat onzeker is. Bruikbaar voor een bijschrift, de alt-tekst en *Ken je de foto?*. Wat als *Let op* is gemarkeerd, is niet geverifieerd of vraagt om voorzichtigheid.
 
 ### Gebruik door AI en vormgevers
 
@@ -901,6 +933,8 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 
 **Beschrijving:** Jongeren steken de handen uit de mouwen tijdens de maatschappelijke actie Heitje voor een karweitje.
 
+**Wat je ziet:** Op het Damrak in Amsterdam, met tramdraden en grachtenpanden op de achtergrond, zit een padvinder op zijn knieën en poetst de schoen van een man in pak met hoed. Om hen heen staan andere padvinders met fietsen en een groep toeschouwers; een bord meldt de actie. Volgens de archieftitel is de man met de hoed burgemeester Arnold d'Ailly. Bij *Heitje voor een karweitje* deden jongeren kleine klusjes voor een 'heitje', een kwartje. Het beeld laat zien hoe een kleine daad publiek en gewoon gemaakt wordt.
+
 **Identiteitsvraag:** Wat willen jullie in beweging brengen dat zonder jullie niet gebeurt?
 
 **Herkomst:** Nationaal Archief / Wikimedia Commons
@@ -914,9 +948,11 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 
 ### C.02 Bouwvakkers van de Sint-Jan (1925)
 
-**Onderwerp:** Bouwvakkers aan de Sint-Jan in ’s-Hertogenbosch (1925).
+**Onderwerp:** Bouwvakkers die aan 'de St. Jan' werkten (1925); vermoedelijk de Sint-Jan in ’s-Hertogenbosch.
 
 **Beschrijving:** Vakmensen werken samen aan een bouwwerk dat hun eigen levens zal overstijgen.
+
+**Wat je ziet:** Een groep van ruim twintig bouwvakkers poseert onder hoge bakstenen bogen, tussen puin en bouwmateriaal. De meesten dragen een pet, werkkleding of een vest; vooraan liggen en zitten er een paar op de grond. Rechts staat de uitvoerder, G.H. Huiskes, met hoed. Het is een groepsportret van mensen die trots zijn op wat ze samen maken. *Let op:* de archieftitel noemt 'de St. Jan'; dat dit de Bossche Sint-Jan is, is aannemelijk maar niet vastgesteld (het archief is het streekarchief van de Langstraat).
 
 **Identiteitsvraag:** Waaraan bouwen jullie dat groter is dan jullie organisatie?
 
@@ -931,9 +967,11 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 
 ### C.03 Amsterdamse straatmakers (1953)
 
-**Onderwerp:** Amsterdamse straatmakers helpen bij de wederopbouw in Zeeland (1953).
+**Onderwerp:** Amsterdamse straatmakers helpen bij het herstel na de Watersnoodramp (1953).
 
 **Beschrijving:** Amsterdamse straatmakers helpen bij de wederopbouw na de Watersnoodramp.
+
+**Wat je ziet:** Midden in een straat vol puin hakken vijf mannen met houwelen en schoppen de kapotte bestrating op. Langs de straat staan beschadigde woningen; op de voorgrond liggen planken en stenen. Volgens de archieftitel zijn het Amsterdamse straatmakers die na de Watersnoodramp van 1 februari 1953 helpen bij het herstel. Het beeld toont hulp die niet uit medelijden komt, maar uit vakmanschap. *Let op:* de precieze plaats noemt de titel niet.
 
 **Identiteitsvraag:** Waar verbinden jullie je aan, ook als het iets kost?
 
@@ -952,6 +990,8 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 
 **Beschrijving:** Een Oostenrijkse ambulance staat klaar om mensen uit het rampgebied te evacueren.
 
+**Wat je ziet:** Op een kade in Dordrecht staan mannen in uniform met een Rode Kruisband om de arm bij een rij ambulances; één zit gehurkt bij de voorste auto, die een Oostenrijks kenteken heeft. Op de achtergrond een hijskraan, huizen en vermoedelijk de toren van de Grote Kerk. Het beeld komt uit de dagen na de Watersnoodramp van 1953, toen hulp uit het buitenland binnenkwam. Het laat zien dat solidariteit grenzen overschrijdt.
+
 **Identiteitsvraag:** Voor wie zijn jullie er, juist wanneer het moeilijk wordt?
 
 **Herkomst:** Nationaal Archief / Wikimedia Commons
@@ -969,6 +1009,8 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 
 **Beschrijving:** Nederlandse en buitenlandse jongeren werken samen aan de wederopbouw.
 
+**Wat je ziet:** Vier jonge mannen leunen glimlachend over een half gemetselde muur, in het kozijn van een woning in aanbouw; de voorste houdt een troffel vast. Achter hen staan nieuwe rijtjeshuizen. Volgens de archieftitel zijn het vrijwilligers, onder wie buitenlandse jongeren, die in 1955 helpen bij de wederopbouw van Nieuwerkerk, een van de zwaarst getroffen dorpen bij de ramp van 1953. Een beeld van samen herbouwen, met zichtbaar plezier.
+
 **Identiteitsvraag:** Welke overtuiging brengt bij jullie mensen in beweging?
 
 **Herkomst:** Nationaal Archief / Wikimedia Commons
@@ -983,6 +1025,8 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 ### C.06 Het dorpsplein
 
 **Beschrijving:** Op een dorpsplein kruisen de levens van kinderen, boeren en andere inwoners elkaar.
+
+**Wat je ziet:** Een dorpsplein met kinderkopjes, een sierlijke lantaarnpaal met drie lampen, kale bomen en oude huizen met pannendaken. Kinderen staan met hun fietsen te praten, een man leidt een kalf over het plein en verderop staan mensen bij een winkel. Niets bijzonders gebeurt hier, en dat is precies het punt: het plein als plek waar het dagelijks leven elkaar kruist.
 
 **Identiteitsvraag:** Wat maakt dat mensen zich bij jullie ergens onderdeel van voelen?
 
@@ -1000,6 +1044,8 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 
 **Beschrijving:** Jonge vrouwen maken samen muziek in een gemeenschappelijke ruimte.
 
+**Wat je ziet:** In een eenvoudige houten ruimte, mogelijk een kamp- of verenigingsgebouw, zitten en staan een stuk of tien jonge vrouwen in vergelijkbare blouses. Eén speelt accordeon, een ander gitaar; de anderen zingen mee uit liedboekjes. Het licht valt schuin naar binnen. Een beeld van gemeenschap die ontstaat door samen iets te doen. *Let op:* wie zij zijn en waar dit is, is niet vastgesteld.
+
 **Identiteitsvraag:** Wat verbindt jullie mensen, voorbij hun functie of rol?
 
 **Herkomst:** Nationaal Archief, fotocollectie Spaarnestad Onderwerpen (7.000SPAond)
@@ -1015,6 +1061,8 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 ### C.08 De eerste vrouwelijke inwoners van Lelystad
 
 **Beschrijving:** De eerste vrouwelijke inwoners van Lelystad staan samen aan de rand van het nieuwe land.
+
+**Wat je ziet:** Een rij van ruim tien vrouwen in jassen staat schouder aan schouder tegen de bakstenen gevel van een gebouw met grote ramen; rechts is open water. Ze lachen naar de fotograaf. Volgens de werkbeschrijving zijn het de eerste vrouwelijke inwoners van Lelystad. Het beeld gaat over beginnen op een plek waar nog bijna niets is. *Let op:* deze toeschrijving is niet geverifieerd.
 
 **Identiteitsvraag:** Welke gemeenschap willen jullie helpen ontstaan?
 
@@ -1032,6 +1080,8 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 
 **Beschrijving:** Een groep kinderen verzamelt zich rond een vrouw die drinken uitdeelt.
 
+**Wat je ziet:** Een jonge vrouw in een gestreepte jurk houdt een dienblad met bekertjes vast; kinderen grijpen er van alle kanten naar. Achter haar staat een jongeman in pak, aan de muur hangen flessen. Het is een keuken- of kantinesetting, waarschijnlijk eind jaren vijftig. Een beeld van gastvrijheid en van volwassenen die iets klaarzetten voor kinderen.
+
 **Identiteitsvraag:** Waaraan merken mensen dat ze bij jullie welkom zijn?
 
 **Herkomst:** Nationaal Archief, fotocollectie Spaarnestad Onderwerpen (7.000SPAond)
@@ -1047,6 +1097,8 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 ### C.10 Voorlezen aan kinderen
 
 **Beschrijving:** Kinderen verzamelen zich rond een vrouw die een verhaal voorleest.
+
+**Wat je ziet:** Een jonge vrouw leest voor uit een boekje en wordt dicht omringd door een grote groep jonge kinderen, die over haar schouder meekijken of haar aanstaren. De kinderen dragen gebreide truien en eenvoudige kleding. Het beeld is van zo dichtbij genomen dat je er zelf bij lijkt te zitten. Het gaat over aandacht: één verhaal en een hele groep die luistert.
 
 **Identiteitsvraag:** Welk verhaal houdt jullie organisatie bij elkaar?
 
@@ -1064,6 +1116,8 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 
 **Beschrijving:** Kinderen trekken samen met een bolderwagen door een park.
 
+**Wat je ziet:** Een zonnig park met een grote berk op de voorgrond, een grasveld en een laag hek. Klein in beeld trekken kinderen een bolderwagen over het pad; er zitten kinderen in. De mensen zijn klein ten opzichte van het park, waardoor het beeld vooral rust en ruimte uitstraalt. Geschikt bij thema's als vrije tijd, buiten zijn en de openbare ruimte.
+
 **Identiteitsvraag:** Hoeveel ruimte krijgen mensen bij jullie om zelf iets te ontdekken?
 
 **Herkomst:** Nationaal Archief, fotocollectie Spaarnestad Onderwerpen (7.000SPAond)
@@ -1079,6 +1133,8 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 ### C.12 De dorpspomp
 
 **Beschrijving:** Kinderen ontmoeten elkaar bij een dorpspomp.
+
+**Wat je ziet:** Vier jongens op klompen staan bij een houten dorpspomp; één drinkt rechtstreeks uit de tuit, de anderen kijken lachend toe. Achter hen een boerderij met een kar en kale bomen. De pomp was de plek waar je water haalde en elkaar tegenkwam. Een beeld van een gedeelde voorziening als ontmoetingsplek.
 
 **Identiteitsvraag:** Waar ontstaat bij jullie de ontmoeting die er werkelijk toe doet?
 
@@ -1096,6 +1152,8 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 
 **Beschrijving:** Een plaatselijke muziekvereniging speelt voor dorpsbewoners.
 
+**Wat je ziet:** Een fanfare in klederdracht, met wijde broeken en klompen, speelt op straat: vooraan een grote trom, daarachter trompetten en een tuba. Links staat een dicht opeengepakte menigte kinderen met petten en klompen, een van hen met een vlag. De plaats is niet vastgesteld; de dracht wijst op een vissersdorp aan de voormalige Zuiderzee. Een beeld van een feestelijk moment waarbij het hele dorp uitloopt.
+
 **Identiteitsvraag:** Wat kunnen jullie samen wat niemand afzonderlijk kan?
 
 **Herkomst:** Nationaal Archief, fotocollectie Spaarnestad Onderwerpen (7.000SPAond)
@@ -1111,6 +1169,8 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 ### C.14 De biljartvereniging
 
 **Beschrijving:** Een groep mannen verzamelt zich rond een biljarttafel.
+
+**Wat je ziet:** Een stuk of twaalf mannen in pak buigen lachend over een biljarttafel zonder gaten (carambole), waarop drie ballen liggen; één man staat klaar om te stoten. Eén draagt een uniform. Boven de tafel hangen lampen. Het beeld gaat over een vereniging als plek van ontspanning, rivaliteit en kameraadschap.
 
 **Identiteitsvraag:** Wat maakt jullie tot een gemeenschap en niet alleen tot een verzameling mensen?
 
@@ -1128,6 +1188,8 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 
 **Beschrijving:** Boeren zijn aan het werk terwijl het dorp om hen heen zijn dagelijkse gang gaat.
 
+**Wat je ziet:** Een dorpsstraat met een paard en wagen; een man staat op de wagen, een ander met hoed ernaast. Een lange boom steekt schuin omhoog en op straat ligt hooi of stro; vermoedelijk wordt een vracht geladen of gelost. Kinderen lopen en fietsen er gewoon langs en op de achtergrond staat een kerktoren. Een beeld van boerenwerk midden in het dorpsleven.
+
 **Identiteitsvraag:** Wat vinden jullie zo belangrijk dat het elke dag opnieuw inzet verdient?
 
 **Herkomst:** Nationaal Archief, fotocollectie Spaarnestad Onderwerpen (7.000SPAond)
@@ -1140,27 +1202,11 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 
 [![Het hooien](https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/NL-HaNA_7.000SPAond_482038_008-groot.jpg)](https://debetekenisfabriek.nl/wp-content/uploads/2026/10/Ken_je_de_foto.html "Over deze foto")
 
-### C.16 Muziekkorps op het station
-
-> **Niet gebruiken tot de herkomst is vastgesteld.** Op de foto lijkt een militair muziekkorps in Duits uniform te spelen, vermoedelijk tijdens de bezetting. De werkbeschrijving hieronder vermeldt dat niet. Eerst het originele archiefbijschrift controleren.
-
-**Beschrijving:** Een muziekkorps speelt op een druk station, tussen reizigers en omstanders.
-
-**Identiteitsvraag:** Welke momenten verdienen het om als organisatie samen bij stil te staan?
-
-**Herkomst:** Nationaal Archief, fotocollectie Spaarnestad Onderwerpen (7.000SPAond)
-**Archiefbestandsaanduiding:** 30073 / 014 (`30073_014`)
-**Bestand (GitHub):** `NL-HaNA_7.000SPAond_30073_014-groot.jpg`
-**Afbeeldings-URL:** https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/NL-HaNA_7.000SPAond_30073_014-groot.jpg
-**Oorspronkelijke vindplaats:** Nationaal Archief, Spaarnestad Onderwerpen, toegang 7.000SPAond.
-**Zoekingang:** https://www.nationaalarchief.nl/onderzoeken/fotocollectie (zoek op bestandsaanduiding 30073 / 014)
-**Permanente registratie-URL en oorspronkelijke datering:** nog niet vastgesteld.
-
-[![Muziekkorps op het station](https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/NL-HaNA_7.000SPAond_30073_014-groot.jpg)](https://debetekenisfabriek.nl/wp-content/uploads/2026/10/Ken_je_de_foto.html "Over deze foto")
-
 ### C.17 Mannen aan boord
 
 **Beschrijving:** Vier mannen zwaaien enthousiast met hun petten vanaf een schip.
+
+**Wat je ziet:** Vier mannen staan op het dek van een schip, bij een mast met een vlaggetje, en zwaaien uitgelaten met hun petten; op de achtergrond is een kade. Het moment van vertrek of thuiskomst is niet vastgesteld. Een beeld van uitbundigheid en van een gedeeld moment van samen op weg gaan.
 
 **Identiteitsvraag:** Welke toekomst maakt dat jullie samen op weg gaan?
 
@@ -1174,12 +1220,13 @@ Keuzeregels en bijschriftvorm: zie §1.7. Hieronder de aanvullende regels uit de
 
 [![Mannen aan boord](https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/NL-HaNA_7.000SPAond_481200_012-groot.jpg)](https://debetekenisfabriek.nl/wp-content/uploads/2026/10/Ken_je_de_foto.html "Over deze foto")
 
-
 ### C.46 Samen sjoelen in het buurthuis (1953)
 
 **Onderwerp:** Samen sjoelen in het buurthuis (1953).
 
 **Beschrijving:** Op 12 mei 1953 spelen ouderen ter ontspanning een sjoelspel in een buurthuis of opvang voor ouderen in Amsterdam.
+
+**Wat je ziet:** Drie oudere vrouwen en een oudere man staan rond een lange houten sjoelbak op schragen. De vrouw rechts schuift net een schijf; de anderen kijken geconcentreerd mee. Op de achtergrond kijken nog meer mensen toe. Het is een gewoon spel, en juist daardoor een beeld van ontmoeting, ritme en meedoen op latere leeftijd.
 
 **Identiteitsvraag:** Waar maken jullie ruimte voor ontmoeting die anders niet vanzelf ontstaat?
 
@@ -1443,7 +1490,6 @@ De links verwijzen naar de oorspronkelijke bronpagina of naar een archiefzoeking
 | C.13 | De muziekvereniging | NA, Spaarnestad Onderwerpen (7.000SPAond), 482084 / 033 | zoekingang: https://www.nationaalarchief.nl/onderzoeken/fotocollectie |
 | C.14 | De biljartvereniging | NA, Spaarnestad Onderwerpen (7.000SPAond), 481200 / 035 | zoekingang: https://www.nationaalarchief.nl/onderzoeken/fotocollectie |
 | C.15 | Het hooien | NA, Spaarnestad Onderwerpen (7.000SPAond), 482038 / 008 | zoekingang: https://www.nationaalarchief.nl/onderzoeken/fotocollectie |
-| C.16 | Muziekkorps op het station | NA, Spaarnestad Onderwerpen (7.000SPAond), 30073 / 014 | zoekingang: https://www.nationaalarchief.nl/onderzoeken/fotocollectie |
 | C.17 | Mannen aan boord | NA, Spaarnestad Onderwerpen (7.000SPAond), 481200 / 012 | zoekingang: https://www.nationaalarchief.nl/onderzoeken/fotocollectie |
 | C.46 | Samen sjoelen in het buurthuis (1953) | NA, Spaarnestad Photo (7.000SPABB), 50572 | http://hdl.handle.net/10648/35429da6-58d1-a382-e063-6df0900a6686 |
 
