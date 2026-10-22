@@ -1,6 +1,6 @@
 # DBF Huisstijlgids — één bron voor HTML, PDF, PowerPoint en Word
 
-> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 13 oktober 2026 (nieuwe chevron, nieuw patroon, fotostrook in kleur, uitgebreide fotobeschrijvingen) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
+> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 22 oktober 2026 (eigen PowerPoint-sjabloon met slidemaster; auteursrechtregel onder HTML) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
 >
 > Drie documenten, elk met een eigen functie; ze herhalen elkaars inhoud niet:
 > - **Deze huisstijlgids:** de geldende regels en ontwerpprincipes. De normatieve bron.
@@ -16,7 +16,7 @@ Lees altijd de leidende principes, §0 en §1.1–§1.5, en §5 (kwaliteitsrappo
 | Je maakt | Lees | Alleen als het speelt |
 |---|---|---|
 | **HTML-pagina** | §2, Bijlage A | Beeld: §1.7 + Bijlage C · Patroonstrook: §1.6 + B.3 (HTML) |
-| **PowerPoint** | §3, Bijlage A, §1.7 (openingsdia heeft altijd een beeld), B.3 (PowerPoint) | Historische foto of sessiebeeld: Bijlage C |
+| **PowerPoint** | §3 (begin met `Powerpoint_sjabloon.potx`), Bijlage A, B.3 (PowerPoint) | Historische foto of sessiebeeld: Bijlage C |
 | **Word of PDF** | §4, Bijlage A | Beeld: §1.7 + Bijlage C · Achterkant met patroon: §1.6 + B.3 (Word/PDF) |
 
 Open punten die nog niet beslist zijn: §6. Doe daar geen aannames over; vraag het na.
@@ -146,7 +146,7 @@ Vectorpunten (viewBox `0 0 924 1316`): `296.7,118 461.2,653 296.7,1188 348.4,118
 | Formaat | Koppen | Lopende tekst | Labels/tabellen |
 |---|---|---|---|
 | HTML | Merriweather 400/700, cursief 400 | Merriweather | Open Sans 400/600/700 |
-| PowerPoint | Merriweather | Open Sans | Open Sans |
+| PowerPoint | Merriweather 400; kleine kaartkoppen 700 | Open Sans | Open Sans |
 | Word (offerte) | Calibri Light vet 10,5pt | Calibri Light 10,5pt | Calibri Light 9pt |
 
 **Regel:** gebruik altijd de voorgeschreven lettertypen. Sluit ze in waar dat technisch mogelijk en licentierechtelijk toegestaan is. **De visuele uitkomst is leidend:** controleer bij exporteren of delen of de typografie goed wordt weergegeven.
@@ -181,7 +181,7 @@ Gebruik alleen fontgewichten die beschikbaar of ingesloten zijn; anders bootst d
 - Donkere variant: koningsblauw is de standaard. Donker marine alleen als gemotiveerde uitzondering.
 - Bij bijzondere uitgaven mag het patroon nadrukkelijker aanwezig zijn; dat is een bewuste uitzondering, niet de standaard. Drie niveaus: **standaard** volledig toon op toon; **bijzonder** een beperkt aantal chevrons in een eigen huisstijlkleur, in één cluster; **uitzonderlijk** verbindingsstaven, alleen met een inhoudelijke reden (Bijlage B.7).
 
-Fotografie volgt het formaat: beelden die in een sjabloon een vaste plek hebben (zoals de titeldia in PowerPoint) worden niet naar andere formaten overgezet. Het logo blijft in elk formaat op zijn vaste plek staan; een foto vervangt nooit het logo.
+Fotografie volgt het formaat: beelden die in een sjabloon een vaste plek hebben (zoals de fotostrook in PowerPoint) worden niet naar andere formaten overgezet. Het logo blijft in elk formaat op zijn vaste plek staan; een foto vervangt nooit het logo.
 
 Technische specificatie en bestanden: **Bijlage B**.
 
@@ -189,11 +189,7 @@ Technische specificatie en bestanden: **Bijlage B**.
 
 Bron: **Bijlage C** (beeldbank). Beeld is een keuze per document, geen vast onderdeel. **Bepaal eerst wat de tekst zegt; kies pas daarna of er een beeld bij hoort.** Twijfel = geen beeld.
 
-**Uitzondering — openingsdia PowerPoint: altijd een beeld.** De binnenkomer van een presentatie krijgt standaard een foto, naast het effen vlak in koningsblauw (§3). Kies in deze volgorde:
-1. een historisch beeld uit Bijlage C dat de betekenis van de presentatie raakt;
-2. een sessiebeeld (C.23–C.27) als de presentatie over een sessie of samenwerking met het bureau gaat;
-3. anders het vaste titeldiabeeld uit het PowerPoint-sjabloon (strandsilhouetten, §3).
-Een bijschrift is op de openingsdia niet nodig; de identiteitsvraag mag er klein in, als die bij het onderwerp past. Voor alle andere plekken en formaten geldt de beslisvolgorde hieronder.
+**PowerPoint: geen foto op de openingsdia.** Een presentatie opent met de chevrondiepte (§1.3, §3.5). Foto’s passen bij HTML; in een presentatie kaderen ze te veel (besluit Paul, 20 oktober 2026). Ook scheidingsdia’s krijgen geen foto.
 
 **Beslisvolgorde (één keuze per plek, van boven naar beneden):**
 
@@ -218,7 +214,7 @@ Altijd onder of naast het beeld, klein: de bronvermelding (bijv. *Nationaal Arch
 **Per formaat:**
 
 - **HTML:** beeld als figuur in de inhoud, nooit boven of in plaats van het titelblok met logo (§2.4). Beeld als base64 data-URI insluiten (§2.8); de URL in Bijlage C is alleen de bron om het bestand op te halen. Is het bestand niet op te halen, dan geen beeld (niet raden, geen kapotte link). Historische foto: `<img>` in een `<a href="…Ken_je_de_foto.html" target="_blank" rel="noopener">`, met `title="Over deze foto"`.
-- **PowerPoint:** openingsdia altijd met beeld (zie uitzondering hierboven); historisch beeld op een scheidingsdia alleen volgens de beslisvolgorde, naast een effen vlak in koningsblauw (§3). Portretten op een team- of contactdia. Bijschrift in het beeld of eronder zoals hierboven. Historische foto: hyperlink op de afbeelding naar *Ken je de foto?*.
+- **PowerPoint:** geen foto op opening of scheidingsdia (§3.5). Een historisch beeld op een inhoudsdia alleen volgens de beslisvolgorde. Portretten op een team- of contactdia. Bijschrift in het beeld of eronder zoals hierboven. Historische foto: hyperlink op de afbeelding naar *Ken je de foto?*.
 - **Word/PDF:** historisch beeld op de omslag of bij een hoofdstukopening; portret bij de ondertekening. Beeld ingebed, niet gekoppeld. Historische foto: digitaal een hyperlink op de afbeelding; gedrukt één verwijzing in het colofon (zie hierboven).
 
 **Niet doen:** meerdere historische beelden als decoratie door een document strooien; een portret zonder dat die persoon auteur is; namen zetten bij groepsfoto's; een foto in hetzelfde vlak als het patroon (§1.6); beelden bijsnijden tot een detail dat de betekenis verandert.
@@ -293,6 +289,10 @@ Bouwstenen. Gebruik wat past bij het documenttype, laat weg wat niet nodig is:
 - **Figuren/diagrammen** — SVG met bijschrift
 - **Klikbare navigatie** — bij een langere tekst (vanaf een stuk of vijf secties/hoofdstukken): een vaste "Inhoud"-knop rechtsonder die een uitschuifpaneel opent, zie §2.5
 - **Footer** — donkerblauw, **wit logo zonder tagline** (Bijlage A) + documentregel + eventueel het webadres (`debetekenisfabriek.nl`, Open Sans semibold, goud). Staat de patroonstrook erboven (Bijlage B.3), dan scheidt een **gouden lijn van 2px over de volle breedte** strook en voet. Gebruik nooit het losse beeldmerk náást het logo: het logo bevat het beeldmerk al, dus dan staat het hexagon-icoon dubbel. Geef de footer onderaan ca. 88px padding, zodat de vaste "Inhoud"-knop de documentregel niet afdekt (in print terug naar normaal). Referentie: `DBF_voorbeeld_html.html`.
+- **Auteursrechtregel** — onder de documentregel in de footer, altijd, in Open Sans 400, 11–12px, `--wit-zacht`, met precies deze tekst:
+  > © 2026 De Betekenisfabriek B.V. Alle rechten voorbehouden. Niets uit deze uitgave mag worden verveelvoudigd, opgeslagen in een geautomatiseerd gegevensbestand of openbaar gemaakt, in enige vorm of op enige wijze, zonder voorafgaande schriftelijke toestemming van De Betekenisfabriek B.V.
+
+  Het jaartal is het jaar van uitgave. Pas de tekst verder niet aan.
 - **Bronfragment** — letterlijk citaat uit een klantstuk (bijv. als oefenmateriaal): papiertint-vlak, dunne `--inkt-zacht` zijrand, cursief, iets kleiner dan de lopende tekst. Duidelijk anders dan de pull quote (goud), zodat lezers zien: dit is brontekst, geen eigen kernboodschap.
 - **Hergebruikte slides als figuur** — slides uit een ander klanttraject mogen als figuur worden ingebed, maar **altijd zonder het logo van die andere klant** (pixelvlak wegpoetsen naar de achtergrondkleur vóór het inbedden, daarna programmatisch controleren dat er geen restpixels over zijn). Het DBF-logo mag blijven staan. Noem de andere klant ook niet in bijschrift of bronvermelding.
 
@@ -424,6 +424,7 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 - [ ] Vaste navigatieknop wordt onzichtbaar/onklikbaar zolang het paneel open is (`.is-hidden`-patroon), geen z-index-gok
 - [ ] Klikken op een link in het navigatiepaneel sluit het paneel ook (niet alleen navigeren)
 - [ ] Titelblok (`header.top`) en body (`.wrap`) gebruiken identieke horizontale padding op de binnenste wrapper (§2.6) — tekst lijnt uit, ook op mobiel
+- [ ] Auteursrechtregel staat onder de documentregel in de footer, letterlijk zoals in §2.4
 - [ ] Eén zelfstandig bestand, geen gebroken links of ontbrekende assets
 - [ ] Daadwerkelijk gerenderd bekeken — geen code-only review
 
@@ -431,31 +432,39 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 
 Kort blok om mee te geven bij een nieuwe HTML-opdracht aan een AI-tool:
 
-> Gebruik de huisstijl van de Betekenisfabriek: koningsblauw `#27275B` en goud `#DDB85E` als basiskleuren, Merriweather voor koppen en lopende tekst, Open Sans voor labels en tabellen — beide als `@font-face` met base64 ingebed, **geen** `<link>` naar Google Fonts. Gebruik het officiële logo (nooit zelf getekend, ook als base64 ingebed), en zorg dat goud nooit als tekstkleur op een licht vlak wordt gebruikt — alleen als lijn, rand of tekst op donkerblauw. Gebruik het chevron-teken (`›`, §1.3) uitsluitend als enkel hoofdstuknummer-icoon — **geen** herhalend chevron-lijnaccent en **niet** het hexagon-motief, dat is uitsluitend de vorm van het beeldmerk zelf. Het hoofdstuknummer krijgt dezelfde kleur en hetzelfde font als de titel ernaast, geen apart goud. Bouw met de bouwstenen uit §2.4, pas vrij aan naar het documenttype. Is de tekst lang (vanaf ~5 secties/hoofdstukken)? Voeg dan de klikbare navigatie uit §2.5 toe: vaste knop rechtsonder, uitschuifpaneel met inhoudsopgave, actieve sectie gemarkeerd tijdens scrollen.
+> Gebruik de huisstijl van de Betekenisfabriek: koningsblauw `#27275B` en goud `#DDB85E` als basiskleuren, Merriweather voor koppen en lopende tekst, Open Sans voor labels en tabellen — beide als `@font-face` met base64 ingebed, **geen** `<link>` naar Google Fonts. Gebruik het officiële logo (nooit zelf getekend, ook als base64 ingebed), en zorg dat goud nooit als tekstkleur op een licht vlak wordt gebruikt — alleen als lijn, rand of tekst op donkerblauw. Gebruik het chevron-teken (`›`, §1.3) uitsluitend als enkel hoofdstuknummer-icoon — **geen** herhalend chevron-lijnaccent en **niet** het hexagon-motief, dat is uitsluitend de vorm van het beeldmerk zelf. Het hoofdstuknummer krijgt dezelfde kleur en hetzelfde font als de titel ernaast, geen apart goud. Bouw met de bouwstenen uit §2.4, pas vrij aan naar het documenttype. Is de tekst lang (vanaf ~5 secties/hoofdstukken)? Voeg dan de klikbare navigatie uit §2.5 toe: vaste knop rechtsonder, uitschuifpaneel met inhoudsopgave, actieve sectie gemarkeerd tijdens scrollen. Zet onder de documentregel in de footer de auteursrechtregel uit §2.4, letterlijk.
 
 ---
 
 ## 3. PowerPoint
 
-Bron: `Powerpoint_sjabloon.potx`. Palet, logo en chevron: zie §1. Opening, scheiding en slot volgen Bijlage B.3.
+Bron: `Powerpoint_sjabloon.potx` (22 oktober 2026): slidemaster op 13,333 × 7,5 inch met vijf indelingen (OPEN, CONTENT, SECTION, ACCENT, SLOT), tijdelijke aanduidingen en ingesloten lettertypen. **Begin elke presentatie met dit bestand**; in PowerPoint via Nieuwe dia → indeling. Palet, logo en chevron: zie §1. Opening, scheiding en slot volgen Bijlage B.3.
 
 ### 3.1 Kleurgebruik in PowerPoint
 
-- **Koningsblauw `#27275B`** is de donkere kleur (footerbalk, tekstvlak openingsdia, scheidings- en slotdia, headerbalken), zoals in alle formaten (§1.1).
-- **Lichte kaartvlakken op witte contentdia's: lichte navy-tint `#E3E4ED`.** Niet crème; crème alleen voor de "Plaatjes"-instructiedia.
-- **Zand `#ECE4D7`** (§1.1 B) voor wat nadruk krijgt: citaten, beoogd resultaat, kernkaarten. Houdt warmte in een overwegend blauwe presentatie. Tekst erop in zwart of koningsblauw (contrast 10,9:1). Hooguit twee vlaktinten per dia.
+Warm en niet te blauw: zand draagt de vlakken, koningsblauw de vaste plekken (besluit Paul, 20 oktober 2026).
+
+- **Koningsblauw `#27275B`** voor de vaste plekken: openingsdia, footerbalk, scheidings-, accent- en slotdia. Op een inhoudsdia hooguit één koningsblauwe kaart, voor wat zwaar weegt.
+- **Zand `#ECE4D7`** is de standaardkleur voor kaarten en vlakken op witte inhoudsdia's. Tekst erop in zwart of koningsblauw (contrast 10,9:1). Hooguit twee vlaktinten per dia.
+- **Crème `#FFFCF2`** niet als kaart op wit: het verschil is nauwelijks te zien.
+- **Lichtblauw `#E3E4ED`** niet meer voor kaarten; alleen nog in de tabel-heatmap.
+- **Goud `#DDB85E`** als lijn, rand, chevron of opsommingsteken op donker; nooit als tekst op een licht vlak.
 - **Tabel-heatmap** (bijv. scoringsmatrix): sterkste waarde goud, middelste `#AEB0C9`, zwakste `#E3E4ED`. Geen drie losse kleuren zoals sommige klantbestanden doen.
+- In het sjabloon zijn de themakleuren: Tekst/Achtergrond donker 2 = koningsblauw, licht 2 = zand, accent 1 = koningsblauw, accent 2 = goud, accent 3 = crème.
 
 ### 3.2 Fonts in PowerPoint
 
 | Rol | Font | Grootte en kleur |
 |---|---|---|
-| Titel openingsdia | Merriweather, bold | ±36–44pt, wit |
-| Titel inhoudsdia | Merriweather, bold | 26pt, koningsblauw |
+| Titel openingsdia | Merriweather Regular (400) | 40pt, wit |
+| Titel inhouds- en accentdia | Merriweather Regular (400) | 26pt, koningsblauw (accent: wit) |
+| Titel scheidingsdia | Merriweather Regular (400) | 36pt, wit |
+| Hoofdstuknummer scheidingsdia | Open Sans Bold | 16pt, goud, als eigen regel boven een korte gouden lijn |
+| Kleine kaartkop | Merriweather Bold (700) | 14pt, koningsblauw (op koningsblauw: wit) |
 | Lopende tekst | Open Sans | 14–16pt, zwart |
 | Ingebedde varianten | Merriweather regular/bold/italic, Open Sans regular/bold/italic | Gebruik geen andere gewichten |
 
-In code de familienamen `Merriweather` en `Open Sans`, precies zoals ze in de ingebedde lettertypebestanden heten (§3.6).
+Grote titels nooit vet: Bold oogt in PowerPoint zwaarder dan in HTML (besluit Paul, 20 oktober 2026). Merriweather Light (300) is getest en niet gekozen. In code de familienamen `Merriweather` en `Open Sans`, precies zoals ze in de ingebedde lettertypebestanden heten (§3.6).
 
 ### 3.3 Vormstijl
 
@@ -473,7 +482,7 @@ Voorbeeld: in een analyse van negen dia's krijgt de dia met het antwoord op de h
 
 ### 3.5 Contentdia-indeling (referentie-implementatie, 16:9 standaard 13,333 × 7,5 inch)
 
-Dit is de werkende maatvoering; nieuwe presentaties bouwen hierop (zie ook §6 over de slidemaster).
+Deze maten zitten in de slidemaster van `Powerpoint_sjabloon.potx`. Wie in code bouwt (bijvoorbeeld met `pptxgenjs`), gebruikt dezelfde waarden.
 
 **Kleuren/fonts:** zie §3.1 en §3.2.
 
@@ -485,36 +494,35 @@ Dit is de werkende maatvoering; nieuwe presentaties bouwen hierop (zie ook §6 o
 | Navy footerbalk | x=0, y=7,18, w=9,35, h=0,32 | **Bewust korter dan de dia** — laat ruimte vrij voor een opdrachtgeverslogo naast het DBF-logo |
 | DBF-logo | w=1,3, rechts uitgelijnd op x=12,67 (= contentmarge-rand), y=6,64 | Zwart logo, **los boven** de balk in het wit — niet op/in de balk zelf, die is te dun (0,32") voor de logohoogte (0,42") |
 | Contentmarge | x=1,62, breedte 11,05 | Geldt voor titel, body en footerbijschriften |
-| Footerbijschriften | y=6,9, 9pt Open Sans, grijs `#464646` | Optioneel links/rechts, boven de balk |
+| Titel | x=1,62, y=1,05, w=11,05, h=0,85 | Merriweather Regular 26pt, koningsblauw |
+| Tekstvak | x=1,62, y=2,15, w=11,05, h=4,2 | Open Sans 16pt, zwart; opsommingsteken koningsblauw |
+| Voetregel | x=1,62, y=6,79, w=8,0, 9pt Open Sans, grijs `#464646` | In de indeling (Invoegen → Koptekst en voettekst) |
+| Paginanummer | x=8,55, y=7,2, w=0,6, 9pt Open Sans, wit, rechts | In de footerbalk; in de indeling |
 
-**Openingsdia** (volgens Bijlage B.3):
-- Links een effen tekstvlak in koningsblauw, rechts een foto. Het vlak beslaat ongeveer de linkerhelft (richtwaarde; vastleggen zodra er een goedgekeurd voorbeeld is).
-- Foto altijd aanwezig; keuze volgens §1.7: historisch beeld → sessiebeeld → strandsilhouetten. Foto en tekstvlak raken elkaar, overlappen niet. Geen patroon.
-- **Variant zonder foto ('chevrondiepte'):** volle koningsblauwe dia met twee grote chevrons toon op toon (§1.3). Gebruiken als er geen passend beeld is, of als de presentatie bewust typografisch opent. Ook voor scheidingsdia's.
-  - Teken de twee chevrons als vrije vorm (`custGeom`, in `pptxgenjs`: `CUSTOM_GEOMETRY`) met de vectorvorm uit §1.3, punt naar rechts. Achterste: middelpunt op 88,75% van de diabreedte en 50% van de hoogte, hoogte 166,7% van de diahoogte, kleur `#30306A`. Voorste: middelpunt op 95% van de breedte, hoogte 122,2% van de diahoogte, kleur `#34346F`. Het middelpunt is het midden van de vorm in de pijlrichting; wat buiten de dia valt, valt weg. De twee vormen blijven altijd samen één paar: nooit los van elkaar schalen of verschuiven.
-  - Tekst: titel wit, Merriweather bold, 40pt, links op 0,92 inch; korte gouden lijn; ondertitel of datum in goud (Open Sans) direct eronder; logo wit met tagline 0,5 inch hoog linksonder.
-  - Lukt een vrije vorm niet: `DBF_titeldia_chevrondiepte_koningsblauw.png` als afbeelding over de volle dia.
-  - Referentie: dia 2 van `DBF_voorbeeldpresentatie.pptx`.
-- In het tekstvlak: titel wit, Merriweather bold, ±36–44pt; direct eronder de korte gouden lijn (0,15" afstand); ondertitel wit direct onder de lijn (0,13" afstand). Daaronder twee metaregels: een inhoudelijke regel en de documentdatum.
-- Logo: wit, mét tagline (Bijlage A), 0,5 inch hoog, linksonder in het tekstvlak. Niet op de foto.
+**Openingsdia (indeling OPEN): chevrondiepte, geen foto.** Volle koningsblauwe dia met twee grote chevrons toon op toon (§1.3). De variant met foto is vervallen (besluit Paul, 20 oktober 2026).
+- De twee chevrons zijn vrije vormen (`custGeom`, in `pptxgenjs`: `CUSTOM_GEOMETRY`) met de vectorvorm uit §1.3, punt naar rechts, in één vergrendelde groep. Achterste: middelpunt op 88,75% van de diabreedte en 50% van de hoogte, hoogte 166,7% van de diahoogte, kleur `#30306A`. Voorste: middelpunt op 95% van de breedte, hoogte 122,2% van de diahoogte, kleur `#34346F`. Het middelpunt is het midden van de vorm in de pijlrichting; wat buiten de dia valt, valt weg. De twee vormen blijven altijd samen één paar: nooit los van elkaar schalen of verschuiven.
+- Titel: wit, Merriweather Regular, 40pt, links op 0,92 inch, onderkant op 3,9 inch. Gouden lijn 1,0 × 0,035 inch op y=4,05. Ondertitel in goud (Open Sans 18pt) op y=4,22; metaregel wit (Open Sans 12pt) op y=5,15.
+- Logo: wit met tagline, 0,5 inch hoog, linksonder (x=0,92, y=6,45).
+- Lukt een vrije vorm niet: `DBF_titeldia_chevrondiepte_koningsblauw.png` als afbeelding over de volle dia.
+- Referentie: dia 1 van `DBF_voorbeeldpresentatie.pptx`.
 
-**Scheidingsdia:** effen koningsblauw, nummer in goud, titel wit. Eventueel een foto ernaast (§1.7) of de chevrondiepte (§1.3). Geen patroon.
+**Scheidingsdia (indeling SECTION):** effen koningsblauw. Het hoofdstuknummer (‘01’) staat als eigen regel in goud, Open Sans Bold 16pt, op y=2,35–2,75, met daaronder een gouden lijn van 0,6 inch op y=2,95. Zo leest het nummer als label en niet als doorgeschoven titelregel. Titel wit, Merriweather Regular 36pt, op y=3,2; toelichting wit, Open Sans 18pt, op y=4,45. Geen foto, geen patroon. Referentie: dia 2 van `DBF_voorbeeldpresentatie.pptx`.
 
-**Slotdia:** `DBF_slotdia_beeldmerk_koningsblauw.png` over de volle dia: het patroon met het witte beeldmerk precies in het midden, in de plek van één chevronpaar (Bijlage B.6). **Geen logo en geen tekst**; het logo staat al op de openingsdia (besluit Paul, 13 oktober 2026). Referentie: dia 5 van `DBF_voorbeeldpresentatie.pptx`.
+**Slotdia:** `DBF_slotdia_beeldmerk_koningsblauw.png` over de volle dia: het patroon met het witte beeldmerk precies in het midden, in de plek van één chevronpaar (Bijlage B.6). **Geen logo en geen tekst**; het logo staat al op de openingsdia (besluit Paul, 13 oktober 2026). Indeling SLOT; heeft bewust geen titelvak. Referentie: dia 5 van `DBF_voorbeeldpresentatie.pptx`.
 
 **Foto-assets uit het sjabloon** (overgenomen uit `Powerpoint_sjabloon.potx`):
 
 | Bestand | Gebruik | Behandeling |
 |---|---|---|
 | `DBF_fotostrook.png` (kathedraal-detail met blauwe lucht, 88 × 790 px) | Linker fotostrook op contentdia's, alleen in PowerPoint | **In kleur** (besluit Paul, 13 oktober 2026: zwart-wit maakte de dia te streng). Geen kleurfilter. Al op maat (verhouding 0,1114); plaatsen op 0,80 × 7,18 inch, niet opnieuw bijsnijden. `DBF_fotostrook_zw.png` vervalt |
-| `DBF_titelfoto_strand.jpg` (silhouetten op het strand, 2765 × 1844 px) | Openingsdia, rechterhelft — alleen als laatste keuze (§1.7) | Ongefilterd; per presentatie bijsnijden op hoofd-tot-voeten, niet centreren op de lucht |
+| `DBF_titelfoto_strand.jpg` (silhouetten op het strand, 2765 × 1844 px) | **Vervallen** (20 oktober 2026): de openingsdia heeft geen foto meer | Niet meer gebruiken; het bestand blijft op GitHub |
 
-URL's: `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/DBF_fotostrook.png` en `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/DBF_titelfoto_strand.jpg`. De strook is klein (de foto in het sjabloon heeft niet meer pixels); op een groot scherm is hij iets zacht. Strandsilhouetten nooit in HTML gebruiken (§1.6).
+URL: `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/DBF_fotostrook.png`. De strook is klein (de foto in het sjabloon heeft niet meer pixels); op een groot scherm is hij iets zacht. Strandsilhouetten nooit in HTML gebruiken (§1.6).
 
 **Crop zonder vervorming:** zie §1.5.
 
-**Donkere "accent"-dia:** zie §3.4 — koningsblauw, witte kaarten, goud als doorbreker, klein
-wit beeldmerk rechtsonder (± 0,4").
+**Donkere "accent"-dia (indeling ACCENT):** zie §3.4 — koningsblauw, witte kaarten, goud als doorbreker, klein
+wit beeldmerk rechtsonder (0,4" hoog). Titel en tekstvak op dezelfde hoogte als de inhoudsdia (y=1,05 en y=2,15); voetregel en paginanummer in `#BEBECE`. Referentie: dia 4 van `DBF_voorbeeldpresentatie.pptx`.
 
 **Chevron als kopmarkering:** hoogte ± 0,30–0,32", goud — op licht én op donker. Koningsblauw alleen als variant op lichte kaarten. Geen apart nummer nodig — de chevron zelf is de markering.
 
@@ -691,17 +699,14 @@ Groen is geen garantie dat een document foutloos, juridisch juist of AVG-proof i
 
 - **PDF:** geen eigen gids. Openstaande keuze: PDF als export van Word-opmaak, als HTML-export, of een aparte drukopmaak.
 - **Tagline in Word buiten de offerte:** geldt de offerte-uitzondering (herhalend mét tagline) ook voor brief, rapport en memo?
-- **PowerPoint-sjabloon:** `Powerpoint_sjabloon.potx` (in de release) is het oude bronbestand van september en **geen** DBF-sjabloon; niet gebruiken als basis. De geldende vormgeving is de referentie-implementatie in §3.5 (voorbeeld: `DBF_voorbeeldpresentatie.pptx`). Volgende stap: een eigen DBF-sjabloon met echte slidemaster op 13,333 × 7,5 inch, gebouwd vanuit die referentie.
-- **Slidemaat:** `Powerpoint_sjabloon.potx` is custom 22 × 12,375 inch (16:9); de referentie-implementatie gebruikt standaard 13,333 × 7,5 inch. Behouden of standaardiseren?
 - **Assetbibliotheek:** schone transparante witte logo's als SVG aanvragen bij de bron (de PNG's in Bijlage A volstaan intussen).
-- **Openingsdia PowerPoint:** exacte breedte van het blauwe tekstvlak en de plek van een klantlogo (co-branding) vastleggen aan de hand van een goedgekeurd voorbeeld.
 - **Zandvariant van het patroon:** twee voorstellen in proef (B.2). Visuele keuze nog te maken; daarna pas vastleggen.
 
-- **Klantinhoud in het oude sjabloon:** `Powerpoint_sjabloon.potx` bevat nog het logo en de tekst van een klanttraject. Vervalt zodra het eigen DBF-sjabloon er is.
 - **Oude chevron in voorbeeldbestanden:** `DB_brief_sjabloon.pdf` en `DBF_rapport_sjabloon.pdf` tonen nog de chevron en het patroon van vóór 13 oktober. Deze gids en de bestanden in Bijlage A/B gaan voor. Bijwerken vraagt de Word-bronbestanden.
 - **Rustvergelijking:** het nieuwe patroon bestaat uit vlakken, het oude uit lijnen. De dekking van 5% is gekozen zodat beide even aanwezig ogen; in de praktijk toetsen op beamer en drukwerk.
 - **C.22 (`005.jpg`):** staat nog niet op GitHub.
 - **Ken je de foto?:** de pagina is vanuit de AI-omgeving niet te controleren (website blokkeert automatische toegang). Werking periodiek zelf nagaan.
+- **PowerPoint-sjabloon in de praktijk:** de eerste echte presentaties met `Powerpoint_sjabloon.potx` maken en in PowerPoint op een andere computer controleren (lettertypen, indelingen, voetregel).
 - **Praktijktoets:** de gids toetsen met een HTML-lesbrief, een PowerPoint en een Word-offerte, elk met kwaliteitsrapportage. Terugkerende problemen leiden tot een aanpassing van de gids; incidentele niet.
 
 ---
@@ -730,11 +735,12 @@ De logo's en beeldmerken staan als echte, transparante PNG's in de openbare GitH
 |---|---|---|
 | `DBF_chevron.svg` + `DBF_chevron_*.png` (10×) | Chevron, vector en in elke paletkleur | §1.3, §3.7 |
 | `DBF_patroon_*.svg` (6×), `DBF_patroon_slotdia_koningsblauw.png`, `patroon.py` | Decoratief patroon, dia-afbeelding en generator (ook van de chevron) | Bijlage B |
-| `DBF_titeldia_chevrondiepte_koningsblauw.png` | Achtergrond titel- en scheidingsdia zonder foto (4000 × 2250 px) | §1.3, §3.5 |
+| `DBF_titeldia_chevrondiepte_koningsblauw.png` | Openingsdia als afbeelding (4000 × 2250 px), alleen als de vrije vormen niet lukken | §1.3, §3.5 |
 | `DBF_slotdia_beeldmerk_koningsblauw.png` | Slotdia: patroon met het beeldmerk in de middelste cel (4000 × 2250 px) | §3.5, B.6 |
-| `DBF_voorbeeldpresentatie.pptx`, `DBF_voorbeeld_html.html`, `DBF_voorbeeld_achterkant_A4.pdf` | Referentievoorbeelden: zo hoort het eruit te zien (de presentatie heeft geen ingesloten lettertypen; voor een echte uiting §3.6 volgen) | §2.4, §3.5, B.3 |
-| `DBF_fotostrook.png`, `DBF_titelfoto_strand.jpg` | Sjabloonfoto's PowerPoint | §3.5 |
-| `Powerpoint_sjabloon.potx` | PowerPoint-sjabloon. **Niet in de hoofdmap** (te groot, 28 MiB), maar als bijlage bij de GitHub-release: https://github.com/dbfbeeldbank/dbf/releases/latest/download/Powerpoint_sjabloon.potx | §3, §6 |
+| `DBF_voorbeeldpresentatie.pptx`, `DBF_voorbeeld_html.html`, `DBF_voorbeeld_achterkant_A4.pdf` | Referentievoorbeelden: zo hoort het eruit te zien (de presentatie is gemaakt met `Powerpoint_sjabloon.potx`, met ingesloten lettertypen) | §2.4, §3.5, B.3 |
+| `DBF_fotostrook.png` | Fotostrook inhoudsdia PowerPoint (zit al in het sjabloon) | §3.5 |
+| `DBF_titelfoto_strand.jpg` | Vervallen titeldiafoto; niet gebruiken | §3.5 |
+| `Powerpoint_sjabloon.potx` | PowerPoint-sjabloon (0,7 MB): slidemaster, vijf indelingen, ingesloten lettertypen | §3 |
 | `DBF_offerte_sjabloon.dotx`, `dbf_offerte_sjabloon.pdf` | Offertesjabloon en voorbeeld | §4.1 |
 | `DB_brief_sjabloon.pdf`, `DBF_rapport_sjabloon.pdf` | Voorbeelden brief en rapport | §1.3, §4.2 |
 | `kleurenpalet.png` | Bron van het palet | §1.1 |
@@ -847,8 +853,8 @@ In de standaard geen goud: geen gouden vormen, geen metallic, verlopen of glans.
 - PDF volgt de bronopmaak (§0). Het patroon blijft vector.
 
 **PowerPoint**
-- Openingsdia: koningsblauw tekstvlak links, foto rechts; logo met tagline 0,5 inch hoog, linksonder. Variant zonder foto: chevrondiepte (§1.3, §3.5).
-- Scheidingsdia: effen koningsblauw, nummer in goud, titel wit; eventueel een foto of de chevrondiepte. Geen patroon.
+- Openingsdia: chevrondiepte (§1.3, §3.5), geen foto; logo met tagline 0,5 inch hoog, linksonder.
+- Scheidingsdia: effen koningsblauw; nummer als eigen regel in goud boven een korte gouden lijn, titel wit. Geen foto, geen patroon.
 - Slotdia: `DBF_slotdia_beeldmerk_koningsblauw.png` over de volle dia, zonder logo en zonder tekst (B.6).
 - Logomaten gelden voor de standaard dia van 13,333 × 7,5 inch.
 - Het patroon verschijnt hooguit één keer per presentatie. Plaatsen als afbeelding, niet als getegelde vulling.
@@ -856,7 +862,7 @@ In de standaard geen goud: geen gouden vormen, geen metallic, verlopen of glans.
 **HTML**
 - Het titelblok blijft zoals in §2.4: donkerblauw, **met logo** (wit, uit Bijlage A), eyebrow, titel, subtitel en goudlijn.
 - Geen foto boven het titelblok. Een foto is optioneel en staat in de inhoud (als figuur met bijschrift), alleen als die bij het onderwerp van dít document hoort.
-- Beeld uit de PowerPoint-bibliotheek (o.a. de strandsilhouetten van de titeldia, §3) wordt niet in HTML gebruikt.
+- Beeld uit de PowerPoint-bibliotheek (o.a. de fotostrook en de strandsilhouetten, §3) wordt niet in HTML gebruikt.
 - Geen patroon in het titelblok. Eventueel één smalle patroonstrook (90 px) direct boven de footer, toon op toon. Inline SVG, ingebed. Niet verplicht. Tussen strook en voet een gouden lijn van 2px over de volle breedte (§2.4).
 
 ### B.4 Niet doen
