@@ -1,6 +1,6 @@
 # DBF Huisstijlgids — één bron voor HTML, PDF, PowerPoint en Word
 
-> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 22 oktober 2026 (eigen PowerPoint-sjabloon met slidemaster; auteursrechtregel onder HTML) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
+> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 24 oktober 2026 (auteursrechtregel ook op achterkant rapport en in voorbeeld-HTML; co-brandingbalk en vertrouwelijkheidsregel als optie in HTML) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
 >
 > Drie documenten, elk met een eigen functie; ze herhalen elkaars inhoud niet:
 > - **Deze huisstijlgids:** de geldende regels en ontwerpprincipes. De normatieve bron.
@@ -67,6 +67,7 @@ Het doel is consistentie, niet uniformiteit.
 - Signaalwoorden als "document", "rapport", "stuk", "presentatie", "notitie" of "lesbrief" zijn **geen** formaatkeuze. Ook dan eerst vragen.
 - Wordt PDF gekozen: vraag direct mee of de PDF moet uitgaan van de **Word-opmaak** (drukwerk, offerte/rapport) of van een **HTML-export**. Er is nog geen aparte PDF-gids (zie §6, open punten).
 - Een aangeleverd bronbestand (.dotx, .potx, .docx) dat bewerkt moet worden, bepaalt zelf het formaat. Dan niet vragen.
+- **Bij HTML vraagt Claude in dezelfde vraagronde ook twee dingen** (kort, met keuzeknoppen waar dat kan): (1) moet het logo van de opdrachtgever erin? Zo ja: vraag het logobestand (liefst PNG met transparante achtergrond of SVG); dan wordt het titelblok de co-brandingvariant (§2.4). (2) Is het document vertrouwelijk? Zo ja: voor welke kring; dan komt de vertrouwelijkheidsregel erin (§2.4). Beide zijn optioneel; zonder antwoord geldt: geen klantlogo, niet vertrouwelijk.
 - Na de keuze geldt: §1 (gedeeld fundament) **plus** het hoofdstuk van het gekozen formaat (§2 HTML, §3 PowerPoint, §4 Word).
 
 **Werkwijze bij elk nieuw documenttype:** eerst het aangeleverde bronbestand technisch valideren, dan de stijlwaarden er exact uit halen, pas dan bouwen. Nooit waarden verzinnen op gevoel. **Een bronbestand (template, .potx, .dotx) gaat voor op deze gids** als waarden botsen. Wordt een fout gevonden en hersteld, dan wordt de oorzaak en de regel in dezelfde handeling in deze gids vastgelegd.
@@ -279,6 +280,15 @@ Nooit losse hex-codes in de rest van het document — ook niet in SVG's (dus `fi
 Bouwstenen. Gebruik wat past bij het documenttype, laat weg wat niet nodig is:
 
 - **Titelblok** — donkerblauw, met logo, eyebrow-regel, titel, subtitel, eventueel een dunne effen goudlijn als breker (geen chevron-lijnaccent, zie §1.3). **Onder het logo een haarlijn** (1px, wit op 18%, over de breedte van de tekstkolom), ±26px onder het logo en ±40px boven de eyebrow: zo bestaat het blauwe vlak uit twee lagen en oogt het minder massief (besluit Paul, 13 oktober 2026).
+- **Co-brandingbalk (optioneel)** — alleen als de opdrachtgever zijn logo erin wil (vraag in §0). Dan vervangt een **witte horizontale balk** de bovenste laag van het titelblok (het DBF-logo met de haarlijn eronder). Opbouw:
+  - Balk: achtergrond `#FFFFFF`, padding ±18px boven en onder, zelfde horizontale wrapper als titelblok en body (§2.6). Onderrand 1px `--inkt-zacht` op 25% dekking. Niet massief: geen schaduw, geen extra kleurvlak, geen tekst in de balk.
+  - Links: DBF-logo **zwart met tagline** (`DBF-logo-zwart-tagline.png`, Bijlage A), hoogte 40px. Rechts: logo van de opdrachtgever, maximaal 40px hoog en 180px breed, verhoudingen intact (§1.5), uitgelijnd op dezelfde middenlijn. Beide als base64 ingebed, met expliciete `width` en `height`.
+  - Het klantlogo wordt onbewerkt gebruikt: niet hertekenen, niet herkleuren, niet bijsnijden. Heeft het een witte of gekleurde achtergrond, dan eerst vragen om een betere versie; niet zelf vrijstaand maken zonder akkoord.
+  - Op mobiel (onder ±480px) blijven beide logo's naast elkaar, maximaal 30px hoog. Nooit onder elkaar stapelen.
+  - Daaronder volgt het donkerblauwe titelblok **zonder logo en zonder haarlijn**: eyebrow, titel, subtitel en eventueel goudlijn, zoals hierboven. Het DBF-logo staat dan niet dubbel bovenin.
+  - Footer en auteursrechtregel blijven ongewijzigd (alleen het DBF-logo).
+  - Referentie: `DBF_voorbeeld_html_cobranding.html` (met een neutraal proeflogo rechts).
+- **Vertrouwelijkheidsregel (optioneel)** — alleen bij stukken die echt vertrouwelijk zijn (vraag in §0), zoals bestuursnotities of stukken met namen. Eén regel bovenin het titelblok, boven de eyebrow, in Open Sans 600, 12px, hoofdletters met wat spatiëring, `--wit-zacht`. Tekst: "Vertrouwelijk — bestemd voor [kring]. Ontvangen terwijl het niet voor u bedoeld is? Laat het ons weten via [e-mailadres]." Vul kring en e-mailadres in; laat de regel weg als ze ontbreken. Niet standaard toevoegen: wie alles vertrouwelijk noemt, maakt het woord waardeloos.
 - **Hoofdstukkop** — donkerblauw blok met chevron-icoon + nummer + titel — dit is de vaste, herkenbare plek voor het chevron-icoon (zie §1.3). Het nummer krijgt **dezelfde kleur en hetzelfde lettertype/gewicht/formaat als de titel ernaast** (beide wit, `Open Sans` bold, `font-size` tussen **1.1rem en 1.3rem**, vergelijkbaar met een h3) — géén apart goud of een ander lettertype voor het cijfer. Nummer en titel horen visueel bij elkaar; laat het cijfer gewoon de kleur van de omringende tekst erven (`color` niet apart overschrijven op `.nummer`), niet weggemoffeld als klein label. Het chevron-icoon ernaast schaalt mee, ongeveer even hoog als het cijfer.
 - **"In het kort"-kader** — korte samenvatting bovenaan een sectie
 - **Doelenlijst** — gewone bullets. Geen chevron-bullets: dat oogt al snel druk over een hele pagina tekst
@@ -290,9 +300,9 @@ Bouwstenen. Gebruik wat past bij het documenttype, laat weg wat niet nodig is:
 - **Klikbare navigatie** — bij een langere tekst (vanaf een stuk of vijf secties/hoofdstukken): een vaste "Inhoud"-knop rechtsonder die een uitschuifpaneel opent, zie §2.5
 - **Footer** — donkerblauw, **wit logo zonder tagline** (Bijlage A) + documentregel + eventueel het webadres (`debetekenisfabriek.nl`, Open Sans semibold, goud). Staat de patroonstrook erboven (Bijlage B.3), dan scheidt een **gouden lijn van 2px over de volle breedte** strook en voet. Gebruik nooit het losse beeldmerk náást het logo: het logo bevat het beeldmerk al, dus dan staat het hexagon-icoon dubbel. Geef de footer onderaan ca. 88px padding, zodat de vaste "Inhoud"-knop de documentregel niet afdekt (in print terug naar normaal). Referentie: `DBF_voorbeeld_html.html`.
 - **Auteursrechtregel** — onder de documentregel in de footer, altijd, in Open Sans 400, 11–12px, `--wit-zacht`, met precies deze tekst:
-  > © 2026 De Betekenisfabriek B.V. Alle rechten voorbehouden. Niets uit deze uitgave mag worden verveelvoudigd, opgeslagen in een geautomatiseerd gegevensbestand of openbaar gemaakt, in enige vorm of op enige wijze, zonder voorafgaande schriftelijke toestemming van De Betekenisfabriek B.V.
+  > © 2026 De Betekenisfabriek Groep B.V. Alle rechten voorbehouden. Niets uit deze uitgave mag worden verveelvoudigd, opgeslagen in een geautomatiseerd gegevensbestand of openbaar gemaakt, in enige vorm of op enige wijze, zonder voorafgaande schriftelijke toestemming van De Betekenisfabriek Groep B.V.
 
-  Het jaartal is het jaar van uitgave. Pas de tekst verder niet aan.
+  Het jaartal is het jaar van uitgave. Pas de tekst verder niet aan. De rechtspersoon heet altijd **De Betekenisfabriek Groep B.V.**, nooit "De Betekenisfabriek B.V.". Dezelfde tekst staat op de achterkant van een rapport (Bijlage B.3, Word en PDF).
 - **Bronfragment** — letterlijk citaat uit een klantstuk (bijv. als oefenmateriaal): papiertint-vlak, dunne `--inkt-zacht` zijrand, cursief, iets kleiner dan de lopende tekst. Duidelijk anders dan de pull quote (goud), zodat lezers zien: dit is brontekst, geen eigen kernboodschap.
 - **Hergebruikte slides als figuur** — slides uit een ander klanttraject mogen als figuur worden ingebed, maar **altijd zonder het logo van die andere klant** (pixelvlak wegpoetsen naar de achtergrondkleur vóór het inbedden, daarna programmatisch controleren dat er geen restpixels over zijn). Het DBF-logo mag blijven staan. Noem de andere klant ook niet in bijschrift of bronvermelding.
 
@@ -425,6 +435,7 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 - [ ] Klikken op een link in het navigatiepaneel sluit het paneel ook (niet alleen navigeren)
 - [ ] Titelblok (`header.top`) en body (`.wrap`) gebruiken identieke horizontale padding op de binnenste wrapper (§2.6) — tekst lijnt uit, ook op mobiel
 - [ ] Auteursrechtregel staat onder de documentregel in de footer, letterlijk zoals in §2.4
+- [ ] Gevraagd naar klantlogo en vertrouwelijkheid (§0); bij klantlogo de witte co-brandingbalk en het titelblok zonder logo (§2.4); bij vertrouwelijk de regel bovenin, met kring en e-mailadres ingevuld
 - [ ] Eén zelfstandig bestand, geen gebroken links of ontbrekende assets
 - [ ] Daadwerkelijk gerenderd bekeken — geen code-only review
 
@@ -432,7 +443,7 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 
 Kort blok om mee te geven bij een nieuwe HTML-opdracht aan een AI-tool:
 
-> Gebruik de huisstijl van de Betekenisfabriek: koningsblauw `#27275B` en goud `#DDB85E` als basiskleuren, Merriweather voor koppen en lopende tekst, Open Sans voor labels en tabellen — beide als `@font-face` met base64 ingebed, **geen** `<link>` naar Google Fonts. Gebruik het officiële logo (nooit zelf getekend, ook als base64 ingebed), en zorg dat goud nooit als tekstkleur op een licht vlak wordt gebruikt — alleen als lijn, rand of tekst op donkerblauw. Gebruik het chevron-teken (`›`, §1.3) uitsluitend als enkel hoofdstuknummer-icoon — **geen** herhalend chevron-lijnaccent en **niet** het hexagon-motief, dat is uitsluitend de vorm van het beeldmerk zelf. Het hoofdstuknummer krijgt dezelfde kleur en hetzelfde font als de titel ernaast, geen apart goud. Bouw met de bouwstenen uit §2.4, pas vrij aan naar het documenttype. Is de tekst lang (vanaf ~5 secties/hoofdstukken)? Voeg dan de klikbare navigatie uit §2.5 toe: vaste knop rechtsonder, uitschuifpaneel met inhoudsopgave, actieve sectie gemarkeerd tijdens scrollen. Zet onder de documentregel in de footer de auteursrechtregel uit §2.4, letterlijk.
+> Gebruik de huisstijl van de Betekenisfabriek: koningsblauw `#27275B` en goud `#DDB85E` als basiskleuren, Merriweather voor koppen en lopende tekst, Open Sans voor labels en tabellen — beide als `@font-face` met base64 ingebed, **geen** `<link>` naar Google Fonts. Gebruik het officiële logo (nooit zelf getekend, ook als base64 ingebed), en zorg dat goud nooit als tekstkleur op een licht vlak wordt gebruikt — alleen als lijn, rand of tekst op donkerblauw. Gebruik het chevron-teken (`›`, §1.3) uitsluitend als enkel hoofdstuknummer-icoon — **geen** herhalend chevron-lijnaccent en **niet** het hexagon-motief, dat is uitsluitend de vorm van het beeldmerk zelf. Het hoofdstuknummer krijgt dezelfde kleur en hetzelfde font als de titel ernaast, geen apart goud. Bouw met de bouwstenen uit §2.4, pas vrij aan naar het documenttype. Is de tekst lang (vanaf ~5 secties/hoofdstukken)? Voeg dan de klikbare navigatie uit §2.5 toe: vaste knop rechtsonder, uitschuifpaneel met inhoudsopgave, actieve sectie gemarkeerd tijdens scrollen. Zet onder de documentregel in de footer de auteursrechtregel uit §2.4, letterlijk. Vraag vooraf of het logo van de opdrachtgever erin moet (dan de witte co-brandingbalk, §2.4) en of het stuk vertrouwelijk is (dan de vertrouwelijkheidsregel, §2.4).
 
 ---
 
@@ -725,7 +736,7 @@ De logo's en beeldmerken staan als echte, transparante PNG's in de openbare GitH
 | `DBF-logo-wit.png` | 1244 × 370 | Footer, documentkopje, navigatie: elke kleine of herhalende plaatsing op donkerblauw. |
 | `DBF-logo-zwart.png` | 1244 × 370 | Documentkopje of footer op wit of papiertint. |
 | `DBF-logo-wit-tagline.png` | 1244 × 370 | Titelblok (HTML), titel- en slotdia (PowerPoint). |
-| `DBF-logo-zwart-tagline.png` | 1244 × 370 | Omslag en, als uitzondering, de koptekst van de Word-offerte (§1.2). |
+| `DBF-logo-zwart-tagline.png` | 1244 × 370 | Omslag, de witte co-brandingbalk in HTML (§2.4) en, als uitzondering, de koptekst van de Word-offerte (§1.2). |
 | `DBF-beeldmerk-wit.png` | 944 × 1083 | Alleen los, nooit naast het logo (§1.2). Bijvoorbeeld klein rechtsonder op een donkere accentdia (§3.5). |
 | `DBF-beeldmerk-zwart.png` | 944 × 1083 | Alleen los, nooit naast het logo (§1.2). |
 
@@ -737,7 +748,7 @@ De logo's en beeldmerken staan als echte, transparante PNG's in de openbare GitH
 | `DBF_patroon_*.svg` (6×), `DBF_patroon_slotdia_koningsblauw.png`, `patroon.py` | Decoratief patroon, dia-afbeelding en generator (ook van de chevron) | Bijlage B |
 | `DBF_titeldia_chevrondiepte_koningsblauw.png` | Openingsdia als afbeelding (4000 × 2250 px), alleen als de vrije vormen niet lukken | §1.3, §3.5 |
 | `DBF_slotdia_beeldmerk_koningsblauw.png` | Slotdia: patroon met het beeldmerk in de middelste cel (4000 × 2250 px) | §3.5, B.6 |
-| `DBF_voorbeeldpresentatie.pptx`, `DBF_voorbeeld_html.html`, `DBF_voorbeeld_achterkant_A4.pdf` | Referentievoorbeelden: zo hoort het eruit te zien (de presentatie is gemaakt met `Powerpoint_sjabloon.potx`, met ingesloten lettertypen) | §2.4, §3.5, B.3 |
+| `DBF_voorbeeldpresentatie.pptx`, `DBF_voorbeeld_html.html`, `DBF_voorbeeld_html_cobranding.html`, `DBF_voorbeeld_achterkant_A4.pdf` | Referentievoorbeelden: zo hoort het eruit te zien (de presentatie is gemaakt met `Powerpoint_sjabloon.potx`, met ingesloten lettertypen) | §2.4, §3.5, B.3 |
 | `DBF_fotostrook.png` | Fotostrook inhoudsdia PowerPoint (zit al in het sjabloon) | §3.5 |
 | `DBF_titelfoto_strand.jpg` | Vervallen titeldiafoto; niet gebruiken | §3.5 |
 | `Powerpoint_sjabloon.potx` | PowerPoint-sjabloon (0,7 MB): slidemaster, vijf indelingen, ingesloten lettertypen | §3 |
@@ -849,7 +860,7 @@ In de standaard geen goud: geen gouden vormen, geen metallic, verlopen of glans.
 **Word en PDF (rapport)**
 - Omslag: als er een passend beeld is (§1.7) een foto in het bovenste ±56%; anders typografisch. Gouden lijn, titel op wit, logo met tagline rechtsonder. Geen patroon.
 - Binnenwerk en hoofdstukopeningen: geen patroon.
-- Achterkant: `DBF_patroon_koningsblauw_A4.svg` over de volle pagina, met het witte beeldmerk in de middelste cel (B.6) en onderaan gecentreerd het webadres (Open Sans semibold, 10,5 pt, `#BEBECE`, ±22 mm boven de onderrand). Geen logo. Een achterkant zonder patroon is ook in huisstijl. Referentie: `DBF_voorbeeld_achterkant_A4.pdf`.
+- Achterkant: `DBF_patroon_koningsblauw_A4.svg` over de volle pagina, met het witte beeldmerk in de middelste cel (B.6) en onderaan gecentreerd het webadres (Open Sans semibold, 10,5 pt, `#BEBECE`, ±22 mm boven de onderrand). Daaronder een korte gouden lijn en de auteursrechtregel uit §2.4, letterlijk (Open Sans 400, 7 pt, `#BEBECE`, gecentreerd, maximaal ca. 120 mm breed). Geen logo. Een achterkant zonder patroon is ook in huisstijl. Referentie: `DBF_voorbeeld_achterkant_A4.pdf`.
 - PDF volgt de bronopmaak (§0). Het patroon blijft vector.
 
 **PowerPoint**
@@ -895,7 +906,7 @@ Vastgesteld 13 oktober 2026 (besluit Paul). Het beeldmerk is een regelmatige zes
 
 1. **Plaats:** het raster is gecentreerd (B.5). Het verticale chevronpaar in het midden van het vlak vervalt; daar staat het beeldmerk, precies gecentreerd.
 2. **Maat:** de zeshoek van het beeldmerk is 0,906 × de randlengte *d* hoog (96% van de celbreedte). Niet groter of kleiner maken: dan past het niet meer in de cel.
-3. **Wat erbij mag:** niets op de slotdia. Op de achterkant van een rapport alleen het webadres onderaan. Geen logo, geen tagline, geen tekst bij het beeldmerk (§1.2: nooit beeldmerk én logo).
+3. **Wat erbij mag:** niets op de slotdia. Op de achterkant van een rapport alleen het webadres onderaan, met daaronder gouden lijn en auteursrechtregel (B.3). Geen logo, geen tagline, geen tekst bij het beeldmerk (§1.2: nooit beeldmerk én logo).
 4. **Bestand:** alleen het officiële witte beeldmerk (Bijlage A), onbewerkt, één keer per uiting.
 5. **Bestanden:** `DBF_slotdia_beeldmerk_koningsblauw.png` (dia). Voor A4 en andere maten: `patroon.py` (functies `middelste_cel` en `beeldmerk_in_cel`).
 
