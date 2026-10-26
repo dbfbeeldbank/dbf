@@ -1,6 +1,6 @@
 # DBF Huisstijlgids — één bron voor HTML, PDF, PowerPoint en Word
 
-> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 24 oktober 2026 (auteursrechtregel ook op achterkant rapport en in voorbeeld-HTML; co-brandingbalk en vertrouwelijkheidsregel als optie in HTML) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
+> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 26 oktober 2026 (tabellen altijd binnen de tekstkolom; auteursrechtregel ook op achterkant rapport en in voorbeeld-HTML; co-brandingbalk en vertrouwelijkheidsregel als optie in HTML) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
 >
 > Drie documenten, elk met een eigen functie; ze herhalen elkaars inhoud niet:
 > - **Deze huisstijlgids:** de geldende regels en ontwerpprincipes. De normatieve bron.
@@ -295,7 +295,12 @@ Bouwstenen. Gebruik wat past bij het documenttype, laat weg wat niet nodig is:
 - **Zelfcheck/kadertje met badge** — kleine navy "merkje" boven een korte tekst
 - **Voorbeeldkader** — zachte goudtint, voor cases en toelichtingen
 - **Pull quote** — dikke goud zijrand, opvallende regel
-- **Tabellen** — donkerblauw kopregel, witte tekst
+- **Tabellen** — donkerblauwe kopregel, witte tekst, Open Sans. **Een tabel staat altijd binnen de tekstkolom:** linkerrand gelijk met de tekst erboven, rechterrand nooit verder dan de kolom. Kop, tekst en tabel vormen één blok.
+  - Zet elke tabel in een kader: `<div class="tabel-kader"><table>…</table></div>`, met `.tabel-kader{overflow-x:auto}` en `table{width:100%}`.
+  - **Nooit** een tabel laten uitbreken met negatieve marges, `width` boven 100%, `100vw` of een eigen, bredere wrapper. Ook niet "omdat drie kolommen anders te smal worden".
+  - Past een tabel met drie of meer kolommen niet, geef de tabel dan een minimumbreedte (`table.breed{min-width:600px}`). Op een smal scherm scrolt de tabel dan binnen zijn eigen kader; de pagina zelf schuift nooit opzij.
+  - Cellen: padding ±14px 16px, `vertical-align:top`, alleen horizontale rijlijnen (`--lijn`). Geen verticale lijnen.
+  - Referentie: de tabel in `DBF_voorbeeld_html.html`.
 - **Figuren/diagrammen** — SVG met bijschrift
 - **Klikbare navigatie** — bij een langere tekst (vanaf een stuk of vijf secties/hoofdstukken): een vaste "Inhoud"-knop rechtsonder die een uitschuifpaneel opent, zie §2.5
 - **Footer** — donkerblauw, **wit logo zonder tagline** (Bijlage A) + documentregel + eventueel het webadres (`debetekenisfabriek.nl`, Open Sans semibold, goud). Staat de patroonstrook erboven (Bijlage B.3), dan scheidt een **gouden lijn van 2px over de volle breedte** strook en voet. Gebruik nooit het losse beeldmerk náást het logo: het logo bevat het beeldmerk al, dus dan staat het hexagon-icoon dubbel. Geef de footer onderaan ca. 88px padding, zodat de vaste "Inhoud"-knop de documentregel niet afdekt (in print terug naar normaal). Referentie: `DBF_voorbeeld_html.html`.
@@ -430,6 +435,7 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 - [ ] Hoofdstuknummer heeft dezelfde kleur en hetzelfde lettertype/gewicht als de titel ernaast (geen apart goud, geen ander font), en een leesbare maat (1.1–1.3rem, zie §2.4), niet weggemoffeld als klein label
 - [ ] Contrast gecontroleerd — geen goud-tekst op licht vlak
 - [ ] Getest op mobiele én desktopbreedte
+- [ ] Elke tabel staat binnen de tekstkolom: linkerrand gelijk met de tekst, niet breder dan de kolom; op mobiel scrolt alleen de tabel (§2.4)
 - [ ] Bij een langere tekst (vanaf ~5 secties): klikbare navigatie toegevoegd (§2.5), en getest dat die in print verborgen is
 - [ ] Vaste navigatieknop wordt onzichtbaar/onklikbaar zolang het paneel open is (`.is-hidden`-patroon), geen z-index-gok
 - [ ] Klikken op een link in het navigatiepaneel sluit het paneel ook (niet alleen navigeren)

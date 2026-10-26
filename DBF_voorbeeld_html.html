@@ -28,6 +28,12 @@ footer{background:var(--inkt);color:var(--wit-zacht);font-family:'Open Sans',san
 footer .kolom{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
 .noot{font-family:'Open Sans',sans-serif;font-size:.9rem;color:var(--inkt-zacht);border-top:1px solid var(--lijn);padding-top:16px;margin-top:48px}
 footer .url{color:var(--goud);font-weight:600;text-decoration:none}
+.tabel-kader{margin:28px 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tabel-kader table{width:100%;border-collapse:collapse;background:var(--wit);font-family:'Open Sans',sans-serif;font-size:15px;line-height:1.5}
+.tabel-kader table.breed{min-width:600px}
+.tabel-kader th{background:var(--inkt);color:var(--wit);font-weight:700;text-align:left;padding:14px 16px;vertical-align:bottom}
+.tabel-kader td{padding:14px 16px;border-bottom:1px solid var(--lijn);vertical-align:top;color:var(--inkt)}
+.tabel-kader td:first-child{font-weight:700}
 footer .auteursrecht{margin:18px 0 0;font-family:'Open Sans',sans-serif;font-weight:400;font-size:12px;line-height:1.5;color:var(--wit-zacht);max-width:none}
 @media print{footer{padding-bottom:28px}}
 </style></head><body>
@@ -41,6 +47,7 @@ footer .auteursrecht{margin:18px 0 0;font-family:'Open Sans',sans-serif;font-wei
 <div class="hoofdstukkop"><svg class="chev" viewBox="250 100 450 1116" aria-hidden="true"><polygon points="296.7,118 461.2,653 296.7,1188 348.4,1188 657.3,653 348.4,118" style="fill:var(--goud)"/></svg><span class="nummer">1</span><h2>Wat er veranderd is</h2></div>
 <p>De chevron is opener geworden: de armen staan onder 30°, waardoor dezelfde vorm past als los teken, in het patroon en naast het beeldmerk. In de hoofdstukkop staat hij in goud, ongeveer even hoog als het cijfer. Nummer en titel hebben dezelfde kleur en hetzelfde lettertype.</p>
 <blockquote>Losse vormen die pas in verbinding betekenis krijgen.</blockquote>
+<div class="tabel-kader"><table class="breed"><thead><tr><th>Plek</th><th>Regel</th><th>Waarom</th></tr></thead><tbody><tr><td>Linkerrand</td><td>Gelijk met de tekst erboven</td><td>Eén lijn waarop het oog terugkeert</td></tr><tr><td>Breedte</td><td>Nooit breder dan de tekstkolom</td><td>Kop, tekst en tabel vormen één blok</td></tr><tr><td>Smal scherm</td><td>Tabel scrolt binnen zijn eigen kader</td><td>De pagina zelf schuift nooit opzij</td></tr></tbody></table></div>
 <div class="hoofdstukkop"><svg class="chev" viewBox="250 100 450 1116" aria-hidden="true"><polygon points="296.7,118 461.2,653 296.7,1188 348.4,1188 657.3,653 348.4,118" style="fill:var(--goud)"/></svg><span class="nummer">2</span><h2>Waar je op let</h2></div>
 <p>Kijk vooral naar de strook onderaan. Op 90 pixels hoogte moeten de chevrons nog als vorm herkenbaar zijn, niet als vage textuur. De strook is toon op toon, staat direct boven de voet en is niet verplicht.</p>
 <p class="noot">Fonts en logo zijn als data-URI ingebed; de pagina werkt zonder internet.</p>
