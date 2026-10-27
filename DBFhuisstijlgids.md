@@ -1,6 +1,6 @@
 # DBF Huisstijlgids — één bron voor HTML, PDF, PowerPoint en Word
 
-> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 26 oktober 2026 (tabellen altijd binnen de tekstkolom; auteursrechtregel ook op achterkant rapport en in voorbeeld-HTML; co-brandingbalk en vertrouwelijkheidsregel als optie in HTML) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
+> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 27 oktober 2026 (zand als vaste lichte vlakkleur; label als band; tabellen altijd binnen de tekstkolom; auteursrechtregel ook op achterkant rapport en in voorbeeld-HTML; co-brandingbalk en vertrouwelijkheidsregel als optie in HTML) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
 >
 > Drie documenten, elk met een eigen functie; ze herhalen elkaars inhoud niet:
 > - **Deze huisstijlgids:** de geldende regels en ontwerpprincipes. De normatieve bron.
@@ -93,8 +93,8 @@ De kleurwaarden komen uit `kleurenpalet.png`, aangevuld met de afgeleide tinten 
 | Kleur | Hex | Functie |
 |---|---|---|
 | Zwart | `#000000` | Lopende tekst (Word, PowerPoint) |
-| Lichtblauw | `#E3E4ED` | Lichte kaartvlakken en panelen |
-| Zand | `#ECE4D7` | Warme kaarten en vlakken voor nadruk (palet-Goud `#C1A57B` op 30%) |
+| Lichtblauw | `#E3E4ED` | Alleen de zwakste waarde in de tabel-heatmap (§3.1). Niet voor kaarten, vlakken of labels: daarvoor is zand de kleur (besluit Paul, 27 oktober 2026) |
+| Zand | `#ECE4D7` | Vaste kleur voor lichte kaarten, vlakken en blokken, in elk formaat (palet-Goud `#C1A57B` op 30%) |
 | Warm gebroken wit | `#F5F3EE` | Achtergrond van digitale uitingen (HTML) |
 | Donker marine | `#222831` | Alleen als bewust gemotiveerde uitzondering |
 | Crème | `#FFFCF2` | Uitsluitend de PowerPoint-instructiedia "Plaatjes" |
@@ -268,8 +268,11 @@ Elk bestand definieert zijn palet bovenaan als CSS custom properties:
   --goud-licht:#F1E7D0;
   --lijn:#DCD8CE;
   --wit-zacht:#BEBECE;  /* secundaire tekst op donkerblauw, 7,5:1 */
+  --zand:#ECE4D7;       /* lichte vlakken en blokken, §1.1 */
 }
 ```
+
+Geen andere lichte vlakkleuren toevoegen, zoals `--lichtblauw`. Een licht vlak is zand of lichtgoud.
 
 Nooit losse hex-codes in de rest van het document — ook niet in SVG's (dus `fill="var(--inkt)"`, niet `fill="#27275B"`). Zo blijft een kleurwijziging één regel werk.
 
@@ -295,6 +298,14 @@ Bouwstenen. Gebruik wat past bij het documenttype, laat weg wat niet nodig is:
 - **Zelfcheck/kadertje met badge** — kleine navy "merkje" boven een korte tekst
 - **Voorbeeldkader** — zachte goudtint, voor cases en toelichtingen
 - **Pull quote** — dikke goud zijrand, opvallende regel
+- **Label als band** — voor datums of soorten bijeenkomst in een tijdlijn of een uitklapbare modulebalk. Geen los blokje met een eigen breedte, maar een band die bij de kaart hoort (besluit Paul, 27 oktober 2026):
+  - Tijdlijnkaart: de band vult de **bovenkant** van de kaart over de volle breedte. Modulebalk: de band is een **vaste kolom links** (±92px), over de volle hoogte. Zo staan alle titels exact onder elkaar, hoe lang de datum ook is.
+  - Kleuren: hoofdsoort (bijv. ontwikkeldag) koningsblauw `--inkt`, tweede soort middenblauw `--inkt-mid`, beide met witte tekst. Niet koningsblauw naast zand of een andere lichte kleur: dan ontstaat een zebrapad.
+  - Langs de band een **gouden lijn van 2px**: onder de band in de tijdlijn, rechts van de kolom in de modulebalk. Die lijn brengt de warmte terug.
+  - Tekst in **Open Sans** (het is een label, §1.2), 700 voor de hoofdsoort en 600 voor de tweede soort, ±.8rem.
+  - Op mobiel wordt de linkerkolom een band over de volle breedte bovenaan de balk, met de gouden lijn eronder.
+  - De legenda gebruikt dezelfde twee kleuren als vierkantje.
+  - Referentie: tijdlijn en modulebalken in `DBF_voorbeeld_html.html`.
 - **Tabellen** — donkerblauwe kopregel, witte tekst, Open Sans. **Een tabel staat altijd binnen de tekstkolom:** linkerrand gelijk met de tekst erboven, rechterrand nooit verder dan de kolom. Kop, tekst en tabel vormen één blok.
   - Zet elke tabel in een kader: `<div class="tabel-kader"><table>…</table></div>`, met `.tabel-kader{overflow-x:auto}` en `table{width:100%}`.
   - **Nooit** een tabel laten uitbreken met negatieve marges, `width` boven 100%, `100vw` of een eigen, bredere wrapper. Ook niet "omdat drie kolommen anders te smal worden".
@@ -435,6 +446,8 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 - [ ] Hoofdstuknummer heeft dezelfde kleur en hetzelfde lettertype/gewicht als de titel ernaast (geen apart goud, geen ander font), en een leesbare maat (1.1–1.3rem, zie §2.4), niet weggemoffeld als klein label
 - [ ] Contrast gecontroleerd — geen goud-tekst op licht vlak
 - [ ] Getest op mobiele én desktopbreedte
+- [ ] Geen lichtblauw als vlak of label; lichte vlakken zijn zand of lichtgoud (§1.1)
+- [ ] Datums en soorten in tijdlijn of modulebalk staan als band (§2.4), niet als los blokje; alle titels lijnen uit
 - [ ] Elke tabel staat binnen de tekstkolom: linkerrand gelijk met de tekst, niet breder dan de kolom; op mobiel scrolt alleen de tabel (§2.4)
 - [ ] Bij een langere tekst (vanaf ~5 secties): klikbare navigatie toegevoegd (§2.5), en getest dat die in print verborgen is
 - [ ] Vaste navigatieknop wordt onzichtbaar/onklikbaar zolang het paneel open is (`.is-hidden`-patroon), geen z-index-gok
