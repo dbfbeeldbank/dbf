@@ -1,6 +1,6 @@
 # DBF Huisstijlgids — één bron voor HTML, PDF, PowerPoint en Word
 
-> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 27 oktober 2026 (zand als vaste lichte vlakkleur; label als band; tabellen altijd binnen de tekstkolom; auteursrechtregel ook op achterkant rapport en in voorbeeld-HTML; co-brandingbalk en vertrouwelijkheidsregel als optie in HTML) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
+> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 28 oktober 2026 (signaalkleuren voor goed, let op en stop; briefing beeldschermachtergronden) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
 >
 > Drie documenten, elk met een eigen functie; ze herhalen elkaars inhoud niet:
 > - **Deze huisstijlgids:** de geldende regels en ontwerpprincipes. De normatieve bron.
@@ -18,6 +18,9 @@ Lees altijd de leidende principes, §0 en §1.1–§1.5, en §5 (kwaliteitsrappo
 | **HTML-pagina** | §2, Bijlage A | Beeld: §1.7 + Bijlage C · Patroonstrook: §1.6 + B.3 (HTML) |
 | **PowerPoint** | §3 (begin met `Powerpoint_sjabloon.potx`), Bijlage A, B.3 (PowerPoint) | Historische foto of sessiebeeld: Bijlage C |
 | **Word of PDF** | §4, Bijlage A | Beeld: §1.7 + Bijlage C · Achterkant met patroon: §1.6 + B.3 (Word/PDF) |
+| **Beeldschermachtergrond** | B.5, B.6 en B.8 | — |
+
+Toont een uiting een oordeel (goed, let op, stop), lees dan ook §1.1 D.
 
 Open punten die nog niet beslist zijn: §6. Doe daar geen aannames over; vraag het na.
 
@@ -114,6 +117,23 @@ De kleurwaarden komen uit `kleurenpalet.png`, aangevuld met de afgeleide tinten 
 Het eerdere HTML/Word-blauw `#15284B` vervalt. Waar in deze gids "donkerblauw" of "navy" staat zonder hexcode, is koningsblauw bedoeld.
 
 **Goud (DBF) `#DDB85E`:** goud is nooit een tekstkleur op een licht vlak. Contrast goud-op-wit is ca. 1,8:1, ruim onder de WCAG-norm van 4,5:1. Goud alleen als lijn, rand, stip, of als tekstkleur op donkerblauw. Vlakken met witte tekst (labels, chips, badges) staan op donkerblauw, nooit op goud.
+
+**D. Signaalkleuren** — alleen voor een oordeel: goed, let op of stop (besluit Paul, 28 oktober 2026). Bijvoorbeeld in een voortgangsrapportage, scorematrix, risicotabel of de kwaliteitsrapportage (§5). Geen sfeerkleur en geen decoratie. Dezelfde waarden in elk formaat.
+
+| Status | Vorm | Markering | Vlaktint | Contrast markering op wit / papier / eigen vlaktint |
+|---|---|---|---|---|
+| Goed | rondje | `#648C55` (salie) | `#E6EEDD` | 3,9 / 3,5 / 3,3 : 1 |
+| Let op | driehoek, punt omhoog | `#B96B29` (oker) | `#FAE4CE` | 4,0 / 3,6 / 3,3 : 1 |
+| Stop | vierkant | `#C7553F` (terracotta) | `#F8DFD8` | 4,4 / 3,9 / 3,4 : 1 |
+
+- **Markering, geen tekstkleur.** De signaalkleur staat in een vorm, rand of stip. Voor een vorm is 3:1 de norm; die halen alle drie op wit, papier en hun eigen vlaktint. Voor lopende tekst is 4,5:1 nodig; die halen ze niet.
+- **Kleur nooit alleen.** Altijd de vaste vorm én een woord ("Gereed", "Let op", "Stop"). Oranje en rood liggen bij kleurenblindheid dicht bij elkaar; de vorm vangt dat op.
+- **Tekst op een vlaktint** is koningsblauw of zwart.
+- **Hooguit één signaalvlak per kaart of tabelrij.** Koningsblauw blijft de hoofdkleur van de pagina.
+- **Geen oordeel, geen signaalkleur.** Een heatmap zonder goed of fout blijft blauw en goud (§3.1).
+- **Geen play-, pauze- en stopiconen als signaal.** Die zeggen of iets loopt, niet of het goed gaat. Is de procesfase nodig (loopt, gepauzeerd, afgesloten), zet die dan in een aparte, neutrale kolom in koningsblauw.
+- Print: CMYK- en Pantone-waarden zijn nog niet vastgesteld (§6).
+- Referentie: `DBF_voorbeeld_signaalkleuren.html`.
 
 ### 1.2 Logo en beeldmerk
 
@@ -269,10 +289,14 @@ Elk bestand definieert zijn palet bovenaan als CSS custom properties:
   --lijn:#DCD8CE;
   --wit-zacht:#BEBECE;  /* secundaire tekst op donkerblauw, 7,5:1 */
   --zand:#ECE4D7;       /* lichte vlakken en blokken, §1.1 */
+  /* alleen als het document een oordeel toont, §1.1 D */
+  --ok:#648C55;   --ok-licht:#E6EEDD;
+  --letop:#B96B29; --letop-licht:#FAE4CE;
+  --stop:#C7553F; --stop-licht:#F8DFD8;
 }
 ```
 
-Geen andere lichte vlakkleuren toevoegen, zoals `--lichtblauw`. Een licht vlak is zand of lichtgoud.
+Geen andere lichte vlakkleuren toevoegen, zoals `--lichtblauw`. Een licht vlak is zand of lichtgoud. De enige uitzondering zijn de drie signaaltinten, en alleen bij een melding met een oordeel (§1.1 D). Toont het document geen oordeel, laat de zes signaalregels dan weg.
 
 Nooit losse hex-codes in de rest van het document — ook niet in SVG's (dus `fill="var(--inkt)"`, niet `fill="#27275B"`). Zo blijft een kleurwijziging één regel werk.
 
@@ -298,6 +322,12 @@ Bouwstenen. Gebruik wat past bij het documenttype, laat weg wat niet nodig is:
 - **Zelfcheck/kadertje met badge** — kleine navy "merkje" boven een korte tekst
 - **Voorbeeldkader** — zachte goudtint, voor cases en toelichtingen
 - **Pull quote** — dikke goud zijrand, opvallende regel
+- **Statusmelding en statuslabel** — alleen bij een oordeel (§1.1 D).
+  - Melding: vlak in de signaaltint, linkerrand 5px in de signaalkleur, kop in Open Sans 700 met de vorm ervoor (±17px), tekst in koningsblauw.
+  - Statuslabel in een tabel: vorm (±16px) + woord in Open Sans 600, koningsblauw. Alleen de statuskolom draagt kleur. Op mobiel schuift de status naast de eerste kolom, zodat hij niet buiten beeld valt.
+  - Samenvattingskaart: zand, linkerrand 5px in de signaalkleur, vorm + getal + korte omschrijving.
+  - Vormen als inline SVG (`<symbol>` één keer bovenin, daarna `<use>`), met `fill` via de CSS-variabele.
+  - Referentie: `DBF_voorbeeld_signaalkleuren.html`.
 - **Label als band** — voor datums of soorten bijeenkomst in een tijdlijn of een uitklapbare modulebalk. Geen los blokje met een eigen breedte, maar een band die bij de kaart hoort (besluit Paul, 27 oktober 2026):
   - Tijdlijnkaart: de band vult de **bovenkant** van de kaart over de volle breedte. Modulebalk: de band is een **vaste kolom links** (±92px), over de volle hoogte. Zo staan alle titels exact onder elkaar, hoe lang de datum ook is.
   - Kleuren: hoofdsoort (bijv. ontwikkeldag) koningsblauw `--inkt`, tweede soort middenblauw `--inkt-mid`, beide met witte tekst. Niet koningsblauw naast zand of een andere lichte kleur: dan ontstaat een zebrapad.
@@ -454,6 +484,7 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 - [ ] Klikken op een link in het navigatiepaneel sluit het paneel ook (niet alleen navigeren)
 - [ ] Titelblok (`header.top`) en body (`.wrap`) gebruiken identieke horizontale padding op de binnenste wrapper (§2.6) — tekst lijnt uit, ook op mobiel
 - [ ] Auteursrechtregel staat onder de documentregel in de footer, letterlijk zoals in §2.4
+- [ ] Signaalkleuren alleen bij een oordeel, als markering (vorm, rand) en altijd met vaste vorm én woord; nooit als tekstkleur (§1.1 D)
 - [ ] Gevraagd naar klantlogo en vertrouwelijkheid (§0); bij klantlogo de witte co-brandingbalk en het titelblok zonder logo (§2.4); bij vertrouwelijk de regel bovenin, met kring en e-mailadres ingevuld
 - [ ] Eén zelfstandig bestand, geen gebroken links of ontbrekende assets
 - [ ] Daadwerkelijk gerenderd bekeken — geen code-only review
@@ -462,7 +493,7 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 
 Kort blok om mee te geven bij een nieuwe HTML-opdracht aan een AI-tool:
 
-> Gebruik de huisstijl van de Betekenisfabriek: koningsblauw `#27275B` en goud `#DDB85E` als basiskleuren, Merriweather voor koppen en lopende tekst, Open Sans voor labels en tabellen — beide als `@font-face` met base64 ingebed, **geen** `<link>` naar Google Fonts. Gebruik het officiële logo (nooit zelf getekend, ook als base64 ingebed), en zorg dat goud nooit als tekstkleur op een licht vlak wordt gebruikt — alleen als lijn, rand of tekst op donkerblauw. Gebruik het chevron-teken (`›`, §1.3) uitsluitend als enkel hoofdstuknummer-icoon — **geen** herhalend chevron-lijnaccent en **niet** het hexagon-motief, dat is uitsluitend de vorm van het beeldmerk zelf. Het hoofdstuknummer krijgt dezelfde kleur en hetzelfde font als de titel ernaast, geen apart goud. Bouw met de bouwstenen uit §2.4, pas vrij aan naar het documenttype. Is de tekst lang (vanaf ~5 secties/hoofdstukken)? Voeg dan de klikbare navigatie uit §2.5 toe: vaste knop rechtsonder, uitschuifpaneel met inhoudsopgave, actieve sectie gemarkeerd tijdens scrollen. Zet onder de documentregel in de footer de auteursrechtregel uit §2.4, letterlijk. Vraag vooraf of het logo van de opdrachtgever erin moet (dan de witte co-brandingbalk, §2.4) en of het stuk vertrouwelijk is (dan de vertrouwelijkheidsregel, §2.4).
+> Gebruik de huisstijl van de Betekenisfabriek: koningsblauw `#27275B` en goud `#DDB85E` als basiskleuren, Merriweather voor koppen en lopende tekst, Open Sans voor labels en tabellen — beide als `@font-face` met base64 ingebed, **geen** `<link>` naar Google Fonts. Gebruik het officiële logo (nooit zelf getekend, ook als base64 ingebed), en zorg dat goud nooit als tekstkleur op een licht vlak wordt gebruikt — alleen als lijn, rand of tekst op donkerblauw. Gebruik het chevron-teken (`›`, §1.3) uitsluitend als enkel hoofdstuknummer-icoon — **geen** herhalend chevron-lijnaccent en **niet** het hexagon-motief, dat is uitsluitend de vorm van het beeldmerk zelf. Het hoofdstuknummer krijgt dezelfde kleur en hetzelfde font als de titel ernaast, geen apart goud. Bouw met de bouwstenen uit §2.4, pas vrij aan naar het documenttype. Is de tekst lang (vanaf ~5 secties/hoofdstukken)? Voeg dan de klikbare navigatie uit §2.5 toe: vaste knop rechtsonder, uitschuifpaneel met inhoudsopgave, actieve sectie gemarkeerd tijdens scrollen. Zet onder de documentregel in de footer de auteursrechtregel uit §2.4, letterlijk. Vraag vooraf of het logo van de opdrachtgever erin moet (dan de witte co-brandingbalk, §2.4) en of het stuk vertrouwelijk is (dan de vertrouwelijkheidsregel, §2.4). Toont het stuk een oordeel (goed, let op, stop), gebruik dan alleen de signaalkleuren uit §1.1 D, als vorm of rand, met een woord erbij, nooit als tekstkleur.
 
 ---
 
@@ -731,6 +762,8 @@ Groen is geen garantie dat een document foutloos, juridisch juist of AVG-proof i
 - **Tagline in Word buiten de offerte:** geldt de offerte-uitzondering (herhalend mét tagline) ook voor brief, rapport en memo?
 - **Assetbibliotheek:** schone transparante witte logo's als SVG aanvragen bij de bron (de PNG's in Bijlage A volstaan intussen).
 - **Zandvariant van het patroon:** twee voorstellen in proef (B.2). Visuele keuze nog te maken; daarna pas vastleggen.
+- **Signaalkleuren in print:** CMYK- en Pantone-waarden voor §1.1 D nog bepalen en met een proefdruk controleren.
+- **Beeldschermachtergronden (B.8):** de varianten goud en glas zijn voorstellen. Eerst proeven op een echt apparaat bekijken; daarna pas vastleggen.
 
 - **Oude chevron in voorbeeldbestanden:** `DB_brief_sjabloon.pdf` en `DBF_rapport_sjabloon.pdf` tonen nog de chevron en het patroon van vóór 13 oktober. Deze gids en de bestanden in Bijlage A/B gaan voor. Bijwerken vraagt de Word-bronbestanden.
 - **Rustvergelijking:** het nieuwe patroon bestaat uit vlakken, het oude uit lijnen. De dekking van 5% is gekozen zodat beide even aanwezig ogen; in de praktijk toetsen op beamer en drukwerk.
@@ -767,7 +800,7 @@ De logo's en beeldmerken staan als echte, transparante PNG's in de openbare GitH
 | `DBF_patroon_*.svg` (6×), `DBF_patroon_slotdia_koningsblauw.png`, `patroon.py` | Decoratief patroon, dia-afbeelding en generator (ook van de chevron) | Bijlage B |
 | `DBF_titeldia_chevrondiepte_koningsblauw.png` | Openingsdia als afbeelding (4000 × 2250 px), alleen als de vrije vormen niet lukken | §1.3, §3.5 |
 | `DBF_slotdia_beeldmerk_koningsblauw.png` | Slotdia: patroon met het beeldmerk in de middelste cel (4000 × 2250 px) | §3.5, B.6 |
-| `DBF_voorbeeldpresentatie.pptx`, `DBF_voorbeeld_html.html`, `DBF_voorbeeld_html_cobranding.html`, `DBF_voorbeeld_achterkant_A4.pdf` | Referentievoorbeelden: zo hoort het eruit te zien (de presentatie is gemaakt met `Powerpoint_sjabloon.potx`, met ingesloten lettertypen) | §2.4, §3.5, B.3 |
+| `DBF_voorbeeldpresentatie.pptx`, `DBF_voorbeeld_html.html`, `DBF_voorbeeld_html_cobranding.html`, `DBF_voorbeeld_signaalkleuren.html`, `DBF_voorbeeld_achterkant_A4.pdf` | Referentievoorbeelden: zo hoort het eruit te zien (de presentatie is gemaakt met `Powerpoint_sjabloon.potx`, met ingesloten lettertypen) | §1.1 D, §2.4, §3.5, B.3 |
 | `DBF_fotostrook.png` | Fotostrook inhoudsdia PowerPoint (zit al in het sjabloon) | §3.5 |
 | `DBF_titelfoto_strand.jpg` | Vervallen titeldiafoto; niet gebruiken | §3.5 |
 | `Powerpoint_sjabloon.potx` | PowerPoint-sjabloon (0,7 MB): slidemaster, vijf indelingen, ingesloten lettertypen | §3 |
@@ -937,6 +970,42 @@ Alleen buiten de standaarduitingen: bijzondere uitgaven, een omslag van een jubi
 - **Verbindingsstaaf:** een dunne staaf dwars door het midden van een grote zeshoek, van ster naar ster. Breedte gelijk aan het smalle uiteinde van de chevron. Alleen tussen twee sterren die allebei kleur hebben, en alleen als de verbinding iets betekent.
 - **Seizoenen:** het raster blijft altijd intact; het seizoen zit uitsluitend in welke chevrons kleur krijgen (bijv. herfst: een cluster, een dunne valbaan en een hoop). Geen vormen die uit het raster vallen of draaien.
 - Achtergrond uit het palet (§1.1): koningsblauw, navy, blauw `#30475E`, crème of wit.
+- Beeldschermachtergronden hebben een eigen briefing: B.8.
+
+### B.8 Beeldschermachtergronden (briefing)
+
+Voorstel 28 oktober 2026; koningsblauw toon op toon is de bestaande standaard (B.2), goud en glas zijn in proef (§6). Een beeldschermachtergrond heeft geen tekst en geen logo. Raster, vorm en kleuren blijven vast.
+
+**1. Eerst vragen** — in één vraagronde, met keuzeknoppen waar dat kan:
+1. **Kleur:** koningsblauw of goud?
+2. **Afwerking:** toon op toon of glas?
+3. **Apparaat:** iPhone, iPad, Mac of extern beeldscherm, en welk model.
+
+Claude kan niet zien op welk apparaat de vraag wordt gesteld. Vraag het dus altijd. Weet de gebruiker het model niet: op iPhone en iPad staat het onder Instellingen › Algemeen › Info, op een Mac onder Apple-menu › Over deze Mac. Bij een extern scherm: merk en type, of de resolutie in pixels.
+
+**2. Resolutie opzoeken, nooit uit het hoofd.** Zoek de schermresolutie in pixels van dat model op bij de fabrikant (voor Apple: de technische specificaties op support.apple.com) en controleer die met een tweede bron. Maak de afbeelding op precies die maat. iPad draait mee: maak een vierkant met de lange zijde als maat, zodat staand en liggend allebei kloppen. Vermeld in de kwaliteitsrapportage (§5) welke bronnen de maat gaven.
+
+**3. Kleur en afwerking**
+
+| | Achtergrond | Toon op toon | Glas |
+|---|---|---|---|
+| **Koningsblauw** | `#27275B` | chevrons wit, 5% dekking (B.2) | chevrons wit, 12% dekking, rand wit 30% |
+| **Goud** | `#DDB85E` | chevrons koningsblauw, 8% dekking | chevrons wit, 22% dekking, rand wit 45% |
+
+- **Glas** betekent: de chevrons als matte, halfdoorzichtige plaatjes met een dunne, lichtere rand (±0,4% van de korte zijde). Geen verloop, geen spiegeling, geen glans of metallic en geen onscherpte-effect (B.2). Het verschil met toon op toon zit alleen in dekking en rand.
+- Goud als achtergrond mag hier, omdat er geen tekst op staat. In documenten blijft goud een accent (§1.1).
+
+**4. Opbouw**
+- Raster volgens B.5, gecentreerd, gemaakt met `patroon.py`. Niet hertekenen.
+- Randlengte *d* ±1/6 van de korte zijde, zoals op de dia (7,5 / 1,25 inch).
+- Beeldmerk optioneel, precies in de middelste cel (B.6). Op koningsblauw het witte beeldmerk. Op goud geen beeldmerk: wit is daar te zwak en een koningsblauwe versie bestaat niet als officieel bestand.
+- Geen logo, geen tekst, geen kleuraccenten. Wil de gebruiker toch een kleurcluster of seizoensbeeld, dan volgens B.7.
+- **Vrije zones.** iPhone: bovenste ±30% (klok, datum, widgets) en onderste ±10% (dock, balk) zonder beeldmerk; op het beginscherm valt het midden onder de apps, dus het beeldmerk is vooral voor het toegangsscherm. Mac en extern scherm: menubalk bovenin, Dock onderin. Het besturingssysteem kan de achtergrond iets vergroten; zet daarom niets wezenlijks tegen de rand.
+
+**5. Oplevering**
+- PNG, sRGB, exact de opgezochte pixelmaat. Als bestand om te downloaden (`present_files`), niet als gepubliceerde pagina.
+- Bestandsnaam: `DBF_achtergrond_[kleur]_[afwerking]_[apparaat]_[breedte]x[hoogte].png`.
+- Daadwerkelijk bekijken voor oplevering: het geheel verkleind én een uitsnede op ware grootte (raster, rand, beeldmerk in de cel).
 
 ---
 
