@@ -1,17 +1,18 @@
 # DBF Huisstijlgids — één bron voor HTML, PDF, PowerPoint en Word
 
-> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 28 oktober 2026 (signaalkleuren voor goed, let op en stop; briefing beeldschermachtergronden) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
+> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 28 oktober 2026, derde versie (signaalkleuren; briefing beeldschermachtergronden; voorrangsregel gids en sjablonen; manifest hersteld; schrijfstijl als apart bestand) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
 >
-> Drie documenten, elk met een eigen functie; ze herhalen elkaars inhoud niet:
+> Vier documenten, elk met een eigen functie; ze herhalen elkaars inhoud niet:
 > - **Deze huisstijlgids:** de geldende regels en ontwerpprincipes. De normatieve bron.
 > - **`DBF_ontwikkellogboek.md`:** hoe keuzes tot stand kwamen, afgewezen varianten, open ontwikkelpunten. Wordt bijgewerkt als de huisstijl zelf verandert. Niet nodig om een uiting te maken.
 > - **Kwaliteitsrapportage (§5):** per oplevering, over die ene uiting. Geen ontwikkelgeschiedenis.
+> - **`DBF_schrijfstijl.md`:** hoe we klinken. Geldt voor elke tekst, naast deze gids.
 >
 > **Alle bestanden** (logo's, chevrons, patronen, sjablonen, sjabloonfoto's, beeldbank) staan in de openbare GitHub-repository `dbfbeeldbank/dbf`, met een volledige lijst in `DBF_assets_manifest.csv` (Bijlage A). **Lukt downloaden niet**, bijvoorbeeld in een AI-omgeving zonder internet, vraag de gebruiker dan om `DBF_huisstijl_assets.zip`: daarin zit alles, inclusief deze gids en het manifest.
 
 ## Wegwijzer — wat lees je voor welk formaat?
 
-Lees altijd de leidende principes, §0 en §1.1–§1.5, en §5 (kwaliteitsrapportage, bij elke oplevering). Lees daarna alleen wat bij je opdracht hoort; de rest kun je overslaan.
+Lees altijd de leidende principes, §0 en §1.1–§1.5, en §5 (kwaliteitsrapportage, bij elke oplevering). Schrijf je tekst, lees dan ook `DBF_schrijfstijl.md`. Lees daarna alleen wat bij je opdracht hoort; de rest kun je overslaan.
 
 | Je maakt | Lees | Alleen als het speelt |
 |---|---|---|
@@ -73,15 +74,17 @@ Het doel is consistentie, niet uniformiteit.
 - **Bij HTML vraagt Claude in dezelfde vraagronde ook twee dingen** (kort, met keuzeknoppen waar dat kan): (1) moet het logo van de opdrachtgever erin? Zo ja: vraag het logobestand (liefst PNG met transparante achtergrond of SVG); dan wordt het titelblok de co-brandingvariant (§2.4). (2) Is het document vertrouwelijk? Zo ja: voor welke kring; dan komt de vertrouwelijkheidsregel erin (§2.4). Beide zijn optioneel; zonder antwoord geldt: geen klantlogo, niet vertrouwelijk.
 - Na de keuze geldt: §1 (gedeeld fundament) **plus** het hoofdstuk van het gekozen formaat (§2 HTML, §3 PowerPoint, §4 Word).
 
-**Werkwijze bij elk nieuw documenttype:** eerst het aangeleverde bronbestand technisch valideren, dan de stijlwaarden er exact uit halen, pas dan bouwen. Nooit waarden verzinnen op gevoel. **Een bronbestand (template, .potx, .dotx) gaat voor op deze gids** als waarden botsen. Wordt een fout gevonden en hersteld, dan wordt de oorzaak en de regel in dezelfde handeling in deze gids vastgelegd.
+**Werkwijze bij elk nieuw documenttype:** eerst het aangeleverde bronbestand technisch valideren, dan de stijlwaarden er exact uit halen, pas dan bouwen. Nooit waarden verzinnen op gevoel. Wordt een fout gevonden en hersteld, dan wordt de oorzaak en de regel in dezelfde handeling in deze gids vastgelegd.
+
+**Voorrang (besluit Paul, 28 oktober 2026).** De actuele gids bevat de geldende regels. Een vastgesteld sjabloon (.potx, .dotx) is de goedgekeurde uitvoering daarvan, en een aangeleverd klantbestand bepaalt de opmaak van dát bestand. Wijkt een DBF-sjabloon af van de gids, dan kiest Claude niet zelf: de afwijking wordt gemeld (in de kwaliteitsrapportage, §5) en Paul beslist. Een uitzondering die in de gids zelf staat, zoals de tagline in de Word-offerte (§1.2), blijft geldig tot ze wordt herzien.
 
 ---
 
 ## 1. Gedeeld fundament (geldt voor elk formaat)
 
-### 1.1 Kleur: drie niveaus
+### 1.1 Kleur: identiteit, ondersteuning, functie en signaal
 
-De kleurwaarden komen uit `kleurenpalet.png`, aangevuld met de afgeleide tinten hieronder. Dit hoofdstuk legt vast welke **rol** een kleur heeft. Het is het enige kleurvoorschrift; de mediumhoofdstukken verwijzen hiernaar. Drie niveaus betekent niet: meer kleuren gebruiken. **Een afzonderlijke uiting bevat zo weinig mogelijk verschillende kleuren.**
+De kleurwaarden komen uit `kleurenpalet.png`, aangevuld met de afgeleide tinten hieronder. Dit hoofdstuk legt vast welke **rol** een kleur heeft. Het is het enige kleurvoorschrift; de mediumhoofdstukken verwijzen hiernaar. Vier soorten kleur betekent niet: meer kleuren gebruiken. **Een afzonderlijke uiting bevat zo weinig mogelijk verschillende kleuren.**
 
 **A. Identiteitskleuren** — dragen de merkidentiteit.
 
@@ -602,7 +605,7 @@ Procedure:
 
 ### 3.7 Chevron-bibliotheek — alle paletkleuren (ook bruikbaar in Word)
 
-De chevron is **in elke kleur uit het palet** (§1.1) beschikbaar als transparante PNG (924 × 1316 px), allemaal met dezelfde vorm (§1.3, vorm van 13 oktober 2026; de bestandsnamen zijn ongewijzigd). Ophalen via `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/<bestandsnaam>`. Een nieuwe kleur nodig? Genereer die uit de vectorpunten, niet door een bestaande PNG te verkleuren.
+De chevron is **in elke kleur uit het palet** (§1.1) beschikbaar als transparante PNG (924 × 1316 px), allemaal met dezelfde vorm (§1.3, vorm van 13 oktober 2026; de bestandsnamen zijn ongewijzigd). Ophalen via `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/<bestandsnaam>`. Een nieuwe kleur nodig? Genereer die uit de vectorpunten, niet door een bestaande PNG te verkleuren. Dat een kleur hier beschikbaar is, betekent niet dat hij overal gebruikt mag worden: de rol van elke kleur staat in §1.1.
 
 | Bestand | Hex | Paletnaam | Opmerking |
 |---|---|---|---|
@@ -615,7 +618,7 @@ De chevron is **in elke kleur uit het palet** (§1.1) beschikbaar als transparan
 | `DBF_chevron_000000.png` | `#000000` | Zwart | — |
 | `DBF_chevron_white.png` | `#FFFFFF` | Wit | Bestaande naam. Standaard witte variant, o.a. op navy achtergrond. |
 | `DBF_chevron_FFFCF2.png` | `#FFFCF2` | Crème | Zeer laag contrast op wit; alleen zinvol op een donkere achtergrond, en dan nog subtiel. |
-| `DBF_chevron_E3E4ED.png` | `#E3E4ED` | Lichte navy-tint | Zeer laag contrast op wit; alleen zinvol op een donkere achtergrond. |
+| `DBF_chevron_E3E4ED.png` | `#E3E4ED` | Lichte navy-tint | Zeer laag contrast op wit; alleen zinvol op een donkere achtergrond. Lichtblauw is verder alleen nog heatmapkleur (§1.1 B). |
 
 **Gebruik:** kies de kleur op basis van de achtergrond waarop de chevron staat (voldoende contrast), niet
 standaard navy of goud. Grijs, crème en de lichte navy-tint zijn alleen bruikbaar op koningsblauwe vlakken
@@ -787,7 +790,7 @@ De logo's en beeldmerken staan als echte, transparante PNG's in de openbare GitH
 |---|---|---|
 | `DBF-logo-wit.png` | 1244 × 370 | Footer, documentkopje, navigatie: elke kleine of herhalende plaatsing op donkerblauw. |
 | `DBF-logo-zwart.png` | 1244 × 370 | Documentkopje of footer op wit of papiertint. |
-| `DBF-logo-wit-tagline.png` | 1244 × 370 | Titelblok (HTML), titel- en slotdia (PowerPoint). |
+| `DBF-logo-wit-tagline.png` | 1244 × 370 | Titelblok (HTML), openingsdia (PowerPoint). Niet op de slotdia: die heeft geen logo (B.6). |
 | `DBF-logo-zwart-tagline.png` | 1244 × 370 | Omslag, de witte co-brandingbalk in HTML (§2.4) en, als uitzondering, de koptekst van de Word-offerte (§1.2). |
 | `DBF-beeldmerk-wit.png` | 944 × 1083 | Alleen los, nooit naast het logo (§1.2). Bijvoorbeeld klein rechtsonder op een donkere accentdia (§3.5). |
 | `DBF-beeldmerk-zwart.png` | 944 × 1083 | Alleen los, nooit naast het logo (§1.2). |
@@ -808,6 +811,7 @@ De logo's en beeldmerken staan als echte, transparante PNG's in de openbare GitH
 | `DB_brief_sjabloon.pdf`, `DBF_rapport_sjabloon.pdf` | Voorbeelden brief en rapport | §1.3, §4.2 |
 | `kleurenpalet.png` | Bron van het palet | §1.1 |
 | `DBF_algemene_voorwaarden.md` | Algemene voorwaarden | §4.1 |
+| `DBF_schrijfstijl.md` | Schrijfstijl: hoe we klinken (concept, in proef) | Wegwijzer |
 | `DBF_ontwikkellogboek.md` | Ontwikkelgeschiedenis | — |
 | Beeldbank | Historische foto's, portretten, teambeelden | Bijlage C |
 
