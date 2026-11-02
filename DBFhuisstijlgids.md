@@ -1,6 +1,6 @@
 # DBF Huisstijlgids — één bron voor HTML, PDF, PowerPoint en Word
 
-> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 28 oktober 2026, derde versie (signaalkleuren; briefing beeldschermachtergronden; voorrangsregel gids en sjablonen; manifest hersteld; schrijfstijl als apart bestand) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
+> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 2 november 2026, vierde versie (HTML: bladspiegel met chevron en zwevende kaart; kaarten met diepte; hoekregel; interactieve bouwstenen; mobiele regel) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
 >
 > Vier documenten, elk met een eigen functie; ze herhalen elkaars inhoud niet:
 > - **Deze huisstijlgids:** de geldende regels en ontwerpprincipes. De normatieve bron.
@@ -16,7 +16,7 @@ Lees altijd de leidende principes, §0 en §1.1–§1.5, en §5 (kwaliteitsrappo
 
 | Je maakt | Lees | Alleen als het speelt |
 |---|---|---|
-| **HTML-pagina** | §2, Bijlage A | Beeld: §1.7 + Bijlage C · Patroonstrook: §1.6 + B.3 (HTML) |
+| **HTML-pagina** | §2, Bijlage A | Beeld: §1.7 + Bijlage C · Patroonstrook: §1.6 + B.3 (HTML) · Keuzes, stappen of draaikaartjes: §2.4 B |
 | **PowerPoint** | §3 (begin met `Powerpoint_sjabloon.potx`), Bijlage A, B.3 (PowerPoint) | Historische foto of sessiebeeld: Bijlage C |
 | **Word of PDF** | §4, Bijlage A | Beeld: §1.7 + Bijlage C · Achterkant met patroon: §1.6 + B.3 (Word/PDF) |
 | **Beeldschermachtergrond** | B.5, B.6 en B.8 | — |
@@ -100,7 +100,7 @@ De kleurwaarden komen uit `kleurenpalet.png`, aangevuld met de afgeleide tinten 
 |---|---|---|
 | Zwart | `#000000` | Lopende tekst (Word, PowerPoint) |
 | Lichtblauw | `#E3E4ED` | Alleen de zwakste waarde in de tabel-heatmap (§3.1). Niet voor kaarten, vlakken of labels: daarvoor is zand de kleur (besluit Paul, 27 oktober 2026) |
-| Zand | `#ECE4D7` | Vaste kleur voor lichte kaarten, vlakken en blokken, in elk formaat (palet-Goud `#C1A57B` op 30%) |
+| Zand | `#ECE4D7` | Vaste kleur voor lichte vlakken en blokken, in elk formaat (palet-Goud `#C1A57B` op 30%). In HTML zijn losse kaarten wit met een zachte schaduw (§2.4 A) |
 | Warm gebroken wit | `#F5F3EE` | Achtergrond van digitale uitingen (HTML) |
 | Donker marine | `#222831` | Alleen als bewust gemotiveerde uitzondering |
 | Crème | `#FFFCF2` | Uitsluitend de PowerPoint-instructiedia "Plaatjes" |
@@ -164,6 +164,7 @@ Vectorpunten (viewBox `0 0 924 1316`): `296.7,118 461.2,653 296.7,1188 348.4,118
 - **Uitlijning:** de y-positie nooit via een geschatte offset. Centreer op de rij: `chevron-y = rij-y + rijhoogte/2 − chevron-hoogte/2`. Geldt voor elke chevron.
 - Bestanden: `DBF_chevron.svg` (schaalbaar, `fill="currentColor"`) en de PNG-bibliotheek in §3.7. In HTML: inline `<svg><polygon>` met een CSS-variabele als `fill`. Bestaande uitingen of scripts met de oude vectorpunten: bij de eerstvolgende bewerking omzetten.
 - **Grote chevron ('chevrondiepte'), alleen titel- en scheidingsdia:** twee grote chevrons toon op toon over elkaar, afgesneden door de rechterrand, links de titel vrij. Vaste regels: maximaal twee lagen, altijd toon op toon (`#30306A` en `#34346F` op koningsblauw), altijd afgesneden door de rechterrand, nooit in goud, nooit achter tekst. Bestand: `DBF_titeldia_chevrondiepte_koningsblauw.png` (Bijlage A).
+- **Grote chevron in het HTML-titelblok (besluit Paul, 2 november 2026):** één chevron, rechts in het titelblok, afgesneden door de boven-, rechter- en onderrand. Kleur `--chevron-kop` `#3F3A5B` (goud op 13% over koningsblauw), als vaste kleur, niet als doorzichtigheid. Nooit een tweede laag, nooit achter tekst. Op mobiel kleiner en verder naar rechts. Of PowerPoint dezelfde enkele chevron krijgt, is nog open (§6).
 
 ### 1.4 Typografie per formaat
 
@@ -292,6 +293,9 @@ Elk bestand definieert zijn palet bovenaan als CSS custom properties:
   --lijn:#DCD8CE;
   --wit-zacht:#BEBECE;  /* secundaire tekst op donkerblauw, 7,5:1 */
   --zand:#ECE4D7;       /* lichte vlakken en blokken, §1.1 */
+  --chevron-kop:#3F3A5B; /* grote chevron in het titelblok, §1.3 */
+  --schaduw:0 4px 18px rgba(39,39,91,.08);          /* kaart, §2.4 A */
+  --schaduw-zwevend:0 10px 30px rgba(39,39,91,.12); /* zwevende kaart, §2.4 */
   /* alleen als het document een oordeel toont, §1.1 D */
   --ok:#648C55;   --ok-licht:#E6EEDD;
   --letop:#B96B29; --letop-licht:#FAE4CE;
@@ -310,6 +314,10 @@ Nooit losse hex-codes in de rest van het document — ook niet in SVG's (dus `fi
 Bouwstenen. Gebruik wat past bij het documenttype, laat weg wat niet nodig is:
 
 - **Titelblok** — donkerblauw, met logo, eyebrow-regel, titel, subtitel, eventueel een dunne effen goudlijn als breker (geen chevron-lijnaccent, zie §1.3). **Onder het logo een haarlijn** (1px, wit op 18%, over de breedte van de tekstkolom), ±26px onder het logo en ±40px boven de eyebrow: zo bestaat het blauwe vlak uit twee lagen en oogt het minder massief (besluit Paul, 13 oktober 2026).
+  - Titel: Merriweather 700, `font-size:clamp(1.9rem,5vw,2.8rem)`, `max-width:16ch`, zodat een lange titel netjes over twee regels breekt.
+  - Rechts de grote chevron (§1.3). Haaks: het titelblok krijgt geen afgeronde hoeken.
+  - Onder de tekst ±92px ruimte (mobiel ±76px) voor de zwevende kaart.
+- **Zwevende kaart ('bladspiegel', besluit Paul, 2 november 2026)** — een witte kaart die ±56px (mobiel ±44px) over de onderrand van het titelblok valt. Hoek 18px, `--schaduw-zwevend`, geen rand. Inhoud: "In het kort", of maximaal drie vaste aandachtspunten met een icoon (§2.4 B). Op mobiel worden aandachtspunten één regel die je openklapt, met het belangrijkste punt zichtbaar. Referentie: `DBF_voorbeeld_html.html` en `DBF_voorbeeld_html_interactief.html`.
 - **Co-brandingbalk (optioneel)** — alleen als de opdrachtgever zijn logo erin wil (vraag in §0). Dan vervangt een **witte horizontale balk** de bovenste laag van het titelblok (het DBF-logo met de haarlijn eronder). Opbouw:
   - Balk: achtergrond `#FFFFFF`, padding ±18px boven en onder, zelfde horizontale wrapper als titelblok en body (§2.6). Onderrand 1px `--inkt-zacht` op 25% dekking. Niet massief: geen schaduw, geen extra kleurvlak, geen tekst in de balk.
   - Links: DBF-logo **zwart met tagline** (`DBF-logo-zwart-tagline.png`, Bijlage A), hoogte 40px. Rechts: logo van de opdrachtgever, maximaal 40px hoog en 180px breed, verhoudingen intact (§1.5), uitgelijnd op dezelfde middenlijn. Beide als base64 ingebed, met expliciete `width` en `height`.
@@ -354,6 +362,40 @@ Bouwstenen. Gebruik wat past bij het documenttype, laat weg wat niet nodig is:
   Het jaartal is het jaar van uitgave. Pas de tekst verder niet aan. De rechtspersoon heet altijd **De Betekenisfabriek Groep B.V.**, nooit "De Betekenisfabriek B.V.". Dezelfde tekst staat op de achterkant van een rapport (Bijlage B.3, Word en PDF).
 - **Bronfragment** — letterlijk citaat uit een klantstuk (bijv. als oefenmateriaal): papiertint-vlak, dunne `--inkt-zacht` zijrand, cursief, iets kleiner dan de lopende tekst. Duidelijk anders dan de pull quote (goud), zodat lezers zien: dit is brontekst, geen eigen kernboodschap.
 - **Hergebruikte slides als figuur** — slides uit een ander klanttraject mogen als figuur worden ingebed, maar **altijd zonder het logo van die andere klant** (pixelvlak wegpoetsen naar de achtergrondkleur vóór het inbedden, daarna programmatisch controleren dat er geen restpixels over zijn). Het DBF-logo mag blijven staan. Noem de andere klant ook niet in bijschrift of bronvermelding.
+
+### 2.4 A Vorm: kaarten, vlakken, hoeken en lijnen
+
+Besluit Paul, 2 november 2026. Aanleiding: rapportages oogden flets, met dunne grijze lijntjes. De workshoppagina met witte kaarten op een warme achtergrond werkte wel. Diepte maakt het vlak, niet de kleur.
+
+**Kaart of vlak?**
+- **Kaart:** iets wat je als los ding leest: citaat, stap, keuze, module, tijdlijnmoment, contactblok, tabel. Wit, `--schaduw`, hoek 14px, **geen rand**.
+- **Vlak:** een achtergrond die tekst of een figuur draagt: samenvatting binnen de tekst, figuur, kerncijfers, statuskaart (§1.1 D). Zand, geen schaduw, hoek 14px. Het voorbeeldkader blijft lichtgoud.
+- **Zwevende kaart:** zie §2.4.
+- De achtergrond van de pagina blijft papier (`--papier`).
+
+**Hoeken**
+- Rond: kaarten en vlakken 14px, de zwevende kaart 18px. Labels, chips en knoppen helemaal rond (`999px`). Cirkels blijven cirkels (stapnummer, stip in een tijdlijn, icoonvlak).
+- Haaks: titelblok, co-brandingbalk, hoofdstukkop en kopbalk van een paneel, patroonstrook en footer.
+- **Een gekleurde rand buigt nooit mee.** De kant waar de rand zit, is haaks. Citaat met goudrand links: `border-radius:0 14px 14px 0`. Rand bovenaan: `0 0 14px 14px`. Een gekleurde band ín een kaart (datum, soort) is een vlak en volgt de hoek van de kaart.
+- Geen tussenmaten: alleen 14px, 18px, rond en haaks.
+
+**Lijnen**
+- Geen grijze rand om een kaart; de schaduw geeft de vorm.
+- Een dunne lijn (`--lijn`) alleen als rijlijn in een tabel of als scheiding binnen een kaart.
+- Een kaart die open staat (uitklapper, stap) mag een binnenrand van 2px `--goud-mat` krijgen.
+
+### 2.4 B Interactieve bouwstenen
+
+Voor pagina's die mensen gebruiken in plaats van lezen: werkvormen, programma's, handleidingen. Referentie: `DBF_voorbeeld_html_interactief.html`.
+
+- **Aandachtspunten** — in de zwevende kaart, maximaal drie. Elk met een lijnicoon in een rond lichtgoud vlak (38px), een korte kop in Merriweather en één regel uitleg.
+- **Iconen** — lijniconen in één lijndikte, koningsblauw, in een rond lichtgoud vlak. Alleen bij keuzes en vaste aandachtspunten, nooit als versiering naast lopende tekst.
+- **Keuzekaarten** — twee tot vier kaarten naast elkaar, elk met icoon, naam en één regel (duur of tijdstip). De gekozen kaart is koningsblauw met een goud icoonvlak en een pijltje naar het paneel eronder; de andere zijn wit met schaduw. Op mobiel worden ze een smalle balk die bovenaan blijft staan tijdens het scrollen.
+- **Kopbalk van een paneel** — koningsblauw, haaks, gouden chevron, titel in Open Sans.
+- **Tijdlijnbalk** — blokken met een breedte naar duur, afwisselend koningsblauw en `--inkt-mid`. In elk blok het stapnummer in goud; de naam alleen als hij helemaal past, nooit afgekapt. Bij aanwijzen staat de volledige naam met tijd onder de balk. Op mobiel weg: de stappenlijst toont de tijden al.
+- **Stappenlijst** — uitklapkaarten met het tijdlabel in een rond lichtgoud label en het stapnummer voor de titel. De eerste stap staat open; eronder een knop "Alle stappen openen".
+- **Draaikaartje** — voorkant: lichtgoud vlak met titel (Merriweather), korte tekst en onderaan "Draai om voor de vraag". Achterkant: koningsblauw, gouden chevron vast linksboven op dezelfde hoogte bij elk kaartje, de vraag er direct onder, bovenaan uitgelijnd. Zonder draaianimatie als de lezer beweging heeft uitgezet.
+- **Afvinklijst** — ronde labels in lichtgoud met een selectievakje; de keuze blijft bewaard in de browser.
 
 ### 2.5 Klikbare navigatie bij langere teksten
 
@@ -465,6 +507,7 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 
 - Eén zelfstandig HTML-bestand: CSS inline in een `<style>`-blok, logo's, beelden **en fonts** als base64 data-URI ingebed (zie §2.2). Geen losse bestanden en geen CDN-`<link>`'s. Dit is een harde eis: een verwijzing naar een los bestand of naar Google Fonts is een gebroken oplevering, ook als het er bij jou goed uitziet.
 - Test responsief: smal (mobiel) én breed scherm. Voeg een print-mediaquery toe als het document ook afgedrukt moet kunnen worden.
+- **Mobiel (besluit Paul, 2 november 2026), getest op 390px breed:** de inhoud begint in het eerste scherm; een keuze tussen panelen blijft bereikbaar zonder terug te scrollen; wat op een smal scherm zijn betekenis verliest (een tijdlijnbalk, lege blokjes) gaat weg; de pagina schuift nooit zijwaarts. Let op labels zonder spatie ertussen: die breken niet af en duwen de pagina breder.
 - Test met de daadwerkelijk geladen fonts vóór oplevering, niet alleen met fallback-fonts. Merriweather en Open Sans zijn beide breder dan een generieke systeemfont — bij vaste-breedte elementen (SVG-labels, badges) kan dat tot overlopende tekst leiden als je dat niet checkt.
 
 ### 2.9 Checklist vóór oplevering
@@ -478,6 +521,10 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 - [ ] Chevron-teken (niet hexagon) is gebruikt als hoofdstuknummer-icoon (§1.3); géén chevron-lijnaccent (verboden) — nergens als bullet voor gewone lijsten of koppen. Het hexagon-vormige beeldmerk (Bijlage A) is de uitzondering: dat is het logo zelf, geen decoratief motief
 - [ ] Hoofdstuknummer heeft dezelfde kleur en hetzelfde lettertype/gewicht als de titel ernaast (geen apart goud, geen ander font), en een leesbare maat (1.1–1.3rem, zie §2.4), niet weggemoffeld als klein label
 - [ ] Contrast gecontroleerd — geen goud-tekst op licht vlak
+- [ ] Kaarten wit met schaduw, zonder grijze rand; vlakken zand (§2.4 A)
+- [ ] Hoeken volgens §2.4 A: alleen 14px, 18px, rond of haaks; geen gekleurde rand die meebuigt met een afronding
+- [ ] Titelblok met grote chevron in `--chevron-kop` en, waar het past, de zwevende kaart (§2.4)
+- [ ] Mobiel op 390px: inhoud in het eerste scherm, keuze bereikbaar, geen zijwaarts scrollen (§2.8)
 - [ ] Getest op mobiele én desktopbreedte
 - [ ] Geen lichtblauw als vlak of label; lichte vlakken zijn zand of lichtgoud (§1.1)
 - [ ] Datums en soorten in tijdlijn of modulebalk staan als band (§2.4), niet als los blokje; alle titels lijnen uit
@@ -496,7 +543,7 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 
 Kort blok om mee te geven bij een nieuwe HTML-opdracht aan een AI-tool:
 
-> Gebruik de huisstijl van de Betekenisfabriek: koningsblauw `#27275B` en goud `#DDB85E` als basiskleuren, Merriweather voor koppen en lopende tekst, Open Sans voor labels en tabellen — beide als `@font-face` met base64 ingebed, **geen** `<link>` naar Google Fonts. Gebruik het officiële logo (nooit zelf getekend, ook als base64 ingebed), en zorg dat goud nooit als tekstkleur op een licht vlak wordt gebruikt — alleen als lijn, rand of tekst op donkerblauw. Gebruik het chevron-teken (`›`, §1.3) uitsluitend als enkel hoofdstuknummer-icoon — **geen** herhalend chevron-lijnaccent en **niet** het hexagon-motief, dat is uitsluitend de vorm van het beeldmerk zelf. Het hoofdstuknummer krijgt dezelfde kleur en hetzelfde font als de titel ernaast, geen apart goud. Bouw met de bouwstenen uit §2.4, pas vrij aan naar het documenttype. Is de tekst lang (vanaf ~5 secties/hoofdstukken)? Voeg dan de klikbare navigatie uit §2.5 toe: vaste knop rechtsonder, uitschuifpaneel met inhoudsopgave, actieve sectie gemarkeerd tijdens scrollen. Zet onder de documentregel in de footer de auteursrechtregel uit §2.4, letterlijk. Vraag vooraf of het logo van de opdrachtgever erin moet (dan de witte co-brandingbalk, §2.4) en of het stuk vertrouwelijk is (dan de vertrouwelijkheidsregel, §2.4). Toont het stuk een oordeel (goed, let op, stop), gebruik dan alleen de signaalkleuren uit §1.1 D, als vorm of rand, met een woord erbij, nooit als tekstkleur.
+> Gebruik de huisstijl van de Betekenisfabriek: koningsblauw `#27275B` en goud `#DDB85E` als basiskleuren, Merriweather voor koppen en lopende tekst, Open Sans voor labels en tabellen — beide als `@font-face` met base64 ingebed, **geen** `<link>` naar Google Fonts. Gebruik het officiële logo (nooit zelf getekend, ook als base64 ingebed), en zorg dat goud nooit als tekstkleur op een licht vlak wordt gebruikt — alleen als lijn, rand of tekst op donkerblauw. Gebruik het chevron-teken (`›`, §1.3) uitsluitend als enkel hoofdstuknummer-icoon — **geen** herhalend chevron-lijnaccent en **niet** het hexagon-motief, dat is uitsluitend de vorm van het beeldmerk zelf. Het hoofdstuknummer krijgt dezelfde kleur en hetzelfde font als de titel ernaast, geen apart goud. Bouw met de bouwstenen uit §2.4, pas vrij aan naar het documenttype. Is de tekst lang (vanaf ~5 secties/hoofdstukken)? Voeg dan de klikbare navigatie uit §2.5 toe: vaste knop rechtsonder, uitschuifpaneel met inhoudsopgave, actieve sectie gemarkeerd tijdens scrollen. Zet onder de documentregel in de footer de auteursrechtregel uit §2.4, letterlijk. Vraag vooraf of het logo van de opdrachtgever erin moet (dan de witte co-brandingbalk, §2.4) en of het stuk vertrouwelijk is (dan de vertrouwelijkheidsregel, §2.4). Toont het stuk een oordeel (goed, let op, stop), gebruik dan alleen de signaalkleuren uit §1.1 D, als vorm of rand, met een woord erbij, nooit als tekstkleur. Maak kaarten wit met een zachte schaduw en zonder grijze rand; een gekleurde rand buigt nooit mee met een afgeronde hoek (§2.4 A).
 
 ---
 
@@ -774,6 +821,9 @@ Groen is geen garantie dat een document foutloos, juridisch juist of AVG-proof i
 - **Ken je de foto?:** de pagina is vanuit de AI-omgeving niet te controleren (website blokkeert automatische toegang). Werking periodiek zelf nagaan.
 - **PowerPoint-sjabloon in de praktijk:** de eerste echte presentaties met `Powerpoint_sjabloon.potx` maken en in PowerPoint op een andere computer controleren (lettertypen, indelingen, voetregel).
 - **Praktijktoets:** de gids toetsen met een HTML-lesbrief, een PowerPoint en een Word-offerte, elk met kwaliteitsrapportage. Terugkerende problemen leiden tot een aanpassing van de gids; incidentele niet.
+- **Eén grote chevron in elk formaat?** HTML heeft sinds 2 november één chevron in `#3F3A5B`; PowerPoint houdt de chevrondiepte met twee lagen toon op toon. Besluiten of PowerPoint meegaat.
+- **Kaartvorm buiten HTML:** §2.4 A geldt voor HTML. Nagaan of Word, PDF en PowerPoint dezelfde hoek- en randregel krijgen.
+- **Oudere voorbeeldbestanden:** `DBF_voorbeeld_html_cobranding.html` en `DBF_voorbeeld_signaalkleuren.html` tonen nog het titelblok zonder grote chevron en kaarten met een grijze rand. Bij de eerstvolgende bewerking omzetten.
 
 ---
 
