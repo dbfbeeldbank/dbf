@@ -1,11 +1,11 @@
 # DBF Huisstijlgids — één bron voor HTML, PDF, PowerPoint en Word
 
-> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 2 november 2026, vierde versie (HTML: bladspiegel met chevron en zwevende kaart; kaarten met diepte; hoekregel; interactieve bouwstenen; mobiele regel) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
+> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 2 november 2026, vierde versie (HTML: bladspiegel met chevron en zwevende kaart; kaarten met diepte; hoekregel; interactieve bouwstenen; mobiele regel; kwaliteitsrapportage "Vóór Karin het ziet"; bestandsnamen met datum) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
 >
 > Vier documenten, elk met een eigen functie; ze herhalen elkaars inhoud niet:
 > - **Deze huisstijlgids:** de geldende regels en ontwerpprincipes. De normatieve bron.
 > - **`DBF_ontwikkellogboek.md`:** hoe keuzes tot stand kwamen, afgewezen varianten, open ontwikkelpunten. Wordt bijgewerkt als de huisstijl zelf verandert. Niet nodig om een uiting te maken.
-> - **Kwaliteitsrapportage (§5):** per oplevering, over die ene uiting. Geen ontwikkelgeschiedenis.
+> - **Kwaliteitsrapportage "Vóór Karin het ziet" (§5):** per oplevering, over die ene uiting. Geen ontwikkelgeschiedenis.
 > - **`DBF_schrijfstijl.md`:** hoe we klinken. Geldt voor elke tekst, naast deze gids.
 >
 > **Alle bestanden** (logo's, chevrons, patronen, sjablonen, sjabloonfoto's, beeldbank) staan in de openbare GitHub-repository `dbfbeeldbank/dbf`, met een volledige lijst in `DBF_assets_manifest.csv` (Bijlage A). **Lukt downloaden niet**, bijvoorbeeld in een AI-omgeving zonder internet, vraag de gebruiker dan om `DBF_huisstijl_assets.zip`: daarin zit alles, inclusief deze gids en het manifest.
@@ -78,6 +78,12 @@ Het doel is consistentie, niet uniformiteit.
 
 **Voorrang (besluit Paul, 28 oktober 2026).** De actuele gids bevat de geldende regels. Een vastgesteld sjabloon (.potx, .dotx) is de goedgekeurde uitvoering daarvan, en een aangeleverd klantbestand bepaalt de opmaak van dát bestand. Wijkt een DBF-sjabloon af van de gids, dan kiest Claude niet zelf: de afwijking wordt gemeld (in de kwaliteitsrapportage, §5) en Paul beslist. Een uitzondering die in de gids zelf staat, zoals de tagline in de Word-offerte (§1.2), blijft geldig tot ze wordt herzien.
 
+
+**Bestandsnamen (besluit Paul, 2 november 2026).** Elk bestand dat Claude levert begint met de datum en heeft geen underscores.
+- Gewoon bestand (Word, PowerPoint, PDF, Markdown, afbeelding): datum met spaties, dan de naam. Bijvoorbeeld `2026 11 02 Empatec koers 2027-2030.docx`.
+- Kwaliteitsrapportage: dezelfde naam met `kwaliteitsrapportage` erachter: `2026 11 02 Empatec koers 2027-2030 kwaliteitsrapportage.md`.
+- HTML: datum en woorden met streepjes, in kleine letters: `2026-11-02-empatec-koers.html`. Spaties worden in een link `%20`.
+- Uitzondering: de huisstijlbestanden zelf (`DBFhuisstijlgids.md`, `DBF_schrijfstijl.md`, `DBF_ontwikkellogboek.md`, het manifest, de zip, de assets en de voorbeeldbestanden) houden hun naam. Collega's, skills en scripts gebruiken vaste links; de datum staat in de regel "Stand:".
 ---
 
 ## 1. Gedeeld fundament (geldt voor elk formaat)
@@ -333,6 +339,7 @@ Bouwstenen. Gebruik wat past bij het documenttype, laat weg wat niet nodig is:
 - **Zelfcheck/kadertje met badge** — kleine navy "merkje" boven een korte tekst
 - **Voorbeeldkader** — zachte goudtint, voor cases en toelichtingen
 - **Pull quote** — dikke goud zijrand, opvallende regel
+- **Centrale probleemstelling (besluit Paul, 2 november 2026)** — altijd een koningsblauw vlak: witte tekst, label in goud, hoek 14px, geen schaduw. Alleen de probleemstelling zelf staat erin. Onderbouwing en bronnen staan eronder in een uitklapbare verdieping, nooit in het vlak.
 - **Statusmelding en statuslabel** — alleen bij een oordeel (§1.1 D).
   - Melding: vlak in de signaaltint, linkerrand 5px in de signaalkleur, kop in Open Sans 700 met de vorm ervoor (±17px), tekst in koningsblauw.
   - Statuslabel in een tabel: vorm (±16px) + woord in Open Sans 600, koningsblauw. Alleen de statuskolom draagt kleur. Op mobiel schuift de status naast de eerste kolom, zodat hij niet buiten beeld valt.
@@ -378,6 +385,7 @@ Besluit Paul, 2 november 2026. Aanleiding: rapportages oogden flets, met dunne g
 - Haaks: titelblok, co-brandingbalk, hoofdstukkop en kopbalk van een paneel, patroonstrook en footer.
 - **Een gekleurde rand buigt nooit mee.** De kant waar de rand zit, is haaks. Citaat met goudrand links: `border-radius:0 14px 14px 0`. Rand bovenaan: `0 0 14px 14px`. Een gekleurde band ín een kaart (datum, soort) is een vlak en volgt de hoek van de kaart.
 - Geen tussenmaten: alleen 14px, 18px, rond en haaks.
+- **Kaarten in één rij hebben dezelfde vorm (besluit Paul, 2 november 2026).** Geef een kenmerk dat maar een deel van de kaarten heeft (bijv. "weegt zwaar") nooit als rand of streep. Geef elke kaart hetzelfde label met zijn eigen waarde, en markeer met de kleur van het label (goud tegenover zand). Zo hebben alle kaarten dezelfde vorm, en draagt een woord de betekenis, niet alleen een kleur.
 
 **Lijnen**
 - Geen grijze rand om een kaart; de schaduw geeft de vorm.
@@ -781,30 +789,89 @@ Rapport/boekje (Word) en memo (Word). Per type: eigen bronbestand aanleveren, te
 
 ---
 
-## 5. Kwaliteitsrapportage bij elke oplevering
+## 5. Kwaliteitsrapportage: "Vóór Karin het ziet"
 
-Bij elke uiting die Claude maakt of inhoudelijk bewerkt (Word, PowerPoint, PDF, HTML en vergelijkbare formaten) hoort een aparte kwaliteitsrapportage in Markdown: `[documentnaam]_kwaliteitsrapportage.md`. Intern, niet voor de opdrachtgever en nooit in het einddocument. Bij een kleine correctie op een eerder opgeleverde uiting volstaat een korte aanvulling op de bestaande rapportage.
+Bij elke uiting die Claude maakt of inhoudelijk bewerkt (Word, PowerPoint, PDF, HTML en vergelijkbare formaten) hoort een aparte rapportage in Markdown. De titel bovenin is **Vóór Karin het ziet**: het model doet het voorwerk, Karin heeft het laatste woord. De bestandsnaam volgt §0: `JJJJ MM DD [documentnaam] kwaliteitsrapportage.md`. Intern, niet voor de opdrachtgever en nooit in het einddocument. Bij een kleine correctie op een eerder opgeleverde uiting volstaat een korte aanvulling op de bestaande rapportage.
 
-Claude heeft daarbij twee rollen: **maker** (zorgvuldig, creatief, trouw aan de huisstijl) en **kritische meelezer** (alert op inhoudelijke zwaktes, inconsistenties, onbedoelde overnames, privacyrisico's). De rapportage is een vast onderdeel van het werk, geen verantwoording achteraf.
+De rapportage is een snelle check, geen verslag. Wie hem opent, ziet in tien seconden wat er moet gebeuren en waar. Claude heeft twee rollen: **maker** (trouw aan de huisstijl) en **kritische meelezer** (alert op inhoudelijke zwaktes, tegenstrijdigheden, onbedoelde overnames en privacyrisico's).
 
-**Status bovenaan**, met een korte toelichting eronder:
-- 🟢 **GEREED VOOR GEBRUIK** — geen wezenlijke problemen binnen de uitgevoerde controles.
-- 🟠 **AANDACHTSPUNTEN** — bruikbaar, maar met punten die beoordeling verdienen.
-- 🔴 **NIET VERSPREIDEN VÓÓR CONTROLE** — mogelijk kritieke fouten: vertrouwelijke informatie, gegevens van een andere opdrachtgever, wezenlijke inhoudelijke problemen.
+**Opbouw, in deze volgorde (besluit Paul, 2 november 2026):**
 
-Groen is geen garantie dat een document foutloos, juridisch juist of AVG-proof is. De status rust alleen op controles die echt zijn uitgevoerd.
+1. **Titel, documentnaam en datum.**
+2. **Status**, één regel:
+   - 🟢 **GEREED VOOR GEBRUIK** — geen wezenlijke problemen binnen de uitgevoerde controles.
+   - 🟠 **AANDACHTSPUNTEN** — bruikbaar, maar met punten die beoordeling verdienen.
+   - 🔴 **NIET VERSPREIDEN VÓÓR CONTROLE** — mogelijk kritieke fouten: vertrouwelijke informatie, gegevens van een andere opdrachtgever, wezenlijke inhoudelijke problemen.
+3. **▶ EERST DOEN** — het belangrijkste deel, als kop (`##`) direct onder de status. Genummerd, maximaal vijf punten, kritieke eerst. Vervalt bij 🟢. Elk punt:
+   - begint met een **werkwoord in het vet** (pas aan, vervang, schrap, vraag op), dan de plek;
+   - laat zien wat er nu staat en wat het wordt (**Nu:** … **Wordt:** …);
+   - zegt in één regel waarom.
+   Geen vage werkwoorden als "kies", "overweeg", "kijk naar" of "check". Kan Claude geen voorstel doen, dan zegt het wat ontbreekt en bij wie je het haalt.
+4. **Taal**, één regel: hoeveel typefouten Claude heeft gecorrigeerd en hoeveel stijlpunten het vond. Typefouten zijn aantoonbare fouten en worden verbeterd. Stijlpunten niet: de tekst blijft van de auteur.
+5. **Cijfers voor de auteur** — tabel met cijfer (1–10) en één regel waarom, alleen voor wat de auteur zelf maakte: *Wat zeggen we*, *Inhoud en opbouw*, *Schrijfstijl* en *Taal*. Vormkeuzes en beeld krijgen geen cijfer; die maakt Claude bij een omzetting zelf. Schreef Claude de tekst, dan beoordeelt het die met dezelfde maat.
+6. **Wat zeggen we eigenlijk?** — vier vragen, elk met ✅ of ⚠️ en één regel: *Wie wordt hier blij van? Wat beloven we precies? Is de identiteit het vertrekpunt? Welk maatschappelijk vraagstuk helpt dit oplossen?* Past een vraag niet bij de uiting (een uitnodiging, een planning), dan "n.v.t.". Overheerst het proces de inhoud, dan wijst Claude de passage aan.
+7. **Schrijfstijl** — oordeel volgens `DBF_schrijfstijl.md`: **ja**, **grotendeels** of **nee**. Daaronder de drie suggesties die het meeste opleveren, als *oude zin → nieuwe zin* met de regel uit de schrijfstijl waarop ze steunen. Alleen voorstellen. Heeft de opdrachtgever een eigen tone of voice, dan toetst Claude daaraan en zegt dat erbij.
+8. **Checklist** — de zes onderdelen hieronder, op één regel, elk met een teken: ✅ in orde · ⚠️ let op (met plek, in een paar woorden) · ⛔ kritiek (staat ook onder Eerst doen).
+9. **Niet gecontroleerd**, één regel, alleen als het speelt (bijv. niet in echte PowerPoint of Word geopend, feiten niet nagetrokken).
 
-**Zes verplichte onderdelen:**
-1. **Vormkeuzes** — compositie, typografie, kleur, witruimte, hiërarchie, inzet of bewust weglaten van huisstijlelementen. Concreet: hoe heeft de inhoud de vorm bepaald?
-2. **Beeldmateriaal** — per beeld: wat, waar, waarom inhoudelijk en visueel, bron en rechten, onzekerheden. Of waarom bewust geen beeld.
-3. **Stijl- en spelspanningen** — tussen inhoud, huisstijl, medium en ontwerp. Onderscheid bewuste, gemotiveerde afwijkingen van onbedoelde inconsistenties. Een spanning hoeft niet altijd opgelost; soms moet ze alleen zichtbaar zijn.
-4. **Inhoud en opbouw** — logica, centrale boodschap, volgorde, ontbrekende redeneringen, tegenstrijdigheden, herhaling, onduidelijke formuleringen, toon, overtuigingskracht. Concrete verbeterpunten; de bedoeling van de auteur niet eigenmachtig veranderen.
-5. **Vreemde of onbedoeld overgenomen inhoud** — namen van andere opdrachtgevers, organisaties, projecten of personen; verkeerde plaatsen en data; achtergebleven kop- en voetteksten; verwijzingen naar andere trajecten; interne opmerkingen. Waar mogelijk ook sprekersnotities, opmerkingen, verborgen tekst en metadata. Aantoonbare fouten binnen de opdracht corrigeren en melden; twijfelgevallen voorleggen, nooit stilzwijgend verwijderen.
-6. **Privacy en vertrouwelijkheid** — persoons- en contactgegevens, cliënt-, leerling- of medewerkergegevens, medische en financiële gegevens, interne correspondentie, gegevens van andere opdrachtgevers, metadata. Onderscheid terecht opgenomen van mogelijk onbedoeld. Gevoelige gegevens niet letterlijk in de rapportage: benoem het soort risico en de plek. Bij twijfel markeren en menselijke beoordeling vragen.
+**De zes onderdelen van de checklist:**
+1. **Vormkeuzes** — alleen melden waar is afgeweken van de gids of een keuze nodig was die de gids niet regelt. Standaard toepassen = ✅.
+2. **Beeld** — bron, rechten, onzekerheden. Geen beeld gebruikt = ✅.
+3. **Stijlspanningen** — bewuste afwijkingen (met reden) en onbedoelde inconsistenties. Wijkt een DBF-sjabloon af van de gids: hier melden, Paul beslist.
+4. **Inhoud en opbouw** — logica, herhaling, tegenstrijdigheden, onduidelijke zinnen. De bedoeling van de auteur niet eigenmachtig veranderen.
+5. **Vreemde inhoud** — namen van andere opdrachtgevers, verkeerde plaatsen en data, achtergebleven kop- en voetteksten, interne opmerkingen, ook in sprekersnotities, verborgen tekst en metadata. Aantoonbare fouten corrigeren en melden; twijfel voorleggen, nooit stil verwijderen.
+6. **Privacy** — persoons-, cliënt-, medewerker-, medische en financiële gegevens, gegevens van andere opdrachtgevers. Gevoelige gegevens niet letterlijk in de rapportage: soort risico en plek.
 
-**Rapportageregels:** alle zes onderdelen verplicht; niets te melden is "Geen bijzonderheden aangetroffen." Verwijs naar pagina, dia of paragraaf. Onderscheid vastgestelde fouten, vermoedelijke problemen en aanbevelingen; kritieke bevindingen eerst. Vermeld uitgevoerde correcties en technische beperkingen van de controle (bijv. geen echte PowerPoint of Word beschikbaar). Claim geen controles die niet zijn gedaan. Compact, in verhouding tot het document.
+**Voorbeeld** (fictief, met de voorbeeldcorporatie WoonSamen):
+
+```markdown
+    # Vóór Karin het ziet
+    2026-11-02-woonsamen-koers.html
+
+    🟠 AANDACHTSPUNTEN — bruikbaar na twee aanpassingen.
+
+    ## ▶ EERST DOEN
+    1. **Pas de belofte aan** — §3, tweede alinea.
+       Nu: "Huurders houden hun woning en hun vaste contactpersoon."
+       Wordt: "Huurders houden hun woning."
+       Waarom: §5 kondigt wijkteams aan; de vaste contactpersoon verdwijnt dus.
+    2. **Vervang de opening** — §1.
+       Het verhaal van de huurder is niet herleidbaar. Open met het aantal wachtenden op een seniorenwoning.
+       Ontbreekt nog: dat cijfer, op te vragen bij WoonSamen (verhuur).
+
+    Taal: 4 typefouten gecorrigeerd · 9 stijlpunten gevonden, 3 hieronder voorgesteld.
+
+    | Voor de auteur   | Cijfer | Waarom                                         |
+    |------------------|--------|------------------------------------------------|
+    | Wat zeggen we    | 7      | Belofte helder; identiteit niet het vertrekpunt |
+    | Inhoud en opbouw | 6      | Tegenspraak, zie Eerst doen 1                  |
+    | Schrijfstijl     | 7      | Grotendeels volgens de schrijfstijl            |
+    | Taal             | 8      | 4 typefouten                                   |
+
+    **Wat zeggen we eigenlijk?**
+    ✅ Wie wordt blij — ouderen die nu te groot wonen, en gezinnen die daarna kunnen doorschuiven.
+    ✅ Belofte — elke wijk een vast team dat binnen een week terugbelt.
+    ⚠️ Identiteit — niet genoemd; de keuze rust op geld en wachtlijst.
+    ✅ Vraagstuk — ouderen die blijven wonen waar het niet meer past.
+
+    **Schrijfstijl: grotendeels**
+    1. "Blijven we verhuurder, of worden we buurtpartner?" → "Investeren we eerst in nieuwbouw of in de wijken die er al staan?" (§2.2, een echte keuze)
+    2. "een unieke kans voor de wijk" → "een kans voor de wijk" (§3, lege versterkers)
+    3. "Daar doen we het voor." → eindigen bij het gevraagde besluit (§3, slot dat het gevoel voorzegt)
+
+    ✅ Vormkeuzes · ✅ Beeld · ⚠️ Stijlspanning: tabel §4 bewust over de volle breedte · ✅ Vreemde inhoud · ✅ Privacy
+    Niet gecontroleerd: cijfers over WoonSamen.
+```
+
+**Regels:**
+- Alle onderdelen staan er altijd, ook als alles ✅ is.
+- Past op één scherm. Langer alleen bij 🔴.
+- Schrijfstijl maakt de status hooguit 🟠; 🔴 is voor fouten, vreemde inhoud en privacy.
+- Claim geen controles die niet zijn gedaan. Groen is geen garantie dat een document foutloos, juridisch juist of AVG-proof is.
+- Uitgevoerde correcties: één regel bij het onderdeel waar ze horen ("gecorrigeerd: datum p. 2").
 
 ---
+
 
 ## 6. Open punten
 

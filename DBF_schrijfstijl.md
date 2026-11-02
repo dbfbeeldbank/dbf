@@ -1,6 +1,6 @@
 # DBF Schrijfstijl — zo klinken wij
 
-> Stand: 28 oktober 2026 — **concept, in proef.** Afgeleid uit eigen teksten van Paul (offerte, memo aan een raad van bestuur, brief aan managers, strategieplan, websitetekst) en één tegenvoorbeeld. Hoort bij `DBFhuisstijlgids.md`: de gids gaat over hoe we eruitzien, dit bestand over hoe we klinken.
+> Stand: 2 november 2026 — **concept, in proef.** Afgeleid uit eigen teksten van Paul (offerte, memo aan een raad van bestuur, brief aan managers, strategieplan, websitetekst) en één tegenvoorbeeld. Hoort bij `DBFhuisstijlgids.md`: de gids gaat over hoe we eruitzien, dit bestand over hoe we klinken.
 >
 > Geldt voor alles wat we schrijven: offertes, memo's, brieven, strategiedocumenten, lesbrieven, webteksten en posts. Ook voor teksten die we voor een opdrachtgever schrijven, tenzij die een eigen tone of voice heeft.
 
@@ -12,10 +12,10 @@ Concreet, vragend en warm-direct: we beginnen bij mensen en momenten, stellen de
 
 ## 2. Zes kenmerken
 
-1. **Begin bij iets concreets.** Een gesprek, een moment, een cijfer of een citaat. Pas daarna het begrip.
+1. **Begin bij iets concreets.** Een gesprek, een moment, een cijfer of een citaat. Pas daarna het begrip. Het moet echt zijn en herleidbaar: een verzonnen tafereel kost vertrouwen.
    - *Zo:* "We kijken met veel plezier terug op ons gesprek van 8 december."
    - *Niet zo:* "Identiteit is de basis van elke organisatie."
-2. **Orden met een vraag die een keuze afdwingt.** Eén goede vraag per stuk is genoeg; geef haar ruimte.
+2. **Orden met een vraag die een keuze afdwingt.** Eén goede vraag per stuk is genoeg; geef haar ruimte. Is het antwoord "allebei", dan dwingt de vraag geen keuze af.
    - *Zo:* "Badwater of bruiswater?" — "Wat zou je doen als je de organisatie morgen opnieuw mocht oprichten?"
 3. **Laat mensen spreken.** Eén letterlijk citaat of een tafereel van één zin zegt meer dan een alinea uitleg.
    - *Zo:* "De vrijwilliger die een wandeling maakt met een bewoner."
@@ -41,6 +41,7 @@ Veel van deze patronen ontstaan als een taalmodel de eerste versie schrijft. Ze 
 | Engels waar Nederlands kan | going concern, finetunen, committeren | basis op orde, aanscherpen, ons verbinden aan |
 | Versleten uitdrukkingen | "handen en voeten geven", "van hart tot hart", "er echt toe doen" | Het concrete voorbeeld zelf |
 | Lege versterkers | "schitterend", "uniek", "diepste", "helemaal" | Weglaten; het voorbeeld draagt |
+| Slot dat het gevoel voorzegt | Terug naar de anekdote van de opening; "Daar doen we het voor." | Eindig bij wat je van de lezer vraagt |
 
 ## 4. Per soort tekst
 
@@ -55,7 +56,7 @@ Veel van deze patronen ontstaan als een taalmodel de eerste versie schrijft. Ze 
 - Een eerste versie van een taalmodel is een grondstof, geen tekst. Vertaal elke alinea terug naar mensen, momenten en de vraag die ertoe doet.
 - Loop de tabel in §3 langs; de patronen daarin zijn de meest voorkomende sporen van een gegenereerde tekst.
 - **De toets:** zou je deze zin hardop zeggen, aan tafel, tegen de bestuurder? Zo nee, herschrijf hem.
-- Claude past dit bestand toe bij elke tekst die het voor DBF schrijft, en meldt in de kwaliteitsrapportage (huisstijlgids §5) waar een tekst er bewust van afwijkt.
+- Claude past dit bestand toe bij elke tekst die het voor DBF schrijft, en geeft in de kwaliteitsrapportage (huisstijlgids §5, "Vóór Karin het ziet") een oordeel met drie suggesties. Waar een tekst bewust afwijkt, staat het daar ook.
 
 ## 6. Twee herschrijvingen
 
@@ -75,4 +76,4 @@ De opening met twee vragen was al goed; die is gebleven. Weg zijn de herhaling (
 
 - Afgeleid uit vijf teksten (2025–2026), een websitetekst en één tegenvoorbeeld dat Paul zelf aanwees. Telling per duizend woorden: abstracte woorden (‑heid, ‑ing, ‑schap, ‑iteit) 27–31 in brief en offerte, 44 in het strategieplan, 50 in het tegenvoorbeeld; "niet X, maar Y" 1,9–2,4 tegen 5,4.
 - Citaten uit klantstukken staan hier niet in, op enkele korte eigen zinnen van Paul na; voorbeelden zijn herschreven of geanonimiseerd.
-- Nog toetsen: een uitgeschreven podcastintro of post, en twee nieuwe teksten die met dit bestand zijn geschreven.
+- Getoetst op 2 november 2026 met één nieuwe tekst (zie ontwikkellogboek). Nog toetsen: een uitgeschreven podcastintro of post, en een tweede nieuwe tekst.
