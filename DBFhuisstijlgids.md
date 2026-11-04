@@ -1,6 +1,6 @@
 # DBF Huisstijlgids — één bron voor HTML, PDF, PowerPoint en Word
 
-> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 4 november 2026, vijfde versie (tegels voor uitspraken van mensen en zilveren fotolijstjes, §1.8; geen vervaagde schaduw in print en PDF, §2.8; daarvoor 2 november: bladspiegel met chevron en zwevende kaart, kaarten met diepte, hoekregel, interactieve bouwstenen, mobiele regel) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
+> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 4 november 2026, vijfde versie (tegels voor uitspraken van mensen en zilveren fotolijstjes, §1.8; geen vervaagde schaduw in print en PDF, §2.8; modelkleuren BSR, §1.1 E; daarvoor 2 november: bladspiegel met chevron en zwevende kaart, kaarten met diepte, hoekregel, interactieve bouwstenen, mobiele regel) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
 >
 > Vier documenten, elk met een eigen functie; ze herhalen elkaars inhoud niet:
 > - **Deze huisstijlgids:** de geldende regels en ontwerpprincipes. De normatieve bron.
@@ -21,7 +21,7 @@ Lees altijd de leidende principes, §0 en §1.1–§1.5, en §5 (kwaliteitsrappo
 | **Word of PDF** | §4, Bijlage A | Beeld: §1.7 + Bijlage C · Achterkant met patroon: §1.6 + B.3 (Word/PDF) · Uitspraak als tegel of foto in een lijstje: §1.8 |
 | **Beeldschermachtergrond** | B.5, B.6 en B.8 | — |
 
-Toont een uiting een oordeel (goed, let op, stop), lees dan ook §1.1 D.
+Toont een uiting een oordeel (goed, let op, stop), lees dan ook §1.1 D. Toont ze een model met eigen kleuren, zoals het BSR-model, lees dan §1.1 E.
 
 Open punten die nog niet beslist zijn: §6. Doe daar geen aannames over; vraag het na.
 
@@ -84,7 +84,7 @@ Het doel is consistentie, niet uniformiteit.
 
 ### 1.1 Kleur: identiteit, ondersteuning, functie en signaal
 
-De kleurwaarden komen uit `kleurenpalet.png`, aangevuld met de afgeleide tinten hieronder. Dit hoofdstuk legt vast welke **rol** een kleur heeft. Het is het enige kleurvoorschrift; de mediumhoofdstukken verwijzen hiernaar. Vier soorten kleur betekent niet: meer kleuren gebruiken. **Een afzonderlijke uiting bevat zo weinig mogelijk verschillende kleuren.**
+De kleurwaarden komen uit `kleurenpalet.png`, aangevuld met de afgeleide tinten hieronder. Dit hoofdstuk legt vast welke **rol** een kleur heeft. Het is het enige kleurvoorschrift; de mediumhoofdstukken verwijzen hiernaar. Vijf soorten kleur betekent niet: meer kleuren gebruiken. **Een afzonderlijke uiting bevat zo weinig mogelijk verschillende kleuren.**
 
 **A. Identiteitskleuren** — dragen de merkidentiteit.
 
@@ -138,6 +138,23 @@ Het eerdere HTML/Word-blauw `#15284B` vervalt. Waar in deze gids "donkerblauw" o
 - **Geen play-, pauze- en stopiconen als signaal.** Die zeggen of iets loopt, niet of het goed gaat. Is de procesfase nodig (loopt, gepauzeerd, afgesloten), zet die dan in een aparte, neutrale kolom in koningsblauw.
 - Print: CMYK- en Pantone-waarden zijn nog niet vastgesteld (§6).
 - Referentie: `DBF_voorbeeld_signaalkleuren.html`.
+
+**E. Modelkleuren** — een vastgesteld model met een eigen kleurbetekenis houdt zijn eigen kleuren (besluit Paul, 4 november 2026). Aanleiding: bij een BSR-uitslag werd alles plichtmatig in koningsblauw, goud en zand gezet, zodat de werelden niet meer te herkennen waren. De kleur van het model is dan inhoud, geen decoratie. De huisstijl zit in de letter, de kaart, de hoeken en de ruimte eromheen. Huiskleuren worden niet in het model gemengd, en signaalkleuren (D) staan nooit in hetzelfde schema.
+
+**BSR-model** (Brand Strategy Research, vier belevingswerelden). Referentie: `DBF_voorbeeld_bsr.html`.
+
+| Wereld | Plek | Kop en gevulde chip | Vlak | Tekst op de kop |
+|---|---|---|---|---|
+| Rood | linksboven (extravert, ik) | `#B14434` | `#F3DFDC` | wit (5,6:1) |
+| Geel | rechtsboven (extravert, wij) | `#E7A549` | `#FBF0D8` | koningsblauw (6,5:1) |
+| Blauw | linksonder (introvert, ik) | `#3B5CA3` | `#DFE6F2` | wit (6,5:1) |
+| Groen | rechtsonder (introvert, wij) | `#558038` | `#E5EEDD` | wit (4,6:1) |
+
+- Altijd in deze volgorde en op deze plek, met de assen eronder: "↑ extravert · ↓ introvert" en "← ik · wij →".
+- Kaartenuitslag: wat past, staat als gevulde chip in de kleur van de wereld; wat niet past, als witte chip met koningsblauwe tekst. Een leeg vak krijgt "geen", cursief, in `--inkt-mid` (`--inkt-zacht` haalt op de vlakken net geen 4,5:1).
+- Vorm: kop als band over de volle breedte, 2×2 met ±6px tussenruimte, rijen even hoog, buitenste hoeken 14px. Twee schema's naast elkaar (past wel, past niet) zijn even hoog. Op mobiel onder elkaar.
+- In HTML als variabelen (`--bsr-rood`, `--bsr-rood-licht` enz.) in het `:root`-blok, alleen als het document het model toont.
+- De reader *Brand Strategy Research (BSR)* gebruikt felle kleuren; deze gedempte waarden gaan voor in DBF-uitingen.
 
 ### 1.2 Logo en beeldmerk
 
@@ -267,6 +284,7 @@ Besluit Paul, 4 november 2026. **Tegels zijn voor wat mensen zeggen, lijstjes vo
 
 **Tegel: vorm (vast)**
 - Vierkant, haaks, wit. Geen slijtage, vergeling of afgebroken hoek.
+- **Altijd vierkant, ook bij een lange uitspraak.** De tegel groeit nooit mee met de tekst. De kaderlijnen van F, G, H en K bestaan uit vier hoekstukken van elk een halve tegel; is de tegel hoger dan breed, dan ontstaat een gat in de zijlijnen. In HTML: `aspect-ratio:1/1; min-height:0; overflow:hidden; container-type:inline-size` op de tegel, en de lettermaat in `cqi` (Playwrite NL 8,4, Caveat 11,2, Neucha 9,4, Homemade Apple 6,4; afzender 4,6). Een klein script mag de letter verkleinen als een uitspraak toch niet past; zonder script moet de tekst al passen. Past hij niet, kort de uitspraak in.
 - Op een witte pagina (Word, PowerPoint, PDF) een dunne binnenrand: koningsblauw op 20%, ±1px of 0,3 mm. Op papiertint (HTML) op 7%.
 - Uitspraak in koningsblauw, in een handschrift uit de vaste set. Afzender eronder in Open Sans 600, `--inkt-zacht`, kleiner.
 - Markering: lichtblauw `#E3E4ED` als onregelmatige veeg over het onderste deel van de woorden, die bij een regelafbreking doorloopt. Geen strak blok.
@@ -622,9 +640,11 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 - [ ] Klikken op een link in het navigatiepaneel sluit het paneel ook (niet alleen navigeren)
 - [ ] Titelblok (`header.top`) en body (`.wrap`) gebruiken identieke horizontale padding op de binnenste wrapper (§2.6) — tekst lijnt uit, ook op mobiel
 - [ ] Auteursrechtregel staat onder de documentregel in de footer, letterlijk zoals in §2.4
+- [ ] Model met eigen kleuren (BSR) in de modelkleuren van §1.1 E, op de vaste plek, met assen; geen huiskleuren in het model
 - [ ] Signaalkleuren alleen bij een oordeel, als markering (vorm, rand) en altijd met vaste vorm én woord; nooit als tekstkleur (§1.1 D)
 - [ ] Gevraagd naar klantlogo en vertrouwelijkheid (§0); bij klantlogo de witte co-brandingbalk en het titelblok zonder logo (§2.4); bij vertrouwelijk de regel bovenin, met kring en e-mailadres ingevuld
 - [ ] Eén zelfstandig bestand, geen gebroken links of ontbrekende assets
+- [ ] Elke tegel gemeten: breedte gelijk aan hoogte, geen tekst die wegvalt, kaderlijnen ononderbroken (§1.8)
 - [ ] Tegels en lijstjes volgens §1.8: tegel alleen voor een uitspraak van een mens, afzender de rol tenzij persona of bewust met naam, handschrift en hoekmotief uit de vaste set, hooguit vier tegels per pagina, niets overlapt
 - [ ] Printregel aanwezig: geen vervaagde schaduw of filter in print en PDF (§2.8); afgedrukte PDF gecontroleerd op grijze blokken
 - [ ] Daadwerkelijk gerenderd bekeken — geen code-only review
