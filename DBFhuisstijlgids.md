@@ -145,13 +145,13 @@ Het eerdere HTML/Word-blauw `#15284B` vervalt. Waar in deze gids "donkerblauw" o
 
 | Wereld | Plek | Kop en gevulde chip | Vlak | Tekst op de kop |
 |---|---|---|---|---|
-| Rood | linksboven (extravert, ik) | `#B14434` | `#F3DFDC` | wit (5,6:1) |
-| Geel | rechtsboven (extravert, wij) | `#E7A549` | `#FBF0D8` | koningsblauw (6,5:1) |
-| Blauw | linksonder (introvert, ik) | `#3B5CA3` | `#DFE6F2` | wit (6,5:1) |
-| Groen | rechtsonder (introvert, wij) | `#558038` | `#E5EEDD` | wit (4,6:1) |
+| Rood | linksboven (extravert, ik) | `#C0392B` | `#F7DEDB` | wit (5,4:1) |
+| Geel | rechtsboven (extravert, wij) | `#F2A12E` | `#FDEFD5` | koningsblauw (6,5:1) |
+| Blauw | linksonder (introvert, ik) | `#2F5DA8` | `#DDE6F3` | wit (6,5:1) |
+| Groen | rechtsonder (introvert, wij) | `#47812B` | `#E3EEDB` | wit (4,7:1) |
 
 - Altijd in deze volgorde en op deze plek, met de assen eronder: "↑ extravert · ↓ introvert" en "← ik · wij →".
-- Kaartenuitslag: wat past, staat als gevulde chip in de kleur van de wereld; wat niet past, als witte chip met koningsblauwe tekst. Een leeg vak krijgt "geen", cursief, in `--inkt-mid` (`--inkt-zacht` haalt op de vlakken net geen 4,5:1).
+- Kaartenuitslag: wat past, staat als gevulde chip in de kleur van de wereld; wat niet past, als witte chip met koningsblauwe tekst. Een leeg vak krijgt "geen", cursief, in `--inkt-mid` (`--inkt-zacht` haalt op het rode en blauwe vlak net geen 4,5:1).
 - Vorm: kop als band over de volle breedte, 2×2 met ±6px tussenruimte, rijen even hoog, buitenste hoeken 14px. Twee schema's naast elkaar (past wel, past niet) zijn even hoog. Op mobiel onder elkaar.
 - In HTML als variabelen (`--bsr-rood`, `--bsr-rood-licht` enz.) in het `:root`-blok, alleen als het document het model toont.
 - De reader *Brand Strategy Research (BSR)* gebruikt felle kleuren; deze gedempte waarden gaan voor in DBF-uitingen.
@@ -284,7 +284,7 @@ Besluit Paul, 4 november 2026. **Tegels zijn voor wat mensen zeggen, lijstjes vo
 
 **Tegel: vorm (vast)**
 - Vierkant, haaks, wit. Geen slijtage, vergeling of afgebroken hoek.
-- **Altijd vierkant, ook bij een lange uitspraak.** De tegel groeit nooit mee met de tekst. De kaderlijnen van F, G, H en K bestaan uit vier hoekstukken van elk een halve tegel; is de tegel hoger dan breed, dan ontstaat een gat in de zijlijnen. In HTML: `aspect-ratio:1/1; min-height:0; overflow:hidden; container-type:inline-size` op de tegel, en de lettermaat in `cqi` (Playwrite NL 8,4, Caveat 11,2, Neucha 9,4, Homemade Apple 6,4; afzender 4,6). Een klein script mag de letter verkleinen als een uitspraak toch niet past; zonder script moet de tekst al passen. Past hij niet, kort de uitspraak in.
+- **Altijd vierkant, ook bij een lange uitspraak.** De tegel groeit nooit mee met de tekst. De kaderlijnen van F, G, H en K bestaan uit vier hoekstukken van elk een halve tegel; is de tegel hoger dan breed, dan ontstaat een gat in de zijlijnen. In HTML: `aspect-ratio:1/1; min-height:0; overflow:hidden; container-type:inline-size` op de tegel, en de lettermaat in `cqi` (Playwrite NL 8,4, Caveat 11,2, Neucha 9,4, Homemade Apple 6,4; afzender 4,6). Zet op de uitspraak en de afzender altijd `white-space:normal` en `overflow-wrap:break-word`: staat de tegel in een rij of kaart die `nowrap` doorgeeft, dan loopt de uitspraak anders op één regel de tegel uit en wordt hij afgesneden. Een tegel naast tekst krijgt een vaste breedte (`flex:0 0 …`). Een klein script mag de letter verkleinen als een uitspraak toch niet past, in hoogte of in breedte; zonder script moet de tekst al passen. Past hij niet, kort de uitspraak in.
 - Op een witte pagina (Word, PowerPoint, PDF) een dunne binnenrand: koningsblauw op 20%, ±1px of 0,3 mm. Op papiertint (HTML) op 7%.
 - Uitspraak in koningsblauw, in een handschrift uit de vaste set. Afzender eronder in Open Sans 600, `--inkt-zacht`, kleiner.
 - Markering: lichtblauw `#E3E4ED` als onregelmatige veeg over het onderste deel van de woorden, die bij een regelafbreking doorloopt. Geen strak blok.
@@ -644,7 +644,7 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 - [ ] Signaalkleuren alleen bij een oordeel, als markering (vorm, rand) en altijd met vaste vorm én woord; nooit als tekstkleur (§1.1 D)
 - [ ] Gevraagd naar klantlogo en vertrouwelijkheid (§0); bij klantlogo de witte co-brandingbalk en het titelblok zonder logo (§2.4); bij vertrouwelijk de regel bovenin, met kring en e-mailadres ingevuld
 - [ ] Eén zelfstandig bestand, geen gebroken links of ontbrekende assets
-- [ ] Elke tegel gemeten: breedte gelijk aan hoogte, geen tekst die wegvalt, kaderlijnen ononderbroken (§1.8)
+- [ ] Elke tegel gemeten: breedte gelijk aan hoogte, uitspraak loopt over meerdere regels en valt nergens weg, kaderlijnen ononderbroken (§1.8)
 - [ ] Tegels en lijstjes volgens §1.8: tegel alleen voor een uitspraak van een mens, afzender de rol tenzij persona of bewust met naam, handschrift en hoekmotief uit de vaste set, hooguit vier tegels per pagina, niets overlapt
 - [ ] Printregel aanwezig: geen vervaagde schaduw of filter in print en PDF (§2.8); afgedrukte PDF gecontroleerd op grijze blokken
 - [ ] Daadwerkelijk gerenderd bekeken — geen code-only review
