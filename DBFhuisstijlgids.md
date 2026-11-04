@@ -1,6 +1,6 @@
 # DBF Huisstijlgids — één bron voor HTML, PDF, PowerPoint en Word
 
-> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 2 november 2026, vierde versie (HTML: bladspiegel met chevron en zwevende kaart; kaarten met diepte; hoekregel; interactieve bouwstenen; mobiele regel) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
+> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 4 november 2026, vijfde versie (tegels voor uitspraken van mensen en zilveren fotolijstjes, §1.8; geen vervaagde schaduw in print en PDF, §2.8; daarvoor 2 november: bladspiegel met chevron en zwevende kaart, kaarten met diepte, hoekregel, interactieve bouwstenen, mobiele regel) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
 >
 > Vier documenten, elk met een eigen functie; ze herhalen elkaars inhoud niet:
 > - **Deze huisstijlgids:** de geldende regels en ontwerpprincipes. De normatieve bron.
@@ -16,9 +16,9 @@ Lees altijd de leidende principes, §0 en §1.1–§1.5, en §5 (kwaliteitsrappo
 
 | Je maakt | Lees | Alleen als het speelt |
 |---|---|---|
-| **HTML-pagina** | §2, Bijlage A | Beeld: §1.7 + Bijlage C · Patroonstrook: §1.6 + B.3 (HTML) · Keuzes, stappen of draaikaartjes: §2.4 B |
-| **PowerPoint** | §3 (begin met `Powerpoint_sjabloon.potx`), Bijlage A, B.3 (PowerPoint) | Historische foto of sessiebeeld: Bijlage C |
-| **Word of PDF** | §4, Bijlage A | Beeld: §1.7 + Bijlage C · Achterkant met patroon: §1.6 + B.3 (Word/PDF) |
+| **HTML-pagina** | §2, Bijlage A | Beeld: §1.7 + Bijlage C · Patroonstrook: §1.6 + B.3 (HTML) · Keuzes, stappen of draaikaartjes: §2.4 B · Uitspraak als tegel of foto in een lijstje: §1.8 |
+| **PowerPoint** | §3 (begin met `Powerpoint_sjabloon.potx`), Bijlage A, B.3 (PowerPoint) | Historische foto of sessiebeeld: Bijlage C · Uitspraak als tegel of foto in een lijstje: §1.8 |
+| **Word of PDF** | §4, Bijlage A | Beeld: §1.7 + Bijlage C · Achterkant met patroon: §1.6 + B.3 (Word/PDF) · Uitspraak als tegel of foto in een lijstje: §1.8 |
 | **Beeldschermachtergrond** | B.5, B.6 en B.8 | — |
 
 Toont een uiting een oordeel (goed, let op, stop), lees dan ook §1.1 D.
@@ -99,7 +99,7 @@ De kleurwaarden komen uit `kleurenpalet.png`, aangevuld met de afgeleide tinten 
 | Kleur | Hex | Functie |
 |---|---|---|
 | Zwart | `#000000` | Lopende tekst (Word, PowerPoint) |
-| Lichtblauw | `#E3E4ED` | Alleen de zwakste waarde in de tabel-heatmap (§3.1). Niet voor kaarten, vlakken of labels: daarvoor is zand de kleur (besluit Paul, 27 oktober 2026) |
+| Lichtblauw | `#E3E4ED` | Alleen de zwakste waarde in de tabel-heatmap (§3.1) en de markeerstift in een tegel (§1.8, besluit Paul, 4 november 2026). Niet voor kaarten, vlakken of labels: daarvoor is zand de kleur (besluit Paul, 27 oktober 2026) |
 | Zand | `#ECE4D7` | Vaste kleur voor lichte vlakken en blokken, in elk formaat (palet-Goud `#C1A57B` op 30%). In HTML zijn losse kaarten wit met een zachte schaduw (§2.4 A) |
 | Warm gebroken wit | `#F5F3EE` | Achtergrond van digitale uitingen (HTML) |
 | Donker marine | `#222831` | Alleen als bewust gemotiveerde uitzondering |
@@ -116,6 +116,7 @@ De kleurwaarden komen uit `kleurenpalet.png`, aangevuld met de afgeleide tinten 
 | `#ECECEC` | Tabelkopregel PowerPoint |
 | `#464646` | Secundaire tekst, bijschriften |
 | `#C1A57B`, `#30475E` | Paletkleuren zonder eigen rol; alleen functioneel |
+| `#5F636B`, `#8C9098`, `#C4C7CC` | Zilveren fotolijstje (§1.8): donker, midden, glans |
 
 Het eerdere HTML/Word-blauw `#15284B` vervalt. Waar in deze gids "donkerblauw" of "navy" staat zonder hexcode, is koningsblauw bedoeld.
 
@@ -185,6 +186,8 @@ Vectorpunten (viewBox `0 0 924 1316`): `296.7,118 461.2,653 296.7,1188 348.4,118
 
 Gebruik alleen fontgewichten die beschikbaar of ingesloten zijn; anders bootst de applicatie ze lelijk na.
 
+**Uitzondering: handschrift in een tegel.** Een uitspraak van een mens in een tegel staat in een handschrift uit de vaste set van §1.8. Nergens anders.
+
 ### 1.5 Afbeeldingen en hergebruik
 
 - **Nooit non-uniform schalen** (aparte factor voor breedte en hoogte). Bereken de crop: `crop_breedte = bronhoogte × doelverhouding`, snijd dat uit, schaal daarna uniform.
@@ -245,6 +248,68 @@ Altijd onder of naast het beeld, klein: de bronvermelding (bijv. *Nationaal Arch
 **Niet doen:** meerdere historische beelden als decoratie door een document strooien; een portret zonder dat die persoon auteur is; namen zetten bij groepsfoto's; een foto in hetzelfde vlak als het patroon (§1.6); beelden bijsnijden tot een detail dat de betekenis verandert.
 
 ---
+
+### 1.8 Tegels en fotolijstjes (nostalgie)
+
+Besluit Paul, 4 november 2026. **Tegels zijn voor wat mensen zeggen, lijstjes voor wat mensen zien.** Beide zijn een aanvulling, geen vast onderdeel: een uiting zonder tegel of lijstje is volledig in huisstijl. Twijfel = weglaten. Referenties: `DBF_voorbeeld_nostalgie.html` (scherm, met alle hoekmotieven) en `DBF_voorbeeld_nostalgie_op_wit.pdf` (A4 op een witte pagina).
+
+**Tegel: wanneer**
+- Bij een uitspraak van een mens: medewerker, cliënt, bewoner, mantelzorger, of een persona.
+- **Afzender:** standaard de rol (*Wijkverpleegkundige*). Een naam alleen bij een fictieve persona die als persona wordt gebruikt, of bij een echt persoon als we bewust voor- en achternaam vermelden. In onderzoeksuitkomsten ligt een naam niet voor de hand: daar de rol, en die rol maakt de persoon niet herleidbaar.
+- **Letterlijk is de norm.** Een verzonnen of samengevatte uitspraak mag alleen als de waarachtigheid op orde is: hij moet kloppen met wat mensen werkelijk zeiden of zouden zeggen. Zo'n uitspraak is altijd een aandachtspunt in de kwaliteitsrapportage (§5).
+- Hooguit drie regels per uitspraak; twee of drie woorden gemarkeerd.
+- Overal te gebruiken, ook in het titelblok, op de openingsdia en op een tussendia.
+
+**Tegel: niet**
+- Voor eigen conclusies of kernzinnen. Daarvoor is de pull quote (§2.4).
+- In een tabel, op een foto, of in hetzelfde vlak als het patroon (§1.6).
+- Meer dan vier tegels per pagina of dia.
+
+**Tegel: vorm (vast)**
+- Vierkant, haaks, wit. Geen slijtage, vergeling of afgebroken hoek.
+- Op een witte pagina (Word, PowerPoint, PDF) een dunne binnenrand: koningsblauw op 20%, ±1px of 0,3 mm. Op papiertint (HTML) op 7%.
+- Uitspraak in koningsblauw, in een handschrift uit de vaste set. Afzender eronder in Open Sans 600, `--inkt-zacht`, kleiner.
+- Markering: lichtblauw `#E3E4ED` als onregelmatige veeg over het onderste deel van de woorden, die bij een regelafbreking doorloopt. Geen strak blok.
+- Hoekmotief uit de vaste set, in koningsblauw (D met een witte chevron).
+- Los gelegd, gedraaid tussen −3° en +3°: niet op één lijn, niet overlappend, geen tekst afdekkend. Geen strakke tegelwand.
+- Schaduw: een harde schaduw (5px 7px, koningsblauw 12%) plus een zachte (10px 16px 26px, koningsblauw 20%). In print en PDF alleen de harde schaduw (1,3 mm 1,9 mm, koningsblauw 14%), zonder vervaging (§2.8).
+
+**Handschriften (vaste set).** Alle vier vrij voor zakelijk gebruik (Open Font License of Apache).
+
+| Font | Gewicht | Gebruik |
+|---|---|---|
+| Playwrite NL | 300 | Nederlands schoolschrift, kroontjespengevoel; standaard |
+| Caveat | 500 | Losser; groot zetten (±1,7rem) |
+| Neucha | 400 | Rustig en goed leesbaar |
+| Homemade Apple | 400 | Alleen korte uitspraken; het minst leesbaar |
+
+- **Dezelfde spreker houdt binnen één document dezelfde hand.** Dat gaat voor de tweede regel: twee tegels naast elkaar hebben niet dezelfde hand.
+- Niet gebruiken: Brittany Signature (alleen persoonlijk gebruik zonder gekochte licentie). Niet in de set: Kalam (te rond), Petit Formal Script en Pinyon Script (deftig, trager leesbaar).
+
+**Hoekmotieven (vaste set).** A kwartrozet, D blauwe hoek, F kader, G kader met boog, H kader met chevron, I ruit, J stralen, K kader met ruitje. De vormen staan als SVG-symbool in `DBF_voorbeeld_nostalgie.html`; overnemen, niet natekenen. Per tegel vrij te kiezen.
+
+**Fotolijstje: wanneer**
+- Om een foto: een historisch beeld uit de beeldbank of een eigen foto, volgens de beslisvolgorde van §1.7.
+- Meerdere foto's per pagina mag, bijvoorbeeld een reeks indrukken van een sessie.
+- Historische beelden in zwart-wit. Eigen kleurenfoto's licht gedempt (verzadiging ±55%, ±8% zandtint), bewerkt in het bestand zelf, zodat het in elk formaat werkt. Rustige kleuren werken het best.
+- Een witte papierrand of scanrand van een oude afdruk gaat eraf; de voorstelling zelf wordt niet bijgesneden (§1.7).
+
+**Fotolijstje: niet**
+- Om grafieken, schema's, schermafbeeldingen, logo's of dia's van een klant.
+- Om een klein portret bij de ondertekening.
+- Op een openings- of scheidingsdia in PowerPoint: daar komt geen foto (§1.7).
+
+**Fotolijstje: vorm (vast)**
+- Smal, donker zilver: ±7px op scherm, 1,8 mm in print. Verloop onder 135°: `--zilver` 0%, `--zilver-licht` 16%, `--zilver` 34%, `--zilver-donker` 62%, `--zilver` 100%. Dunne donkere binnenrand rond de foto.
+- Geen versiering, geen passe-partout.
+- Gedraaid tussen −3° en +3°, met dezelfde schaduw als de tegel, ook in print en PDF.
+
+**Per formaat**
+- **HTML en PDF:** tegel met echte tekst, hoekmotieven als SVG, handschriften ingesloten (§2.2). Lijstje in CSS.
+- **PowerPoint:** tegel als afbeelding (kader, hoekmotief, schaduw) met een los tekstvak erop; lijstje als afbeelding. Nog te toetsen (§6).
+- **Word:** tegel en lijstje allebei als afbeelding, per uitspraak of foto. De markeerstift in Word kent geen lichtblauw; arcering geeft een strak blok. Nog te toetsen (§6).
+
+---
 ## 2. HTML
 
 Geldt voor elk op zichzelf staand HTML-bestand: lesstof, rapport, offerte, voorstel, whitepaper, uitnodiging. Geen vast sjabloon met verplichte secties, maar een consistente set regels en bouwstenen — kies per document wat past, binnen deze visuele taal.
@@ -274,6 +339,8 @@ Praktische manier om aan de woff2-bestanden te komen: de npm-pakketten `@fontsou
 
 Dit voegt ca. 150–250 KB toe — acceptabel, en de enige manier om te garanderen dat het document er bij de ontvanger hetzelfde uitziet, ook offline.
 
+Gebruikt het document tegels (§1.8), sluit dan ook de gebruikte handschriften in (`@fontsource/playwrite-nl`, `caveat`, `neucha`, `homemade-apple`), alleen de gewichten uit §1.8.
+
 Gebruik alleen fontgewichten die je ook embedt. `font-weight:600` op Merriweather bijvoorbeeld wordt niet meegeleverd — de browser bootst dat dan lelijk na.
 
 ### 2.3 Kleuren als CSS-variabelen
@@ -296,6 +363,9 @@ Elk bestand definieert zijn palet bovenaan als CSS custom properties:
   --chevron-kop:#3F3A5B; /* grote chevron in het titelblok, §1.3 */
   --schaduw:0 4px 18px rgba(39,39,91,.08);          /* kaart, §2.4 A */
   --schaduw-zwevend:0 10px 30px rgba(39,39,91,.12); /* zwevende kaart, §2.4 */
+  /* alleen als het document tegels of fotolijstjes heeft, §1.8 */
+  --markeer:#E3E4ED;
+  --zilver-donker:#5F636B; --zilver:#8C9098; --zilver-licht:#C4C7CC;
   /* alleen als het document een oordeel toont, §1.1 D */
   --ok:#648C55;   --ok-licht:#E6EEDD;
   --letop:#B96B29; --letop-licht:#FAE4CE;
@@ -303,11 +373,11 @@ Elk bestand definieert zijn palet bovenaan als CSS custom properties:
 }
 ```
 
-Geen andere lichte vlakkleuren toevoegen, zoals `--lichtblauw`. Een licht vlak is zand of lichtgoud. De enige uitzondering zijn de drie signaaltinten, en alleen bij een melding met een oordeel (§1.1 D). Toont het document geen oordeel, laat de zes signaalregels dan weg.
+Geen andere lichte vlakkleuren toevoegen, zoals `--lichtblauw`. `--markeer` is geen vlakkleur maar de markeerstift in een tegel (§1.8); laat het weg als het document geen tegels heeft, en de zilverregels als er geen fotolijstje is. Een licht vlak is zand of lichtgoud. De enige uitzondering zijn de drie signaaltinten, en alleen bij een melding met een oordeel (§1.1 D). Toont het document geen oordeel, laat de zes signaalregels dan weg.
 
 Nooit losse hex-codes in de rest van het document — ook niet in SVG's (dus `fill="var(--inkt)"`, niet `fill="#27275B"`). Zo blijft een kleurwijziging één regel werk.
 
-**Dit `:root`-blok staat precies één keer in het bestand, bovenaan en compleet.** Verandert het kleurenschema, herschrijf dan dit ene blok; zet er geen tweede blok achter.
+**Dit `:root`-blok staat precies één keer in het bestand, bovenaan en compleet.** De enige toegestane aanvulling is de printregel voor schaduwen (§2.8). Verandert het kleurenschema, herschrijf dan dit ene blok; zet er geen tweede blok achter.
 
 ### 2.4 Component-kit
 
@@ -332,7 +402,9 @@ Bouwstenen. Gebruik wat past bij het documenttype, laat weg wat niet nodig is:
 - **Doelenlijst** — gewone bullets. Geen chevron-bullets: dat oogt al snel druk over een hele pagina tekst
 - **Zelfcheck/kadertje met badge** — kleine navy "merkje" boven een korte tekst
 - **Voorbeeldkader** — zachte goudtint, voor cases en toelichtingen
-- **Pull quote** — dikke goud zijrand, opvallende regel
+- **Pull quote** — dikke goud zijrand, opvallende regel. Voor onze eigen conclusie; een uitspraak van een mens staat in een tegel (§1.8)
+- **Tegel** — uitspraak van een mens in handschrift, met hoekmotief, los en licht gedraaid (§1.8). Referentie: `DBF_voorbeeld_nostalgie.html`
+- **Fotolijstje** — smal, donker zilver, licht gedraaid (§1.8)
 - **Statusmelding en statuslabel** — alleen bij een oordeel (§1.1 D).
   - Melding: vlak in de signaaltint, linkerrand 5px in de signaalkleur, kop in Open Sans 700 met de vorm ervoor (±17px), tekst in koningsblauw.
   - Statuslabel in een tabel: vorm (±16px) + woord in Open Sans 600, koningsblauw. Alleen de statuskolom draagt kleur. Op mobiel schuift de status naast de eerste kolom, zodat hij niet buiten beeld valt.
@@ -378,6 +450,7 @@ Besluit Paul, 2 november 2026. Aanleiding: rapportages oogden flets, met dunne g
 - Haaks: titelblok, co-brandingbalk, hoofdstukkop en kopbalk van een paneel, patroonstrook en footer.
 - **Een gekleurde rand buigt nooit mee.** De kant waar de rand zit, is haaks. Citaat met goudrand links: `border-radius:0 14px 14px 0`. Rand bovenaan: `0 0 14px 14px`. Een gekleurde band ín een kaart (datum, soort) is een vlak en volgt de hoek van de kaart.
 - Geen tussenmaten: alleen 14px, 18px, rond en haaks.
+- **Uitzondering: tegel en fotolijstje** zijn haaks en liggen gedraaid, met een eigen schaduw (§1.8). Dat is hun vorm, geen vrijheid voor andere kaarten.
 
 **Lijnen**
 - Geen grijze rand om een kaart; de schaduw geeft de vorm.
@@ -513,6 +586,11 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
   <meta name="referrer" content="no-referrer">
   ```
   Zet zo'n pagina níet in robots.txt: dan leest Google de noindex-regel niet. Een PDF kan deze regel niet bevatten; daarvoor stelt de webbouwer een `X-Robots-Tag: noindex`-header in. Onvindbaar is niet afgeschermd: wie de link heeft, kan de pagina openen. Kies daarom een adres dat niet te raden is.
+- **Geen vervaagde schaduw in print en PDF (besluit Paul, 4 november 2026).** Chrome zet een `box-shadow` of `filter: drop-shadow` met vervaging bij afdrukken en "Opslaan als PDF" om in een grijze afbeelding met een masker. Apple-weergave (Mail, Bestanden en Voorvertoning op iPhone en Mac) negeert dat masker en toont een grijs blok achter elke kaart. Daarom in elke HTML een printregel die de schaduwvariabelen vervangt door een omtreklijn zonder vervaging:
+  ```css
+  @media print{html:root{--schaduw:0 0 0 1px rgba(39,39,91,.14);--schaduw-zwevend:0 0 0 1px rgba(39,39,91,.14),3px 4px 0 rgba(39,39,91,.10)}}
+  ```
+  `html:root` is nodig om het `:root`-blok te overstemmen; dit is geen tweede kleurenblok (§2.3), het verandert alleen de schaduw. Elke losse `box-shadow` met vervaging en elke `filter` krijgt in dezelfde printregel een vervanger zonder vervaging. Een PDF die rechtstreeks wordt gemaakt, volgt dezelfde regel. Controle: `pdfimages -list` toont geen grijze afbeeldingen buiten logo-maskers en foto's.
 - Test responsief: smal (mobiel) én breed scherm. Voeg een print-mediaquery toe als het document ook afgedrukt moet kunnen worden.
 - **Mobiel (besluit Paul, 2 november 2026), getest op 390px breed:** de inhoud begint in het eerste scherm; een keuze tussen panelen blijft bereikbaar zonder terug te scrollen; wat op een smal scherm zijn betekenis verliest (een tijdlijnbalk, lege blokjes) gaat weg; de pagina schuift nooit zijwaarts. Let op labels zonder spatie ertussen: die breken niet af en duwen de pagina breder.
 - **Werkt zonder JavaScript (besluit Paul, 2 november 2026):** alle inhoud staat in de HTML zelf; het script verbergt en verrijkt alleen (tabbladen, tijdlijnbalk, draaien). Aanleiding: een mailprogramma of de voorvertoning op een telefoon voert geen script uit, en dan bleven alleen de kopblokken over. Zonder script staan panelen, opties, stappen en de vraag van elk draaikaartje onder elkaar. Test ook met JavaScript uit.
@@ -547,6 +625,8 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 - [ ] Signaalkleuren alleen bij een oordeel, als markering (vorm, rand) en altijd met vaste vorm én woord; nooit als tekstkleur (§1.1 D)
 - [ ] Gevraagd naar klantlogo en vertrouwelijkheid (§0); bij klantlogo de witte co-brandingbalk en het titelblok zonder logo (§2.4); bij vertrouwelijk de regel bovenin, met kring en e-mailadres ingevuld
 - [ ] Eén zelfstandig bestand, geen gebroken links of ontbrekende assets
+- [ ] Tegels en lijstjes volgens §1.8: tegel alleen voor een uitspraak van een mens, afzender de rol tenzij persona of bewust met naam, handschrift en hoekmotief uit de vaste set, hooguit vier tegels per pagina, niets overlapt
+- [ ] Printregel aanwezig: geen vervaagde schaduw of filter in print en PDF (§2.8); afgedrukte PDF gecontroleerd op grijze blokken
 - [ ] Daadwerkelijk gerenderd bekeken — geen code-only review
 
 ### 2.10 Prompt-ready instructie voor AI-gebruik
@@ -808,9 +888,9 @@ Groen is geen garantie dat een document foutloos, juridisch juist of AVG-proof i
 1. **Vormkeuzes** — compositie, typografie, kleur, witruimte, hiërarchie, inzet of bewust weglaten van huisstijlelementen. Concreet: hoe heeft de inhoud de vorm bepaald?
 2. **Beeldmateriaal** — per beeld: wat, waar, waarom inhoudelijk en visueel, bron en rechten, onzekerheden. Of waarom bewust geen beeld.
 3. **Stijl- en spelspanningen** — tussen inhoud, huisstijl, medium en ontwerp. Onderscheid bewuste, gemotiveerde afwijkingen van onbedoelde inconsistenties. Een spanning hoeft niet altijd opgelost; soms moet ze alleen zichtbaar zijn.
-4. **Inhoud en opbouw** — logica, centrale boodschap, volgorde, ontbrekende redeneringen, tegenstrijdigheden, herhaling, onduidelijke formuleringen, toon, overtuigingskracht. Concrete verbeterpunten; de bedoeling van de auteur niet eigenmachtig veranderen.
+4. **Inhoud en opbouw** — logica, centrale boodschap, volgorde, ontbrekende redeneringen, tegenstrijdigheden, herhaling, onduidelijke formuleringen, toon, overtuigingskracht. Concrete verbeterpunten; de bedoeling van de auteur niet eigenmachtig veranderen. **Bij tegels (§1.8):** is elke uitspraak letterlijk? Een verzonnen of samengevatte uitspraak is altijd een aandachtspunt: benoem welke tegel het is en of de waarachtigheid op orde is.
 5. **Vreemde of onbedoeld overgenomen inhoud** — namen van andere opdrachtgevers, organisaties, projecten of personen; verkeerde plaatsen en data; achtergebleven kop- en voetteksten; verwijzingen naar andere trajecten; interne opmerkingen. Waar mogelijk ook sprekersnotities, opmerkingen, verborgen tekst en metadata. Aantoonbare fouten binnen de opdracht corrigeren en melden; twijfelgevallen voorleggen, nooit stilzwijgend verwijderen.
-6. **Privacy en vertrouwelijkheid** — persoons- en contactgegevens, cliënt-, leerling- of medewerkergegevens, medische en financiële gegevens, interne correspondentie, gegevens van andere opdrachtgevers, metadata. Onderscheid terecht opgenomen van mogelijk onbedoeld. Gevoelige gegevens niet letterlijk in de rapportage: benoem het soort risico en de plek. Bij twijfel markeren en menselijke beoordeling vragen.
+6. **Privacy en vertrouwelijkheid** — persoons- en contactgegevens, cliënt-, leerling- of medewerkergegevens, medische en financiële gegevens, interne correspondentie, gegevens van andere opdrachtgevers, metadata. Onderscheid terecht opgenomen van mogelijk onbedoeld. Gevoelige gegevens niet letterlijk in de rapportage: benoem het soort risico en de plek. Bij twijfel markeren en menselijke beoordeling vragen. Bij een tegel met een echte naam: is dat een bewuste keuze, en weet de persoon het?
 
 **Rapportageregels:** alle zes onderdelen verplicht; niets te melden is "Geen bijzonderheden aangetroffen." Verwijs naar pagina, dia of paragraaf. Onderscheid vastgestelde fouten, vermoedelijke problemen en aanbevelingen; kritieke bevindingen eerst. Vermeld uitgevoerde correcties en technische beperkingen van de controle (bijv. geen echte PowerPoint of Word beschikbaar). Claim geen controles die niet zijn gedaan. Compact, in verhouding tot het document.
 
@@ -832,6 +912,9 @@ Groen is geen garantie dat een document foutloos, juridisch juist of AVG-proof i
 - **PowerPoint-sjabloon in de praktijk:** de eerste echte presentaties met `Powerpoint_sjabloon.potx` maken en in PowerPoint op een andere computer controleren (lettertypen, indelingen, voetregel).
 - **Praktijktoets:** de gids toetsen met een HTML-lesbrief, een PowerPoint en een Word-offerte, elk met kwaliteitsrapportage. Terugkerende problemen leiden tot een aanpassing van de gids; incidentele niet.
 - **Eén grote chevron in elk formaat?** HTML heeft sinds 2 november één chevron in `#3F3A5B`; PowerPoint houdt de chevrondiepte met twee lagen toon op toon. Besluiten of PowerPoint meegaat.
+- **Tegels en lijstjes in PowerPoint en Word (§1.8):** de werkwijze met afbeeldingen nog toetsen in echte bestanden, op een andere computer. Playwrite NL wordt door Google als variabel font geleverd; Office sluit dat niet betrouwbaar in, dus een vaste TTF-versie nodig.
+- **Zilver in drukwerk:** het verloop van het fotolijstje met een proefdruk controleren; CMYK nog niet vastgesteld.
+- **Handschriften Amatic SC en Beth Ellen:** genoemd, nog niet getoetst. Eerst op leesbaarheid bekijken voordat ze in de set komen.
 - **Kaartvorm buiten HTML:** §2.4 A geldt voor HTML. Nagaan of Word, PDF en PowerPoint dezelfde hoek- en randregel krijgen.
 - **Oudere voorbeeldbestanden:** `DBF_voorbeeld_html_cobranding.html` en `DBF_voorbeeld_signaalkleuren.html` tonen nog het titelblok zonder grote chevron en kaarten met een grijze rand. Bij de eerstvolgende bewerking omzetten.
 
