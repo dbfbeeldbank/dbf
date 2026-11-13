@@ -1,6 +1,6 @@
 # DBF Huisstijlgids — één bron voor HTML, PDF, PowerPoint en Word
 
-> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 4 november 2026, vijfde versie (tegels voor uitspraken van mensen en zilveren fotolijstjes, §1.8; geen vervaagde schaduw in print en PDF, §2.8; modelkleuren BSR, §1.1 E; daarvoor 2 november: bladspiegel met chevron en zwevende kaart, kaarten met diepte, hoekregel, interactieve bouwstenen, mobiele regel) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
+> Eén gids voor HTML, PDF, PowerPoint en Word. Stand: 13 november 2026, zesde versie (logo zonder tagline in alle uitingen, §1.2; raster met fade op koningsblauw voor het HTML-titelblok, openingsdia, scheidingsdia en omslag, §1.6 en B.9; daarvoor 4 november: tegels en fotolijstjes, §1.8; geen vervaagde schaduw in print en PDF, §2.8) — **concept, bevroren voor toetsing in de praktijk.** Niet definitief zolang de open visuele keuzes (§6) niet getoetst zijn.
 >
 > Vier documenten, elk met een eigen functie; ze herhalen elkaars inhoud niet:
 > - **Deze huisstijlgids:** de geldende regels en ontwerpprincipes. De normatieve bron.
@@ -164,9 +164,7 @@ Het eerdere HTML/Word-blauw `#15284B` vervalt. Waar in deze gids "donkerblauw" o
 - **Uitzondering: het patroon (Bijlage B).** Daarin ontstaat de zeshoek uit chevrons die elkaar aankijken. Dat is geen toegevoegd ornament maar een gevolg van de constructie, en daarom toegestaan. Er wordt nergens een zeshoeklijn getekend.
 - Gebruik nooit het losse beeldmerk náást het logo: het logo bevat het beeldmerk al.
 
-**Tagline "IDENTITY MARKETING":**
-- **Standaardregel (HTML, PowerPoint):** alleen bij grote, eenmalige plaatsingen (cover, titelslide). Bij kleine of herhalende plaatsingen (documentkopje, footer) de wordmark **zonder** tagline. Op kleine hoogte wordt de tagline onleesbaar; de fix is de tagline weglaten, niet het logo opblazen.
-- **Uitzondering Word-offerte (besluit Paul, op basis van het offertesjabloon):** horizontaal logo **mét** tagline, zwart, herhalend op elke pagina. Het bronbestand overrulet hier de standaardregel. Of dit ook voor brief/rapport/memo geldt, is nog niet vastgesteld.
+**Geen tagline (besluit Paul, 13 november 2026).** Het logo staat in elke uiting **zonder** de ondertitel "IDENTITY MARKETING": HTML, PowerPoint, Word (ook de offerte) en PDF. Gebruik `DBF-logo-wit.png` op donker en `DBF-logo-zwart.png` op licht. De bestanden met tagline zijn vervallen (Bijlage A).
 
 ### 1.3 Chevron (`›`) als kopmarkering
 
@@ -181,8 +179,8 @@ Vectorpunten (viewBox `0 0 924 1316`): `296.7,118 461.2,653 296.7,1188 348.4,118
 - **Verboden:** een herhalende rij chevrons als lijnaccent of breker, ook niet "subtiel" of "één keer per titelblok".
 - **Uitlijning:** de y-positie nooit via een geschatte offset. Centreer op de rij: `chevron-y = rij-y + rijhoogte/2 − chevron-hoogte/2`. Geldt voor elke chevron.
 - Bestanden: `DBF_chevron.svg` (schaalbaar, `fill="currentColor"`) en de PNG-bibliotheek in §3.7. In HTML: inline `<svg><polygon>` met een CSS-variabele als `fill`. Bestaande uitingen of scripts met de oude vectorpunten: bij de eerstvolgende bewerking omzetten.
-- **Grote chevron ('chevrondiepte'), alleen titel- en scheidingsdia:** twee grote chevrons toon op toon over elkaar, afgesneden door de rechterrand, links de titel vrij. Vaste regels: maximaal twee lagen, altijd toon op toon (`#30306A` en `#34346F` op koningsblauw), altijd afgesneden door de rechterrand, nooit in goud, nooit achter tekst. Bestand: `DBF_titeldia_chevrondiepte_koningsblauw.png` (Bijlage A).
-- **Grote chevron in het HTML-titelblok (besluit Paul, 2 november 2026):** één chevron, rechts in het titelblok, afgesneden door de boven-, rechter- en onderrand. Kleur `--chevron-kop` `#3F3A5B` (goud op 13% over koningsblauw), als vaste kleur, niet als doorzichtigheid. Nooit een tweede laag, nooit achter tekst. Op mobiel kleiner en verder naar rechts. Of PowerPoint dezelfde enkele chevron krijgt, is nog open (§6).
+- **Grote chevron ('chevrondiepte'): vervallen (besluit Paul, 13 november 2026).** Openingsdia en scheidingsdia krijgen het raster met fade (B.9). Het bestand `DBF_titeldia_chevrondiepte_koningsblauw.png` blijft op GitHub voor oude presentaties, maar wordt niet meer gebruikt.
+- **Grote chevron in het HTML-titelblok: vervallen (besluit Paul, 13 november 2026).** Het titelblok krijgt het raster met fade (B.9). De variabele `--chevron-kop` blijft alleen bestaan voor oudere pagina's.
 
 ### 1.4 Typografie per formaat
 
@@ -220,7 +218,7 @@ Gebruik alleen fontgewichten die beschikbaar of ingesloten zijn; anders bootst d
 **Het decoratieve patroon** is een aanvulling, geen vast onderdeel. Het is afgeleid van de chevron (§1.3) en wordt als vast bestand geplaatst (Bijlage B), niet nagebouwd of gevarieerd.
 
 - Ondergeschikt aan logo, typografie, kleur en inhoud. Nooit verplicht op een pagina of dia.
-- Alleen op afsluitende momenten: achterkant van een rapport, slotdia van een presentatie, smalle strook boven de voet van een webpagina.
+- Alleen op afsluitende momenten: achterkant van een rapport, slotdia van een presentatie, smalle strook boven de voet van een webpagina. Daarnaast, als **raster met fade**, op de opening op koningsblauw: het HTML-titelblok, de openingsdia, de scheidingsdia en een koningsblauwe omslag (B.9). In HTML alleen in het titelblok.
 - Altijd toon op toon (vormen op circa 5% verschil met de achtergrond). Nooit in hetzelfde vlak als een foto, nooit achter tekst of knoppen.
 - In beginsel maximaal één keer per uiting.
 - Donkere variant: koningsblauw is de standaard. Donker marine alleen als gemotiveerde uitzondering.
@@ -234,7 +232,7 @@ Technische specificatie en bestanden: **Bijlage B**.
 
 Bron: **Bijlage C** (beeldbank). Beeld is een keuze per document, geen vast onderdeel. **Bepaal eerst wat de tekst zegt; kies pas daarna of er een beeld bij hoort.** Twijfel = geen beeld.
 
-**PowerPoint: geen foto op de openingsdia.** Een presentatie opent met de chevrondiepte (§1.3, §3.5). Foto’s passen bij HTML; in een presentatie kaderen ze te veel (besluit Paul, 20 oktober 2026). Ook scheidingsdia’s krijgen geen foto.
+**PowerPoint: geen foto op de openingsdia.** Een presentatie opent met het raster met fade (§3.5, B.9). Foto’s passen bij HTML; in een presentatie kaderen ze te veel (besluit Paul, 20 oktober 2026). Ook scheidingsdia’s krijgen geen foto.
 
 **Beslisvolgorde (één keuze per plek, van boven naar beneden):**
 
@@ -378,7 +376,7 @@ Elk bestand definieert zijn palet bovenaan als CSS custom properties:
   --lijn:#DCD8CE;
   --wit-zacht:#BEBECE;  /* secundaire tekst op donkerblauw, 7,5:1 */
   --zand:#ECE4D7;       /* lichte vlakken en blokken, §1.1 */
-  --chevron-kop:#3F3A5B; /* grote chevron in het titelblok, §1.3 */
+  --chevron-kop:#3F3A5B; /* vervallen 13 nov 2026: titelblok heeft raster met fade (B.9) */
   --schaduw:0 4px 18px rgba(39,39,91,.08);          /* kaart, §2.4 A */
   --schaduw-zwevend:0 10px 30px rgba(39,39,91,.12); /* zwevende kaart, §2.4 */
   /* alleen als het document tegels of fotolijstjes heeft, §1.8 */
@@ -403,12 +401,12 @@ Bouwstenen. Gebruik wat past bij het documenttype, laat weg wat niet nodig is:
 
 - **Titelblok** — donkerblauw, met logo, eyebrow-regel, titel, subtitel, eventueel een dunne effen goudlijn als breker (geen chevron-lijnaccent, zie §1.3). **Onder het logo een haarlijn** (1px, wit op 18%, over de breedte van de tekstkolom), ±26px onder het logo en ±40px boven de eyebrow: zo bestaat het blauwe vlak uit twee lagen en oogt het minder massief (besluit Paul, 13 oktober 2026).
   - Titel: Merriweather 700, `font-size:clamp(1.9rem,5vw,2.8rem)`, `max-width:16ch`, zodat een lange titel netjes over twee regels breekt.
-  - Rechts de grote chevron (§1.3). Haaks: het titelblok krijgt geen afgeronde hoeken.
+  - Rechts het raster met fade (B.9): begint onder de haarlijn, links effen achter de tekstkolom. Haaks: het titelblok krijgt geen afgeronde hoeken.
   - Onder de tekst ±92px ruimte (mobiel ±76px) voor de zwevende kaart.
 - **Zwevende kaart ('bladspiegel', besluit Paul, 2 november 2026)** — een witte kaart die ±56px (mobiel ±44px) over de onderrand van het titelblok valt. Hoek 18px, `--schaduw-zwevend`, geen rand. Inhoud: "In het kort", of maximaal drie vaste aandachtspunten met een icoon (§2.4 B). Op mobiel worden aandachtspunten één regel die je openklapt, met het belangrijkste punt zichtbaar. Referentie: `DBF_voorbeeld_html.html` en `DBF_voorbeeld_html_interactief.html`.
 - **Co-brandingbalk (optioneel)** — alleen als de opdrachtgever zijn logo erin wil (vraag in §0). Dan vervangt een **witte horizontale balk** de bovenste laag van het titelblok (het DBF-logo met de haarlijn eronder). Opbouw:
   - Balk: achtergrond `#FFFFFF`, padding ±18px boven en onder, zelfde horizontale wrapper als titelblok en body (§2.6). Onderrand 1px `--inkt-zacht` op 25% dekking. Niet massief: geen schaduw, geen extra kleurvlak, geen tekst in de balk.
-  - Links: DBF-logo **zwart met tagline** (`DBF-logo-zwart-tagline.png`, Bijlage A), hoogte 40px. Rechts: logo van de opdrachtgever, maximaal 40px hoog en 180px breed, verhoudingen intact (§1.5), uitgelijnd op dezelfde middenlijn. Beide als base64 ingebed, met expliciete `width` en `height`.
+  - Links: DBF-logo **zwart** (`DBF-logo-zwart.png`, Bijlage A), hoogte 40px. Rechts: logo van de opdrachtgever, maximaal 40px hoog en 180px breed, verhoudingen intact (§1.5), uitgelijnd op dezelfde middenlijn. Beide als base64 ingebed, met expliciete `width` en `height`.
   - Het klantlogo wordt onbewerkt gebruikt: niet hertekenen, niet herkleuren, niet bijsnijden. Heeft het een witte of gekleurde achtergrond, dan eerst vragen om een betere versie; niet zelf vrijstaand maken zonder akkoord.
   - Op mobiel (onder ±480px) blijven beide logo's naast elkaar, maximaal 30px hoog. Nooit onder elkaar stapelen.
   - Daaronder volgt het donkerblauwe titelblok **zonder logo en zonder haarlijn**: eyebrow, titel, subtitel en eventueel goudlijn, zoals hierboven. Het DBF-logo staat dan niet dubbel bovenin.
@@ -620,14 +618,14 @@ De tekst in het titelblok moet precies boven de tekst in de body staan.
 - [ ] `:root`-kleurenblok komt precies één keer voor — geen tweede of derde blok dat het eerste overschrijft
 - [ ] Logo is het officiële bestand, correct gerenderd (niet wit-op-wit)
 - [ ] Logo is ingebed als `data-URI` (`src="data:image/png;base64,..."`), **niet** als verwijzing naar een losse bestandsnaam (`src="logo.png"`)
-- [ ] Tagline "IDENTITY MARKETING" alleen bij grote, eenmalige plaatsingen — kleine/herhalende plekken (documentkopje, footer) gebruiken de wordmark zonder tagline (Bijlage A)
+- [ ] Logo zonder tagline "IDENTITY MARKETING", op elke plek (§1.2, Bijlage A)
 - [ ] Fonts (Merriweather + Open Sans) zijn als `@font-face` met base64 data-URI **in het bestand ingebed** — geen `<link>` naar de Google Fonts CDN, alleen embedded gewichten gebruikt
 - [ ] Chevron-teken (niet hexagon) is gebruikt als hoofdstuknummer-icoon (§1.3); géén chevron-lijnaccent (verboden) — nergens als bullet voor gewone lijsten of koppen. Het hexagon-vormige beeldmerk (Bijlage A) is de uitzondering: dat is het logo zelf, geen decoratief motief
 - [ ] Hoofdstuknummer heeft dezelfde kleur en hetzelfde lettertype/gewicht als de titel ernaast (geen apart goud, geen ander font), en een leesbare maat (1.1–1.3rem, zie §2.4), niet weggemoffeld als klein label
 - [ ] Contrast gecontroleerd — geen goud-tekst op licht vlak
 - [ ] Kaarten wit met schaduw, zonder grijze rand; vlakken zand (§2.4 A)
 - [ ] Hoeken volgens §2.4 A: alleen 14px, 18px, rond of haaks; geen gekleurde rand die meebuigt met een afronding
-- [ ] Titelblok met grote chevron in `--chevron-kop` en, waar het past, de zwevende kaart (§2.4)
+- [ ] Titelblok met raster en fade, logobalk effen (B.9), en waar het past de zwevende kaart (§2.4)
 - [ ] Mobiel op 390px: inhoud in het eerste scherm, keuze bereikbaar, geen zijwaarts scrollen (§2.8)
 - [ ] Getest met JavaScript uit: alle inhoud leesbaar (§2.8)
 - [ ] `robots`-, `googlebot`- en `referrer`-regel staan in de kop (§2.8)
@@ -720,14 +718,12 @@ Deze maten zitten in de slidemaster van `Powerpoint_sjabloon.potx`. Wie in code 
 | Voetregel | x=1,62, y=6,79, w=8,0, 9pt Open Sans, grijs `#464646` | In de indeling (Invoegen → Koptekst en voettekst) |
 | Paginanummer | x=8,55, y=7,2, w=0,6, 9pt Open Sans, wit, rechts | In de footerbalk; in de indeling |
 
-**Openingsdia (indeling OPEN): chevrondiepte, geen foto.** Volle koningsblauwe dia met twee grote chevrons toon op toon (§1.3). De variant met foto is vervallen (besluit Paul, 20 oktober 2026).
-- De twee chevrons zijn vrije vormen (`custGeom`, in `pptxgenjs`: `CUSTOM_GEOMETRY`) met de vectorvorm uit §1.3, punt naar rechts, in één vergrendelde groep. Achterste: middelpunt op 88,75% van de diabreedte en 50% van de hoogte, hoogte 166,7% van de diahoogte, kleur `#30306A`. Voorste: middelpunt op 95% van de breedte, hoogte 122,2% van de diahoogte, kleur `#34346F`. Het middelpunt is het midden van de vorm in de pijlrichting; wat buiten de dia valt, valt weg. De twee vormen blijven altijd samen één paar: nooit los van elkaar schalen of verschuiven.
-- Titel: wit, Merriweather Regular, 40pt, links op 0,92 inch, onderkant op 3,9 inch. Gouden lijn 1,0 × 0,035 inch op y=4,05. Ondertitel in goud (Open Sans 18pt) op y=4,22; metaregel wit (Open Sans 12pt) op y=5,15.
-- Logo: wit met tagline, 0,5 inch hoog, linksonder (x=0,92, y=6,45).
-- Lukt een vrije vorm niet: `DBF_titeldia_chevrondiepte_koningsblauw.png` als afbeelding over de volle dia.
+**Openingsdia (indeling OPEN): raster met fade, geen foto (besluit Paul, 13 november 2026).** Volle koningsblauwe dia met `DBF_titeldia_fade_koningsblauw.png` over de volle dia: links effen, naar rechts komt het raster op (B.9). De chevrondiepte en de variant met foto zijn vervallen.
+- Titel: wit, Merriweather Regular, 40pt, links op 0,92 inch, onderkant op 3,9 inch. Gouden lijn 1,0 × 0,035 inch op y=4,05. Ondertitel in goud (Open Sans 18pt) op y=4,22; metaregel wit (Open Sans 12pt) op y=5,15. De titel staat op het effen deel; een lange titel breken in plaats van verbreden.
+- Logo: wit, zonder tagline (`DBF-logo-wit.png`), 0,5 inch hoog, linksonder (x=0,92, y=6,45).
 - Referentie: dia 1 van `DBF_voorbeeldpresentatie.pptx`.
 
-**Scheidingsdia (indeling SECTION):** effen koningsblauw. Het hoofdstuknummer (‘01’) staat als eigen regel in goud, Open Sans Bold 16pt, op y=2,35–2,75, met daaronder een gouden lijn van 0,6 inch op y=2,95. Zo leest het nummer als label en niet als doorgeschoven titelregel. Titel wit, Merriweather Regular 36pt, op y=3,2; toelichting wit, Open Sans 18pt, op y=4,45. Geen foto, geen patroon. Referentie: dia 2 van `DBF_voorbeeldpresentatie.pptx`.
+**Scheidingsdia (indeling SECTION):** koningsblauw met raster en fade. Het hoofdstuknummer (‘01’) staat als eigen regel in goud, Open Sans Bold 16pt, op y=2,35–2,75, met daaronder een gouden lijn van 0,6 inch op y=2,95. Zo leest het nummer als label en niet als doorgeschoven titelregel. Titel wit, Merriweather Regular 36pt, op y=3,2; toelichting wit, Open Sans 18pt, op y=4,45. Achtergrond: `DBF_titeldia_fade_koningsblauw.png` over de volle dia (B.9), zoals de openingsdia. Geen foto. Referentie: dia 2 van `DBF_voorbeeldpresentatie.pptx`.
 
 **Slotdia:** `DBF_slotdia_beeldmerk_koningsblauw.png` over de volle dia: het patroon met het witte beeldmerk precies in het midden, in de plek van één chevronpaar (Bijlage B.6). **Geen logo en geen tekst**; het logo staat al op de openingsdia (besluit Paul, 13 oktober 2026). Indeling SLOT; heeft bewust geen titelvak. Referentie: dia 5 van `DBF_voorbeeldpresentatie.pptx`.
 
@@ -785,7 +781,7 @@ standaard navy of goud. Grijs, crème en de lichte navy-tint zijn alleen bruikba
 
 ## 4. Word
 
-Bron: `DBF_offerte_sjabloon.dotx` (afgeleid van het oorspronkelijke `Offertesjabloon.dotx`), gevalideerd in Word. Logo-tagline: zie de uitzondering in §1.2.
+Bron: `DBF_offerte_sjabloon.dotx` (afgeleid van het oorspronkelijke `Offertesjabloon.dotx`), gevalideerd in Word. Logo: zonder tagline (§1.2).
 
 ### 4.1 Offerte
 
@@ -802,10 +798,9 @@ Bron: `DBF_offerte_sjabloon.dotx` (afgeleid van het oorspronkelijke `Offertesjab
 Deze marges gelden voor de offerte; voor brief en rapport zijn ze nog niet vastgesteld.
 
 #### Logo & header
-- Logo: **horizontale versie mét ondertitel "IDENTITY MARKETING", zwart** — herhaalt op **elke pagina** (geen aparte eerste-pagina-behandeling).
+- Logo: **horizontale versie zonder tagline, zwart** (`DBF-logo-zwart.png`) — herhaalt op **elke pagina** (geen aparte eerste-pagina-behandeling). De tagline is vervallen (§1.2, 13 november 2026).
 - Afmeting in header: 6,47 × 2,02 cm, aspect ratio vast.
 - Positie: 2,21 cm links van de kolomrand (steekt iets in de marge), 1,10 cm onder de bovenkant van het kopgebied.
-- Dit overrulet voor de offerte de standaard tagline-regel (zie §1.2).
 
 #### Footer
 - Op elke pagina: bedrijfsgegevens (adres, KVK, BTW, IBAN) + paginanummer rechts uitgelijnd.
@@ -919,7 +914,7 @@ Groen is geen garantie dat een document foutloos, juridisch juist of AVG-proof i
 ## 6. Open punten
 
 - **PDF:** geen eigen gids. Openstaande keuze: PDF als export van Word-opmaak, als HTML-export, of een aparte drukopmaak.
-- **Tagline in Word buiten de offerte:** geldt de offerte-uitzondering (herhalend mét tagline) ook voor brief, rapport en memo?
+- **Tagline:** besloten op 13 november 2026: nergens meer (§1.2).
 - **Assetbibliotheek:** schone transparante witte logo's als SVG aanvragen bij de bron (de PNG's in Bijlage A volstaan intussen).
 - **Zandvariant van het patroon:** twee voorstellen in proef (B.2). Visuele keuze nog te maken; daarna pas vastleggen.
 - **Signaalkleuren in print:** CMYK- en Pantone-waarden voor §1.1 D nog bepalen en met een proefdruk controleren.
@@ -931,12 +926,12 @@ Groen is geen garantie dat een document foutloos, juridisch juist of AVG-proof i
 - **Ken je de foto?:** de pagina is vanuit de AI-omgeving niet te controleren (website blokkeert automatische toegang). Werking periodiek zelf nagaan.
 - **PowerPoint-sjabloon in de praktijk:** de eerste echte presentaties met `Powerpoint_sjabloon.potx` maken en in PowerPoint op een andere computer controleren (lettertypen, indelingen, voetregel).
 - **Praktijktoets:** de gids toetsen met een HTML-lesbrief, een PowerPoint en een Word-offerte, elk met kwaliteitsrapportage. Terugkerende problemen leiden tot een aanpassing van de gids; incidentele niet.
-- **Eén grote chevron in elk formaat?** HTML heeft sinds 2 november één chevron in `#3F3A5B`; PowerPoint houdt de chevrondiepte met twee lagen toon op toon. Besluiten of PowerPoint meegaat.
+- **Eén grote chevron in elk formaat?** Vervallen op 13 november 2026: in PowerPoint en in het HTML-titelblok vervangen door het raster met fade (B.9).
 - **Tegels en lijstjes in PowerPoint en Word (§1.8):** de werkwijze met afbeeldingen nog toetsen in echte bestanden, op een andere computer. Playwrite NL wordt door Google als variabel font geleverd; Office sluit dat niet betrouwbaar in, dus een vaste TTF-versie nodig.
 - **Zilver in drukwerk:** het verloop van het fotolijstje met een proefdruk controleren; CMYK nog niet vastgesteld.
 - **Handschriften Amatic SC en Beth Ellen:** genoemd, nog niet getoetst. Eerst op leesbaarheid bekijken voordat ze in de set komen.
 - **Kaartvorm buiten HTML:** §2.4 A geldt voor HTML. Nagaan of Word, PDF en PowerPoint dezelfde hoek- en randregel krijgen.
-- **Oudere voorbeeldbestanden:** `DBF_voorbeeld_html_cobranding.html` en `DBF_voorbeeld_signaalkleuren.html` tonen nog het titelblok zonder grote chevron en kaarten met een grijze rand. Bij de eerstvolgende bewerking omzetten.
+- **Oudere voorbeeldbestanden:** `DBF_voorbeeld_html_cobranding.html` en `DBF_voorbeeld_signaalkleuren.html` hebben sinds 13 november het raster met fade, maar tonen nog kaarten met een grijze rand. Bij de eerstvolgende bewerking omzetten.
 
 ---
 
@@ -953,8 +948,8 @@ De logo's en beeldmerken staan als echte, transparante PNG's in de openbare GitH
 |---|---|---|
 | `DBF-logo-wit.png` | 1244 × 370 | Footer, documentkopje, navigatie: elke kleine of herhalende plaatsing op donkerblauw. |
 | `DBF-logo-zwart.png` | 1244 × 370 | Documentkopje of footer op wit of papiertint. |
-| `DBF-logo-wit-tagline.png` | 1244 × 370 | Titelblok (HTML), openingsdia (PowerPoint). Niet op de slotdia: die heeft geen logo (B.6). |
-| `DBF-logo-zwart-tagline.png` | 1244 × 370 | Omslag, de witte co-brandingbalk in HTML (§2.4) en, als uitzondering, de koptekst van de Word-offerte (§1.2). |
+| `DBF-logo-wit-tagline.png` | 1244 × 370 | **Vervallen** (13 november 2026): niet meer gebruiken (§1.2). Blijft op GitHub voor oude bestanden. |
+| `DBF-logo-zwart-tagline.png` | 1244 × 370 | **Vervallen** (13 november 2026): niet meer gebruiken (§1.2). Blijft op GitHub voor oude bestanden. |
 | `DBF-beeldmerk-wit.png` | 944 × 1083 | Alleen los, nooit naast het logo (§1.2). Bijvoorbeeld klein rechtsonder op een donkere accentdia (§3.5). |
 | `DBF-beeldmerk-zwart.png` | 944 × 1083 | Alleen los, nooit naast het logo (§1.2). |
 
@@ -964,7 +959,9 @@ De logo's en beeldmerken staan als echte, transparante PNG's in de openbare GitH
 |---|---|---|
 | `DBF_chevron.svg` + `DBF_chevron_*.png` (10×) | Chevron, vector en in elke paletkleur | §1.3, §3.7 |
 | `DBF_patroon_*.svg` (6×), `DBF_patroon_slotdia_koningsblauw.png`, `patroon.py` | Decoratief patroon, dia-afbeelding en generator (ook van de chevron) | Bijlage B |
-| `DBF_titeldia_chevrondiepte_koningsblauw.png` | Openingsdia als afbeelding (4000 × 2250 px), alleen als de vrije vormen niet lukken | §1.3, §3.5 |
+| `DBF_titeldia_chevrondiepte_koningsblauw.png` | **Vervallen** (13 november 2026); vervangen door `DBF_titeldia_fade_koningsblauw.png` | §1.3 |
+| `DBF_titeldia_fade_koningsblauw.png` | Openingsdia en scheidingsdia (4000 × 2250 px): raster met fade op koningsblauw | §3.5, B.9 |
+| `DBF_omslag_fade_koningsblauw_A4.png` | Koningsblauwe omslag A4 (1240 × 1754 px, 150 dpi): raster met fade, bovenste 48 mm leeg voor logo en lijn | B.9 |
 | `DBF_slotdia_beeldmerk_koningsblauw.png` | Slotdia: patroon met het beeldmerk in de middelste cel (4000 × 2250 px) | §3.5, B.6 |
 | `DBF_voorbeeldpresentatie.pptx`, `DBF_voorbeeld_html.html`, `DBF_voorbeeld_html_cobranding.html`, `DBF_voorbeeld_signaalkleuren.html`, `DBF_voorbeeld_achterkant_A4.pdf` | Referentievoorbeelden: zo hoort het eruit te zien (de presentatie is gemaakt met `Powerpoint_sjabloon.potx`, met ingesloten lettertypen) | §1.1 D, §2.4, §3.5, B.3 |
 | `DBF_fotostrook.png` | Fotostrook inhoudsdia PowerPoint (zit al in het sjabloon) | §3.5 |
@@ -1000,7 +997,7 @@ Documentkopje of footer op wit of papiertint.
 
 HTML (na inbedden): `<img src="data:image/png;base64,…" alt="de Betekenisfabriek" width="134" height="40">`
 
-### Logo — wit, met tagline, voor donkerblauwe achtergrond (groot / eenmalig)
+### Logo — wit, met tagline — VERVALLEN (13 november 2026), niet gebruiken
 
 Titelblok (HTML), titel- en slotdia (PowerPoint).
 
@@ -1010,7 +1007,7 @@ Titelblok (HTML), titel- en slotdia (PowerPoint).
 
 HTML (na inbedden): `<img src="data:image/png;base64,…" alt="de Betekenisfabriek" width="134" height="40">`
 
-### Logo — zwart, met tagline, voor lichte achtergrond (groot / eenmalig)
+### Logo — zwart, met tagline — VERVALLEN (13 november 2026), niet gebruiken
 
 Omslag en, als uitzondering, de koptekst van de Word-offerte (§1.2).
 
@@ -1058,6 +1055,8 @@ HTML (na inbedden): `<img src="data:image/png;base64,…" alt="de Betekenisfabri
 | `DBF_patroon_wit_A4.svg` | Vastgesteld | Staand A4, op wit: alleen bijzondere uitgaven |
 | `DBF_patroon_slotdia_koningsblauw.png` | Vastgesteld | Alleen het patroon als volle dia (4000 × 2250 px, randlengte 1,25 inch), zonder beeldmerk. Voor eigen samenstellingen |
 | `DBF_slotdia_beeldmerk_koningsblauw.png` | Vastgesteld | Slotdia PowerPoint: patroon met het beeldmerk in de middelste cel (B.6) |
+| `DBF_titeldia_fade_koningsblauw.png` | Vastgesteld | Openingsdia en scheidingsdia: raster met fade (B.9) |
+| `DBF_omslag_fade_koningsblauw_A4.png` | Vastgesteld | Koningsblauwe omslag A4: raster met fade onder de logolijn (B.9) |
 | `patroon.py` | — | Generator van alle bovenstaande bestanden, de chevron-SVG, de tien chevron-PNG's (§3.7) en de titeldia (§1.3) |
 
 De SVG-bestanden zijn vector, met dezelfde geometrie (B.5). Het zijn vaste vellen, geen tegels: naast elkaar leggen geeft een naad. Een ander formaat nodig? Genereer het met `patroon.py`. Alle bestanden staan op GitHub: `https://raw.githubusercontent.com/dbfbeeldbank/dbf/main/<bestandsnaam>`. Niet per as schalen; bijsnijden in plaats van vervormen (§1.5). Op een dia plaats je het patroon als afbeelding van de volle dia (PNG, randlengte ±1,25 inch).
@@ -1072,28 +1071,28 @@ De SVG-bestanden zijn vector, met dezelfde geometrie (B.5). Het zijn vaste velle
 | Zand A | `#ECE4D7` | `#C1A57B`, 18% dekking | Voorstel |
 | Zand B | `#ECE4D7` | `#C1A57B`, 12% dekking | Voorstel |
 
-In de standaard geen goud: geen gouden vormen, geen metallic, verlopen of glans. Goud blijft voor de korte accentlijn, het logo op donker en de bijzondere toepassingen in B.7.
+In de standaard geen goud: geen gouden vormen, geen metallic, verlopen of glans. Eén uitzondering: het raster met fade op koningsblauw (B.9), waarin de dekking van links naar rechts oploopt. Goud blijft voor de korte accentlijn, het logo op donker en de bijzondere toepassingen in B.7.
 
 ### B.3 Toepassing per formaat
 
 **Word en PDF (rapport)**
-- Omslag: als er een passend beeld is (§1.7) een foto in het bovenste ±56%; anders typografisch. Gouden lijn, titel op wit, logo met tagline rechtsonder. Geen patroon.
+- Omslag: als er een passend beeld is (§1.7) een foto in het bovenste ±56%; anders typografisch. Gouden lijn, titel op wit, logo rechtsonder (zonder tagline). Geen patroon. Variant: een **koningsblauwe omslag met raster en fade** (B.9). Referentie: `DBF_voorbeeld_omslag_fade_A4.pdf`.
 - Binnenwerk en hoofdstukopeningen: geen patroon.
 - Achterkant: `DBF_patroon_koningsblauw_A4.svg` over de volle pagina, met het witte beeldmerk in de middelste cel (B.6) en onderaan gecentreerd het webadres (Open Sans semibold, 10,5 pt, `#BEBECE`, ±22 mm boven de onderrand). Daaronder een korte gouden lijn en de auteursrechtregel uit §2.4, letterlijk (Open Sans 400, 7 pt, `#BEBECE`, gecentreerd, maximaal ca. 120 mm breed). Geen logo. Een achterkant zonder patroon is ook in huisstijl. Referentie: `DBF_voorbeeld_achterkant_A4.pdf`.
 - PDF volgt de bronopmaak (§0). Het patroon blijft vector.
 
 **PowerPoint**
-- Openingsdia: chevrondiepte (§1.3, §3.5), geen foto; logo met tagline 0,5 inch hoog, linksonder.
-- Scheidingsdia: effen koningsblauw; nummer als eigen regel in goud boven een korte gouden lijn, titel wit. Geen foto, geen patroon.
+- Openingsdia: raster met fade (§3.5, B.9), geen foto; logo zonder tagline, 0,5 inch hoog, linksonder.
+- Scheidingsdia: koningsblauw met raster en fade (B.9); nummer als eigen regel in goud boven een korte gouden lijn, titel wit. Geen foto.
 - Slotdia: `DBF_slotdia_beeldmerk_koningsblauw.png` over de volle dia, zonder logo en zonder tekst (B.6).
 - Logomaten gelden voor de standaard dia van 13,333 × 7,5 inch.
-- Het patroon verschijnt hooguit één keer per presentatie. Plaatsen als afbeelding, niet als getegelde vulling.
+- Het volle patroon verschijnt hooguit één keer per presentatie (slotdia). Het raster met fade op opening- en scheidingsdia's telt daarvoor niet mee (B.9). Plaatsen als afbeelding, niet als getegelde vulling.
 
 **HTML**
 - Het titelblok blijft zoals in §2.4: donkerblauw, **met logo** (wit, uit Bijlage A), eyebrow, titel, subtitel en goudlijn.
 - Geen foto boven het titelblok. Een foto is optioneel en staat in de inhoud (als figuur met bijschrift), alleen als die bij het onderwerp van dít document hoort.
 - Beeld uit de PowerPoint-bibliotheek (o.a. de fotostrook en de strandsilhouetten, §3) wordt niet in HTML gebruikt.
-- Geen patroon in het titelblok. Eventueel één smalle patroonstrook (90 px) direct boven de footer, toon op toon. Inline SVG, ingebed. Niet verplicht. Tussen strook en voet een gouden lijn van 2px over de volle breedte (§2.4).
+- In het titelblok alleen het raster met fade (B.9), nooit het volle patroon. Niet in hoofdstukkoppen of zandvlakken (besluit Paul, 13 november 2026). Eventueel één smalle patroonstrook (90 px) direct boven de footer, toon op toon. Inline SVG, ingebed. Niet verplicht. Tussen strook en voet een gouden lijn van 2px.
 
 ### B.4 Niet doen
 
@@ -1105,6 +1104,7 @@ In de standaard geen goud: geen gouden vormen, geen metallic, verlopen of glans.
 - Losse chevrons uit het patroon als lijnaccent (§1.3).
 - Het patroon als tweede logo: zo groot of zo vaak dat het meer aandacht trekt dan inhoud, logo of typografie.
 - Een foto boven of in plaats van het titelblok met logo (HTML).
+- Het raster met fade op herhalende elementen (hoofdstukkoppen), in een vlak met afgeronde hoeken, op zand of in HTML (B.9).
 - Het raster fijner maken dan een randlengte van ±0,5 inch op een dia: dan smelten de sterren samen en verdwijnt de chevron.
 
 ### B.5 Opbouw (ter verantwoording; gebruik de bestanden uit B.1)
@@ -1175,6 +1175,24 @@ Claude kan niet zien op welk apparaat de vraag wordt gesteld. Vraag het dus alti
 - Daadwerkelijk bekijken voor oplevering: het geheel verkleind én een uitsnede op ware grootte (raster, rand, beeldmerk in de cel).
 
 ---
+
+
+### B.9 Raster met fade (opening op koningsblauw)
+
+Besluit Paul, 13 november 2026. Het Y-sterraster (B.5) loopt van links naar rechts op: links een effen vlak voor de titel, naar rechts komen de sterren gradueel tevoorschijn. Dat geeft diepte zonder de tekst te storen.
+
+**Waar wel:** alleen op koningsblauw: het HTML-titelblok, PowerPoint (openingsdia en scheidingsdia) en PDF of Word (koningsblauwe omslag).
+
+**Waar niet:** niet in HTML-hoofdstukkoppen (te priegelig, en ze herhalen) en niet in zandvlakken, niet op zand of wit, niet op herhalende elementen en niet in een vlak met afgeronde hoeken. Het raster is een doorlopend systeem; het loopt tot de rand van de dia of pagina.
+
+**Maten:**
+- Dekking wit 8% (rechts, volledig zichtbaar), oplopend van 0% op ±42% van de breedte naar 8% op ±95%. Vloeiende overgang, geen harde rand.
+- Dia: randlengte ±1 inch op 13,333 × 7,5 inch. Omslag A4: randlengte ±19 mm; fade begint op ±45% van de breedte.
+- Omslag: de bovenste 48 mm (logo en dunne lijn) blijft effen. Het raster begint onder de lijn.
+- De titel staat op het effen deel. Loopt de titel verder door, dan breken in plaats van verbreden.
+- **HTML-titelblok:** inline SVG (`class="deco-raster"`, randlengte 92 in een viewBox van 1600 × 560, `preserveAspectRatio="xMaxYMin slice"`), wit op 8%, via `mask-image`. De fade begint naast de tekstkolom: transparant tot `calc(50% + 140px)`, volledig op `calc(50% + 620px)`; op mobiel (≤640px) van 45% naar 100%. Het raster begint onder de haarlijn (`--raster-top`, standaard 128px), zodat de logobalk effen blijft; in de co-brandingvariant vanaf de bovenrand. `z-index:-1` met `isolation:isolate` op het titelblok, zodat de tekst er altijd boven ligt. In print verborgen (§2.8). Referentie: `DBF_voorbeeld_html.html`.
+
+**Bestanden:** `DBF_titeldia_fade_koningsblauw.png` (dia), `DBF_omslag_fade_koningsblauw_A4.png` (omslag). Referenties: het titelblok van `DBF_voorbeeld_html.html`, dia 1 en 2 van `DBF_voorbeeldpresentatie.pptx` en `DBF_voorbeeld_omslag_fade_A4.pdf`.
 
 ## Bijlage C — Beeldbank (historische foto's, portretten, teambeelden)
 
